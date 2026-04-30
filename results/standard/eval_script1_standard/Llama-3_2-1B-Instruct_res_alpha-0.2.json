@@ -1,0 +1,58 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": -0.2
+  },
+  "scores_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.3,
+      "Wrong_Answer_Rate": 0.5,
+      "Correct_Rate": 0.2
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.47,
+      "Wrong_Answer_Rate": 0.38,
+      "Correct_Rate": 0.15
+    },
+    "GPQA": {
+      "Total": 100,
+      "Format_Error_Rate": 0.81,
+      "Wrong_Answer_Rate": 0.19,
+      "Correct_Rate": 0.0
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 1.0,
+      "Wrong_Answer_Rate": 0.0,
+      "Correct_Rate": 0.0
+    }
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.99,
+      "Wrong_Answer_Rate": 0.01,
+      "Correct_Rate": 0.0
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.93,
+      "Wrong_Answer_Rate": 0.06,
+      "Correct_Rate": 0.01
+    },
+    "GPQA": {
+      "Total": 100,
+      "Format_Error_Rate": 0.96,
+      "Wrong_Answer_Rate": 0.03,
+      "Correct_Rate": 0.01
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 1.0,
+      "Wrong_Answer_Rate": 0.0,
+      "Correct_Rate": 0.0
+    }
+  }
+}

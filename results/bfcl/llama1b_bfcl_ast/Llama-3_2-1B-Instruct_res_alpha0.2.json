@@ -1,0 +1,10 @@
+{
+  "config": {
+    "method": "energy_matthew_ast",
+    "alpha": 0.2
+  },
+  "metrics": {
+    "First_pass_success": 0.0,
+    "Retry_enabled_success": 0.015
+  }
+}

@@ -4,6 +4,7 @@ import argparse
 import os
 import re
 import shutil
+import tempfile
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from tqdm import tqdm
 from vllm import LLM, SamplingParams
@@ -148,28 +149,54 @@ def main():
     parser.add_argument("--gpu", type=int, default=0)
     parser.add_argument("--smoke", action="store_true")
     parser.add_argument("--model_id", type=str, default="meta-llama/Llama-3.2-1B-Instruct")
+    parser.add_argument("--num_samples", type=int, default=None)
+    parser.add_argument("--tensor_parallel_size", type=int, default=1)
+    parser.add_argument("--gpu_memory_utilization", type=float, default=0.6)
+    parser.add_argument("--max_model_len", type=int, default=4096)
+    parser.add_argument("--enforce_eager", action="store_true")
+    parser.add_argument("--output_root", type=str, default="results/bfcl/llama1b_bfcl_ast")
+    parser.add_argument("--tmp_root", type=str, default="/tmp")
+    parser.add_argument("--prepared_model_dir", type=str, default=None)
+    parser.add_argument("--save_prepared_model_dir", type=str, default=None)
+    parser.add_argument("--local_files_only", action="store_true")
     args = parser.parse_args()
 
     model_id = args.model_id
     model_name_safe = model_id.split("/")[-1].replace(".", "_")
     device = f"cuda:{args.gpu}"
-    
-    out_path = f"results/llama1b_bfcl_ast/{model_name_safe}_res_alpha{args.alpha}.json"
+    out_path = os.path.join(args.output_root, f"{model_name_safe}_res_alpha{args.alpha}.json")
     if not args.smoke and os.path.exists(out_path):
         print("Exists")
         return
 
-    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    tokenizer_source = args.prepared_model_dir or model_id
+    tokenizer = AutoTokenizer.from_pretrained(tokenizer_source, local_files_only=args.local_files_only)
     if tokenizer.pad_token is None: tokenizer.pad_token = tokenizer.eos_token
-    
-    model = AutoModelForCausalLM.from_pretrained(model_id, torch_dtype=torch.bfloat16, device_map=device)
-    apply_svd_energy_matthew(model, args.alpha)
-    
-    temp_dir = f"/tmp/llama1b_bfcl_ast_{args.alpha}"
-    model.save_pretrained(temp_dir)
-    tokenizer.save_pretrained(temp_dir)
-    del model
-    torch.cuda.empty_cache()
+
+    cleanup_dir = None
+    if args.prepared_model_dir:
+        eval_model_dir = args.prepared_model_dir
+    elif args.alpha == 0.0 and not args.save_prepared_model_dir:
+        eval_model_dir = model_id
+    else:
+        eval_model_dir = args.save_prepared_model_dir or tempfile.mkdtemp(
+            prefix=f"bfcl_ast_{model_name_safe}_alpha{args.alpha}_",
+            dir=args.tmp_root,
+        )
+        if not args.save_prepared_model_dir:
+            cleanup_dir = eval_model_dir
+        model = AutoModelForCausalLM.from_pretrained(
+            model_id,
+            torch_dtype=torch.bfloat16,
+            device_map=device,
+            local_files_only=args.local_files_only,
+        )
+        apply_svd_energy_matthew(model, args.alpha)
+        os.makedirs(eval_model_dir, exist_ok=True)
+        model.save_pretrained(eval_model_dir)
+        tokenizer.save_pretrained(eval_model_dir)
+        del model
+        torch.cuda.empty_cache()
     
     print("Loading BFCL V3 dataset...")
     from huggingface_hub import hf_hub_download
@@ -184,7 +211,9 @@ def main():
     # Map ID to ground truth
     gt_map = {row["id"]: row["ground_truth"] for row in answers}
     
-    num_samples = 2 if args.smoke else min(200, len(questions))
+    default_samples = 2 if args.smoke else min(200, len(questions))
+    num_samples = args.num_samples if args.num_samples is not None else default_samples
+    num_samples = min(num_samples, len(questions))
     items = []
     for row in questions[:num_samples]:
         q = row["question"]
@@ -203,36 +232,42 @@ def main():
         })
 
     print("Generating responses with retry limit=3...")
-    llm = LLM(model=temp_dir, tensor_parallel_size=1, dtype="bfloat16", gpu_memory_utilization=0.6, max_model_len=4096)
-    
+    llm = LLM(
+        model=eval_model_dir,
+        tensor_parallel_size=args.tensor_parallel_size,
+        dtype="bfloat16",
+        gpu_memory_utilization=args.gpu_memory_utilization,
+        max_model_len=args.max_model_len,
+        enforce_eager=args.enforce_eager,
+    )
+
     pass_at_1 = 0
     recovery_success = 0
-    
-    for item in tqdm(items, desc="Processing LLM calls"):
-        prompt = format_tool_prompt(item["query"], item["tools"])
-        history = prompt
-        
-        final_out = ""
-        success_achieved = False
-        
-        for attempt in range(3):
-            sampling_params = SamplingParams(temperature=0.0, max_tokens=256)
-            outputs = llm.generate([history], sampling_params, use_tqdm=False)
-            out_text = outputs[0].outputs[0].text.strip()
-            final_out = out_text
-            
-            # Evaluate using AST logic
-            eval_res = evaluate_ast(out_text, item["ground_truth"])
-            
-            if eval_res["strict_success"] == 1:
-                success_achieved = True
-                if attempt == 0:
-                    pass_at_1 += 1
-                recovery_success += 1
-                item["eval"] = eval_res
-                break
-            else:
-                # Retry logic
+
+    try:
+        for item in tqdm(items, desc="Processing LLM calls"):
+            prompt = format_tool_prompt(item["query"], item["tools"])
+            history = prompt
+
+            final_out = ""
+            success_achieved = False
+
+            for attempt in range(3):
+                sampling_params = SamplingParams(temperature=0.0, max_tokens=256)
+                outputs = llm.generate([history], sampling_params, use_tqdm=False)
+                out_text = outputs[0].outputs[0].text.strip()
+                final_out = out_text
+
+                eval_res = evaluate_ast(out_text, item["ground_truth"])
+
+                if eval_res["strict_success"] == 1:
+                    success_achieved = True
+                    if attempt == 0:
+                        pass_at_1 += 1
+                    recovery_success += 1
+                    item["eval"] = eval_res
+                    break
+
                 err_msg = ""
                 if eval_res["arguments_valid_json"] == 0:
                     err_msg = "Your output is not a valid JSON function call. Please retry and output strictly valid JSON."
@@ -240,20 +275,30 @@ def main():
                     err_msg = "You called an incorrect tool name. Please check the available tools and try again."
                 else:
                     err_msg = "Your arguments do not match the required schema or semantic meaning. Please fix."
-                
+
                 history += "\\n" + out_text + "\\n\\nUser: " + err_msg + "\\nAssistant:"
-                
-        if not success_achieved:
-            item["eval"] = evaluate_ast(final_out, item["ground_truth"])
-            
-    from vllm.distributed.parallel_state import destroy_model_parallel
-    destroy_model_parallel()
-    del llm
-    torch.cuda.empty_cache()
-    shutil.rmtree(temp_dir, ignore_errors=True)
+
+            if not success_achieved:
+                item["eval"] = evaluate_ast(final_out, item["ground_truth"])
+    finally:
+        from vllm.distributed.parallel_state import destroy_model_parallel
+        destroy_model_parallel()
+        del llm
+        torch.cuda.empty_cache()
+        if cleanup_dir:
+            shutil.rmtree(cleanup_dir, ignore_errors=True)
         
     final_res = {
-        "config": {"method": "energy_matthew_ast", "alpha": args.alpha},
+        "config": {
+            "method": "energy_matthew_ast",
+            "alpha": args.alpha,
+            "model_id": model_id,
+            "num_samples": len(items),
+            "tensor_parallel_size": args.tensor_parallel_size,
+            "max_model_len": args.max_model_len,
+            "enforce_eager": args.enforce_eager,
+            "prepared_model_dir": args.prepared_model_dir,
+        },
         "metrics": {
             "First_pass_success": pass_at_1 / len(items),
             "Retry_enabled_success": recovery_success / len(items)
@@ -263,7 +308,7 @@ def main():
     print(f"Results for alpha={args.alpha}:")
     print(json.dumps(final_res, indent=2))
     
-    os.makedirs("results/llama1b_bfcl_ast", exist_ok=True)
+    os.makedirs(args.output_root, exist_ok=True)
     with open(out_path, "w") as f:
         json.dump(final_res, f, indent=2)
 

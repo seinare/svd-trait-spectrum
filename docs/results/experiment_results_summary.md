@@ -2,6 +2,10 @@
 
 Generated from remote run artifacts on xjhl4 and xjha6. CSV files in this directory contain the full long-form tables.
 
+Additional subtask alpha-gradient tables:
+- `llama_lm_eval_alpha_subtasks.md`: Llama 1B/3B MMLU, GPQA, and AGIEval subtask comparison across alpha `-0.3..0.3`.
+- `llama_lm_eval_alpha_subtasks.csv`: machine-readable version of the same comparison.
+
 ## Coverage Check
 
 | model | alpha | missing_module |

@@ -1,0 +1,77 @@
+{
+  "missing": [
+    {
+      "model": "qwen3_8b",
+      "alpha": -0.4,
+      "module": "standard_cot",
+      "present": false
+    },
+    {
+      "model": "qwen3_8b",
+      "alpha": -0.4,
+      "module": "lm_eval",
+      "present": false
+    },
+    {
+      "model": "qwen3_8b",
+      "alpha": -0.3,
+      "module": "lm_eval",
+      "present": false
+    },
+    {
+      "model": "qwen3_8b",
+      "alpha": -0.2,
+      "module": "lm_eval",
+      "present": false
+    },
+    {
+      "model": "qwen3_8b",
+      "alpha": -0.1,
+      "module": "lm_eval",
+      "present": false
+    },
+    {
+      "model": "qwen3_8b",
+      "alpha": 0.0,
+      "module": "standard_cot",
+      "present": false
+    },
+    {
+      "model": "qwen3_8b",
+      "alpha": 0.0,
+      "module": "lm_eval",
+      "present": false
+    },
+    {
+      "model": "qwen3_8b",
+      "alpha": 0.1,
+      "module": "lm_eval",
+      "present": false
+    },
+    {
+      "model": "qwen3_8b",
+      "alpha": 0.2,
+      "module": "lm_eval",
+      "present": false
+    },
+    {
+      "model": "qwen3_8b",
+      "alpha": 0.3,
+      "module": "standard_cot",
+      "present": false
+    },
+    {
+      "model": "qwen3_8b",
+      "alpha": 0.3,
+      "module": "lm_eval",
+      "present": false
+    },
+    {
+      "model": "qwen3_8b",
+      "alpha": 0.4,
+      "module": "lm_eval",
+      "present": false
+    }
+  ],
+  "note": "Qwen residual TP=2 lm-eval / CoT still running when parsed; Llama1B alpha=0 root-level run has been merged."
+}

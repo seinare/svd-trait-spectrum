@@ -247,8 +247,15 @@ def main():
     run_name = f"{model_name_safe}_alpha{args.alpha}_{args.backend}"
     output_dir = os.path.join(args.output_root, run_name)
     if os.path.exists(output_dir) and not args.force:
-        print(f"Output exists: {output_dir}")
-        return
+        result_files = []
+        for root, _, files in os.walk(output_dir):
+            result_files.extend(f for f in files if f.startswith("results_") and f.endswith(".json"))
+        if result_files:
+            print(f"Output exists with results: {output_dir}")
+            return
+        raise RuntimeError(f"Output exists without lm-eval results; pass --force or remove it: {output_dir}")
+    if os.path.exists(output_dir) and args.force:
+        shutil.rmtree(output_dir)
     os.makedirs(output_dir, exist_ok=True)
 
     tokenizer_source = args.prepared_model_dir or model_id

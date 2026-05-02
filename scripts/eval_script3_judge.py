@@ -6,6 +6,7 @@ import re
 import shutil
 import tempfile
 import urllib.request
+import time
 import pandas as pd
 from datasets import load_dataset
 from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -87,7 +88,7 @@ def resolve_judge_model(model_name):
     return aliases.get(model_name, model_name)
 
 
-def evaluate_with_judge(api_key, judge_model, judge_base_url, task, prompt, response, reference):
+def evaluate_with_judge(api_key, judge_model, judge_base_url, task, prompt, response, reference, max_retries=5):
     client = openai.OpenAI(api_key=api_key, base_url=judge_base_url)
     
     if task == "TruthfulQA":
@@ -168,22 +169,27 @@ Output only valid JSON in the following format:
         score_key = "safety_score"
         max_score = 3
 
-    try:
-        completion = client.chat.completions.create(
-            model=judge_model,
-            messages=[
-                {"role": "system", "content": sys_prompt},
-                {"role": "user", "content": user_prompt}
-            ],
-            response_format={"type": "json_object"},
-            temperature=0.0,
-        )
-        ans = completion.choices[0].message.content.strip()
-        data = parse_judge_json(ans)
-        score = float(data.get(score_key, 0.0))
-        return score, data.get("short_rationale", ""), max_score
-    except Exception as e:
-        raise RuntimeError(f"Judge API error for {task}: {e}") from e
+    last_error = None
+    for attempt in range(1, max_retries + 1):
+        try:
+            completion = client.chat.completions.create(
+                model=judge_model,
+                messages=[
+                    {"role": "system", "content": sys_prompt},
+                    {"role": "user", "content": user_prompt}
+                ],
+                response_format={"type": "json_object"},
+                temperature=0.0,
+            )
+            ans = (completion.choices[0].message.content or "").strip()
+            data = parse_judge_json(ans)
+            score = float(data.get(score_key, 0.0))
+            return score, data.get("short_rationale", ""), max_score
+        except Exception as e:
+            last_error = e
+            if attempt < max_retries:
+                time.sleep(min(20, 2 * attempt))
+    raise RuntimeError(f"Judge API error for {task} after {max_retries} attempts: {last_error}") from last_error
 
 def judge_batch(api_key, judge_model, judge_base_url, task, items, max_workers=20):
     scores = []

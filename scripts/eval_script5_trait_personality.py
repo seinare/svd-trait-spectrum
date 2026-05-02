@@ -2,7 +2,6 @@ import argparse
 import json
 import os
 import random
-import re
 import shutil
 import tempfile
 
@@ -47,68 +46,80 @@ def model_name_safe(model_id):
     return model_id.rstrip("/").split("/")[-1].replace(".", "_")
 
 
-def build_prompt(tokenizer, question, options, disable_thinking=False):
-    option_text = "\n".join(f"{letter}. {text}" for letter, text, _ in options)
-    user = (
-        "Choose the answer that best matches how you would naturally respond.\n"
-        "Reply with exactly one letter: A, B, C, or D.\n\n"
-        f"Question: {question}\n\n"
-        f"{option_text}\n\n"
-        "Answer:"
-    )
-    messages = [{"role": "user", "content": user}]
-    try:
-        return tokenizer.apply_chat_template(
-            messages,
-            tokenize=False,
-            add_generation_prompt=True,
-            enable_thinking=not disable_thinking,
-        )
-    except TypeError:
-        return tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-
-
-def first_choice(text):
-    text = text.strip()
-    if "</think>" in text:
-        text = text.split("</think>")[-1].strip()
-    match = re.search(r"\b([ABCD])\b", text.upper())
-    if match:
-        return match.group(1)
-    match = re.search(r"^\s*([ABCD])", text.upper())
-    return match.group(1) if match else None
-
-
-def load_trait_items(tokenizer, splits, limit, seed, disable_thinking):
-    prompts = []
+def load_trait_items(tokenizer, splits, limit, seed):
+    prompt_token_ids = []
     metadata = []
     for split in splits:
         ds = load_dataset("mirlab/TRAIT", split=split, token=True)
         if limit is not None:
             ds = ds.select(range(min(limit, len(ds))))
         for idx, row in enumerate(ds):
-            options = [
-                ("", row["response_high1"], "high"),
-                ("", row["response_high2"], "high"),
-                ("", row["response_low1"], "low"),
-                ("", row["response_low2"], "low"),
+            responses = [
+                ("high1", row["response_high1"], "high"),
+                ("high2", row["response_high2"], "high"),
+                ("low1", row["response_low1"], "low"),
+                ("low2", row["response_low2"], "low"),
             ]
             rng = random.Random(f"{seed}:{split}:{idx}")
-            rng.shuffle(options)
-            lettered = []
-            for letter, (_, text, label) in zip("ABCD", options):
-                lettered.append((letter, text, label))
-            prompts.append(build_prompt(tokenizer, row["question"], lettered, disable_thinking))
+            rng.shuffle(responses)
+            prompt = f"Question: {row['question']}\nResponse: "
+            base_ids = tokenizer.encode(prompt, add_special_tokens=True)
+            options = []
+            for name, text, label in responses:
+                answer_ids = tokenizer.encode(text, add_special_tokens=False)
+                if not answer_ids:
+                    continue
+                prompt_token_ids.append(base_ids + answer_ids)
+                options.append(
+                    {
+                        "name": name,
+                        "label": label,
+                        "text": text,
+                        "answer_token_count": len(answer_ids),
+                    }
+                )
             metadata.append(
                 {
                     "split": split,
                     "index": idx,
                     "question": row["question"],
-                    "labels": {letter: label for letter, _, label in lettered},
-                    "options": {letter: text for letter, text, _ in lettered},
+                    "base_token_count": len(base_ids),
+                    "options": options,
                 }
             )
-    return prompts, metadata
+    return prompt_token_ids, metadata
+
+
+def token_logprob(entry, token_id):
+    if entry is None:
+        return None
+    value = entry.get(token_id)
+    if value is None:
+        return None
+    if hasattr(value, "logprob"):
+        return value.logprob
+    if isinstance(value, dict):
+        return value.get("logprob")
+    return value
+
+
+def answer_log_likelihood(output, token_ids, base_token_count):
+    total = 0.0
+    used = 0
+    prompt_logprobs = output.prompt_logprobs or []
+    for pos in range(base_token_count, len(token_ids)):
+        lp = token_logprob(prompt_logprobs[pos], token_ids[pos])
+        if lp is None:
+            continue
+        total += float(lp)
+        used += 1
+    return total, used
+
+
+def softmax(values):
+    tensor = torch.tensor(values, dtype=torch.float64)
+    probs = torch.softmax(tensor, dim=0)
+    return [float(x) for x in probs.tolist()]
 
 
 def summarize(records):
@@ -116,18 +127,26 @@ def summarize(records):
     for rec in records:
         bucket = by_trait.setdefault(
             rec["trait"],
-            {"total": 0, "high": 0, "low": 0, "invalid": 0, "other": 0},
+            {
+                "total": 0,
+                "trait_score_sum": 0.0,
+                "high1_prob_sum": 0.0,
+                "high2_prob_sum": 0.0,
+                "low1_prob_sum": 0.0,
+                "low2_prob_sum": 0.0,
+            },
         )
         bucket["total"] += 1
-        outcome = rec["outcome"]
-        bucket[outcome] = bucket.get(outcome, 0) + 1
+        bucket["trait_score_sum"] += rec["trait_score"]
+        for name, prob in rec["probabilities"].items():
+            bucket[f"{name}_prob_sum"] += prob
     for stats in by_trait.values():
         total = stats["total"] or 1
-        valid = stats["high"] + stats["low"]
-        stats["high_rate"] = stats["high"] / total
-        stats["low_rate"] = stats["low"] / total
-        stats["invalid_rate"] = stats["invalid"] / total
-        stats["trait_score"] = (stats["high"] - stats["low"]) / valid if valid else 0.0
+        stats["trait_score"] = stats.pop("trait_score_sum") / total
+        for name in ["high1", "high2", "low1", "low2"]:
+            stats[f"{name}_prob"] = stats.pop(f"{name}_prob_sum") / total
+        stats["high_prob"] = stats["high1_prob"] + stats["high2_prob"]
+        stats["low_prob"] = stats["low1_prob"] + stats["low2_prob"]
     return by_trait
 
 
@@ -142,7 +161,7 @@ def main():
     parser.add_argument("--tensor_parallel_size", type=int, default=1)
     parser.add_argument("--gpu_memory_utilization", type=float, default=0.6)
     parser.add_argument("--max_model_len", type=int, default=4096)
-    parser.add_argument("--max_tokens", type=int, default=8)
+    parser.add_argument("--max_tokens", type=int, default=1)
     parser.add_argument("--enforce_eager", action="store_true")
     parser.add_argument("--disable_thinking", action="store_true")
     parser.add_argument("--output_root", type=str, default="results/trait/eval_script5_trait_personality")
@@ -196,12 +215,11 @@ def main():
         torch.cuda.empty_cache()
 
     try:
-        prompts, metadata = load_trait_items(
+        prompt_token_ids, metadata = load_trait_items(
             tokenizer,
             splits=splits,
             limit=args.limit,
             seed=args.seed,
-            disable_thinking=args.disable_thinking,
         )
         llm_kwargs = {
             "model": eval_model_dir,
@@ -214,32 +232,50 @@ def main():
         if args.enforce_eager:
             llm_kwargs["enforce_eager"] = True
         llm = LLM(**llm_kwargs)
-        sampling = SamplingParams(temperature=0.0, max_tokens=args.max_tokens)
-        outputs = llm.generate(prompts, sampling)
+        sampling = SamplingParams(
+            temperature=0.0,
+            max_tokens=args.max_tokens,
+            prompt_logprobs=1,
+        )
+        outputs = llm.generate(prompt_token_ids=prompt_token_ids, sampling_params=sampling)
 
         records = []
         debug = []
-        for meta, out in zip(metadata, outputs):
-            text = out.outputs[0].text
-            choice = first_choice(text)
-            if choice is None:
-                outcome = "invalid"
-            else:
-                outcome = meta["labels"].get(choice, "invalid")
+        cursor = 0
+        for meta in metadata:
+            log_likelihoods = {}
+            used_tokens = {}
+            for option in meta["options"]:
+                token_ids = prompt_token_ids[cursor]
+                out = outputs[cursor]
+                log_likelihood, used = answer_log_likelihood(
+                    out,
+                    token_ids=token_ids,
+                    base_token_count=meta["base_token_count"],
+                )
+                log_likelihoods[option["name"]] = log_likelihood
+                used_tokens[option["name"]] = used
+                cursor += 1
+            probs_order = [option["name"] for option in meta["options"]]
+            probs = dict(zip(probs_order, softmax([log_likelihoods[name] for name in probs_order])))
+            trait_score = sum(probs[name] for name in probs if name.startswith("high"))
             rec = {
                 "trait": meta["split"],
                 "index": meta["index"],
-                "choice": choice,
-                "outcome": outcome,
-                "finish_reason": out.outputs[0].finish_reason,
+                "trait_score": trait_score,
+                "probabilities": probs,
+                "log_likelihoods": log_likelihoods,
+                "used_tokens": used_tokens,
             }
             records.append(rec)
-            if len(debug) < 50 and outcome == "invalid":
-                debug.append({"meta": meta, "output": text})
+            if len(debug) < 10:
+                debug.append({"meta": meta, **rec})
 
         result = {
             "config": {
                 "method": "eval_script5_trait_personality",
+                "scoring": "softmax_log_likelihood_high_probability",
+                "prompt_template": "Question: {q}\\nResponse: ",
                 "alpha": args.alpha,
                 "model_id": args.model_id,
                 "splits": splits,
@@ -256,7 +292,8 @@ def main():
                 "eval_model_dir": eval_model_dir,
             },
             "scores": summarize(records),
-            "debug_invalid": debug,
+            "records": records,
+            "debug_examples": debug,
         }
         with open(output_path, "w") as f:
             json.dump(result, f, indent=2, ensure_ascii=False)

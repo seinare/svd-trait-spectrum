@@ -1,0 +1,171 @@
+{
+  "config": {
+    "method": "eval_script1_standard_cot",
+    "alpha": -0.3,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.2-3B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.6,
+    "max_model_len": 8192,
+    "max_tokens": 8192,
+    "thinking_budget": null,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/pruning_codex/llama3b/Llama-3.2-3B-Instruct-alpha-0.3",
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama3b/Llama-3.2-3B-Instruct-alpha-0.3",
+    "thinking_mode": "cot_enabled"
+  },
+  "scores_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.99,
+      "Wrong_Answer_Rate": 0.01,
+      "Correct_Rate": 0.0,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.99,
+      "Parse_Sources": {
+        "final_line": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "outcome": "format_error",
+          "ground_truth": "18",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1:  The first step is to understand the given information and the context of the problem.\nThe first thing to be mentioned is that the person's income is not in the form of \"Janet's\" is not in the text. The amount of money she has is not in the form of \"Every Day\" at the \"Farmers' Market\" (not \"at the) daily for $2 per fresh \"duck\" \"egg\" or \"s\" or \"s\" or \"in\" the \"market\" for \"f\" (for) \"get\" (for) \"s\" is \"s\" \"t\" \"o\" \"t\" \" \"u\" \"t\" \" \"u\" \"t\" \" \"u\" \"t\" \" \"u\" \"t\" \" \"u\" \"t\" \" \"u\" \"t\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \" \"u\" \" \" \"u\" \" \" \"u\" \" \" \" \"u\" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \"",
+          "raw_preview": "## Step 1:  The first step is to understand the given information and the context of the problem.\nThe first thing to be mentioned is that the person's income is not in the form of \"Janet's\" is not in the text. The amount of money she has is not in the form of \"Every Day\" at the \"Farmers' Market\" (not \"at the) daily for $2 per fresh \"duck\" \"egg\" or \"s\" or \"s\" or \"in\" the \"market\" for \"f\" (for) \"get\" (for) \"s\" is \"s\" \"t\" \"o\" \"t\" \" \"u\" \"t\" \" \"u\" \"t\" \" \"u\" \"t\" \" \"u\" \"t\" \" \"u\" \"t\" \" \"u\" \"t\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \"u\" \" \" \"u\" \" \" \"u\" \" \" \"u\" \" \" \" \"u\" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \" \""
+        },
+        {
+          "index": 1,
+          "outcome": "format_error",
+          "ground_truth": "3",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "I'll be taking over the following text as a form of a response to your question, and then I'll be providing a brief analysis of the show's popularity of the show, and then I'll be doing a series of... (not) things. I'll be doing a series of, and I'll be doing a series of, and I'll be, and I, and I, and I, and I, and I, and, you, and, you, and, you, and, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, ",
+          "raw_preview": "I'll be taking over the following text as a form of a response to your question, and then I'll be providing a brief analysis of the show's popularity of the show, and then I'll be doing a series of... (not) things. I'll be doing a series of, and I'll be doing a series of, and I'll be, and I, and I, and I, and I, and I, and, you, and, you, and, you, and, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, no, "
+        },
+        {
+          "index": 2,
+          "outcome": "format_error",
+          "ground_truth": "70000",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1:  The first part of the book is about the first $20% of the story of a 20% of the 20% of an 100% of an 100% of the 100% of the 100% of the 100% of the 1000 and 2000 of the 1000 of the 1000 of the 1000 of the 1000 of the 1000 of the 1000 of the 1000 of the 2000 of the 2000 of the 2000 of the 2000 of the 2000 of the 2000 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the ",
+          "raw_preview": "## Step 1:  The first part of the book is about the first $20% of the story of a 20% of the 20% of an 100% of an 100% of the 100% of the 100% of the 100% of the 1000 and 2000 of the 1000 of the 1000 of the 1000 of the 1000 of the 1000 of the 1000 of the 1000 of the 2000 of the 2000 of the 2000 of the 2000 of the 2000 of the 2000 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 of the 200 "
+        },
+        {
+          "index": 3,
+          "outcome": "format_error",
+          "ground_truth": "540",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1:  The total distance to be run by the individual is not the sum of the individual sprints of the 3 sprints.  So, we can find the total by taking the number of 60 meter sprints and then the number of 15 meter sprints that he has to do in the remaining 30 s of the 90.  So, he will have to do the remaining 30 s of the 90.  In other 30 s of the 90.  In other 30 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 9",
+          "raw_preview": "## Step 1:  The total distance to be run by the individual is not the sum of the individual sprints of the 3 sprints.  So, we can find the total by taking the number of 60 meter sprints and then the number of 15 meter sprints that he has to do in the remaining 30 s of the 90.  So, he will have to do the remaining 30 s of the 90.  In other 30 s of the 90.  In other 30 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90"
+        },
+        {
+          "index": 4,
+          "outcome": "format_error",
+          "ground_truth": "20",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find the number of cups of feed that should be given to the 20 chickens in the first 20 of the 20 of the 20 of the 20 of the 20 that should be  not  not  not  not  not  not  is  not  is  3  = 1 3  = 1 3  = 1 2  = 1 2  = 1 2  = 1 2  = 1 2  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1",
+          "raw_preview": "To find the number of cups of feed that should be given to the 20 chickens in the first 20 of the 20 of the 20 of the 20 of the 20 that should be  not  not  not  not  not  not  is  not  is  3  = 1 3  = 1 3  = 1 2  = 1 2  = 1 2  = 1 2  = 1 2  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1  = 1"
+        }
+      ],
+      "Correct_Debug_Examples": []
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.97,
+      "Wrong_Answer_Rate": 0.03,
+      "Correct_Rate": 0.0,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.98,
+      "Parse_Sources": {
+        "boxed": 1,
+        "final_line": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "outcome": "format_error",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: The first two pages of the document are in a scanned in a text in a format that is not in an  English. The provided in the 3 different types of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (",
+          "raw_preview": "## Step 1: The first two pages of the document are in a scanned in a text in a format that is not in an  English. The provided in the 3 different types of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3) of (3"
+        },
+        {
+          "index": 1,
+          "outcome": "format_error",
+          "ground_truth": "p - q",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## First, I will provide a brief introduction to the concept of a \"non-ergodic\" (also known as \"in\" as \"per-\" of a \"puzz\" of a \"r\" of \"d\" of \"l\" of \"a\" of \"n\" of \"s\" of \"t\" of \"u\" of \"l\" of \"n\" of \"w\" of \"v\" of \"o\" of \"n\" of \"s\" of \"t\" of \"u\" of \"s\" of \"l\" of \"s\" of \"n\" of \"s\" of \" t\" of \" n\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of",
+          "raw_preview": "## First, I will provide a brief introduction to the concept of a \"non-ergodic\" (also known as \"in\" as \"per-\" of a \"puzz\" of a \"r\" of \"d\" of \"l\" of \"a\" of \"n\" of \"s\" of \"t\" of \"u\" of \"l\" of \"n\" of \"w\" of \"v\" of \"o\" of \"n\" of \"s\" of \"t\" of \"u\" of \"s\" of \"l\" of \"s\" of \"n\" of \"s\" of \" t\" of \" n\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of \" s\" of"
+        },
+        {
+          "index": 2,
+          "outcome": "format_error",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "The value of the function $f$ that is not in the first to the left of the 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 ",
+          "raw_preview": "The value of the function $f$ that is not in the first to the left of the 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "
+        },
+        {
+          "index": 3,
+          "outcome": "format_error",
+          "ground_truth": "9",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: To find the number of positive whole number divisors of 196, we first need to do is to:\n- 1. 196 is already a whole number, and we are already in the 196. So, the number of the 196 is already a whole, and we are in the 196. We are in the 196. We are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196",
+          "raw_preview": "## Step 1: To find the number of positive whole number divisors of 196, we first need to do is to:\n- 1. 196 is already a whole number, and we are already in the 196. So, the number of the 196 is already a whole, and we are in the 196. We are in the 196. We are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we are in the 196, and we "
+        },
+        {
+          "index": 4,
+          "outcome": "format_error",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1:  The following are the results of the 2003  World  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  ",
+          "raw_preview": "## Step 1:  The following are the results of the 2003  World  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -"
+        }
+      ],
+      "Correct_Debug_Examples": []
+    }
+  }
+}

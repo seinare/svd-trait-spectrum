@@ -1,0 +1,247 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": 0.0,
+    "model_id": "Qwen/Qwen3-8B",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 2048,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "Qwen/Qwen3-8B",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.13,
+      "Correct_Rate": 0.87,
+      "Parse_Sources": {
+        "boxed": 90,
+        "final_number": 10
+      },
+      "Debug_Examples": [
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "45",
+          "prediction": "0.5",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given the following information:\n\n- John drives for **3 hours** at **60 mph** before turning around.\n- He then tries to get home in **4 hours**, but:\n  - Spends **2 hours** in **standstill traffic**.\n  - Then drives for **0.5 hours** at **30 mph**.\n  - Then drives the **remaining time** (which is $4 - 2 - 0.5 = 1.5$ hours) at **80 mph**.\n\nWe are to find how far **he is from home** at the end of those 4 hours.\n\n---\n\n### Step 1: Calculate the distance from home before turning around\n\nHe drove for 3 hours at 60 mph:\n\n$$\n\\text{Distance} = 3 \\times 60 = 180 \\text{ miles}\n$$\n\nSo, he is **180 miles away from home** when he turns around.\n\n---\n\n### Step 2: Calculate the distance he covers on the way back\n\nHe spends:\n\n- 2 hours in **standstill traffic** \u2192 0 miles\n- 0.5 hours at **30 mph** \u2192 $0.5 \\times"
+        },
+        {
+          "index": 12,
+          "bucket": "wrong",
+          "ground_truth": "13",
+          "prediction": "12",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "To determine how many years it will take for Carlos to start earning money on the lemon tree, we need to calculate the **net profit per year** and find when it becomes **positive**.\n\n---\n\n### **Initial Cost to Plant the Tree:**\n$$\n\\$90\n$$\n\n---\n\n### **Annual Income from Lemons:**\n- **Lemons per year:** 7  \n- **Price per lemon:** \\$1.5  \n- **Annual income:**  \n$$\n7 \\times 1.5 = \\$10.50\n$$\n\n---\n\n### **Annual Cost to Water and Feed the Tree:**\n$$\n\\$3\n$$\n\n---\n\n### **Net Profit per Year:**\n$$\n\\$10.50 - \\$3 = \\$7.50\n$$\n\n---\n\n### **Time to Break Even:**\n$$\n\\frac{\\$90}{\\$7.50} = 12 \\text{ years}\n$$\n\n---\n\n### **Answer:**\n$$\n\\boxed{12}\n$$"
+        },
+        {
+          "index": 13,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "5",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are told:\n\n- Melanie sold **a third** of her vacuum cleaners at the **green house**.\n- She sold **2 more** to the **red house**.\n- She sold **half of what was left** at the **orange house**.\n- She has **5 vacuum cleaners left**.\n\nLet\u2019s define the total number of vacuum cleaners she started with as $ x $.\n\n---\n\n### Step 1: Sold at the green house\nShe sold $ \\frac{1}{3}x $ at the green house.\n\nRemaining after green house:  \n$$\nx - \\frac{1}{3}x = \\frac{2}{3}x\n$$\n\n---\n\n### Step 2: Sold 2 more to the red house\nRemaining after red house:  \n$$\n\\frac{2}{3}x - 2\n$$\n\n---\n\n### Step 3: Sold half of what was left at the orange house\nShe sold half of $ \\frac{2}{3}x - 2 $, so remaining after orange house is:\n$$\n\\frac{1}{2} \\left( \\frac{2}{3}x - 2 \\right)\n$$\n\nWe are told this equals 5:\n$$"
+        },
+        {
+          "index": 19,
+          "bucket": "wrong",
+          "ground_truth": "6",
+          "prediction": "4",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given:\n\n- Total trail distance = 12 miles  \n- First 4 miles took 1 hour  \n- Next 2 miles took 1 hour  \n- She wants an **average speed of 4 miles per hour** for the entire 12-mile trail  \n- We need to find the **speed** she must walk the **remaining distance** to achieve this average speed.\n\n---\n\n### Step 1: Total time needed for average speed of 4 mph\n\n$$\n\\text{Average speed} = \\frac{\\text{Total distance}}{\\text{Total time}} \\Rightarrow \\text{Total time} = \\frac{\\text{Total distance}}{\\text{Average speed}} = \\frac{12}{4} = 3 \\text{ hours}\n$$\n\n---\n\n### Step 2: Time already spent\n\n- First 4 miles: 1 hour  \n- Next 2 miles: 1 hour  \n- Total time so far: $1 + 1 = 2$ hours\n\n---\n\n### Step 3: Time remaining\n\n$$\n\\text{Time remaining} = 3 - 2 = 1 \\text{ hour}\n$$\n\n---\n\n### Step 4: Remaining distance\n\n$$\n\\text{"
+        },
+        {
+          "index": 37,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "0",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "John sells all his lego sets, so he **does not still have any lego sets**.\n\n$$\n\\boxed{0}\n$$"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.58,
+      "Correct_Rate": 0.42,
+      "Parse_Sources": {
+        "boxed": 35,
+        "final_number": 65
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "2",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given:\n\n$$\np = \\sum_{k = 1}^\\infty \\frac{1}{k^2}, \\quad q = \\sum_{k = 1}^\\infty \\frac{1}{k^3}\n$$\n\nand we are to express:\n\n$$\n\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}\n$$\n\nin terms of $ p $ and $ q $.\n\n---\n\n### Step 1: Change of variables\n\nLet us define $ n = j + k $. Then for each fixed $ n \\geq 2 $, the number of pairs $ (j, k) $ such that $ j + k = n $ is $ n - 1 $, since $ j $ can range from 1 to $ n - 1 $, and $ k = n - j $.\n\nSo we can rewrite the double sum as:\n\n$$\n\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\sum_{n = 2}^\\infty \\sum_{"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "0",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given the function:\n\n$$\nf(x) = \\frac{3x - 2}{x - 2}\n$$\n\nWe are asked to find:\n\n$$\nf(-2) + f(-1) + f(0)\n$$\n\n### Step 1: Compute $ f(-2) $\n\n$$\nf(-2) = \\frac{3(-2) - 2}{-2 - 2} = \\frac{-6 - 2}{-4} = \\frac{-8}{-4} = 2\n$$\n\n### Step 2: Compute $ f(-1) $\n\n$$\nf(-1) = \\frac{3(-1) - 2}{-1 - 2} = \\frac{-3 - 2}{-3} = \\frac{-5}{-3} = \\frac{5}{3}\n$$\n\n### Step 3: Compute $ f(0) $\n\n$$\nf(0) = \\frac{3(0) - 2}{0 - 2} = \\frac{-2}{-2} = 1\n$$\n\n### Step 4: Add the results\n\n$$\nf(-2) + f(-1) + f(0"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "5.6",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To determine which student has the greatest average speed, we calculate the **average speed** for each student using the formula:\n\n$$\n\\text{Average speed} = \\frac{\\text{Distance}}{\\text{Time}}\n$$\n\nFrom the graph:\n\n- **Evelyn**: (1.25, 4.5) \u2192 Time = 1.25, Distance = 4.5 \u2192 Speed = $ \\frac{4.5}{1.25} = 3.6 $\n- **Briana**: (2.5, 2.2) \u2192 Time = 2.5, Distance = 2.2 \u2192 Speed = $ \\frac{2.2}{2.5} = 0.88 $\n- **Carla**: (4.25, 5.2) \u2192 Time = 4.25, Distance = 5.2 \u2192 Speed = $ \\frac{5.2}{4.25} \\approx 1.22 $\n- **Debra**: (5.6, 2.8) \u2192 Time = 5.6, Distance = 2.8 \u2192 Speed = $ \\frac{2.8}{5.6}"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "27",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are asked to find the **smallest positive perfect cube** that can be written as the **sum of three consecutive integers**.\n\n---\n\n### Step 1: Represent the three consecutive integers\n\nLet the three consecutive integers be:\n\n$$\nn-1, \\quad n, \\quad n+1\n$$\n\nTheir sum is:\n\n$$\n(n-1) + n + (n+1) = 3n\n$$\n\nSo, the sum of three consecutive integers is always a **multiple of 3**.\n\n---\n\n### Step 2: Find the smallest perfect cube that is a multiple of 3\n\nWe are looking for the **smallest positive perfect cube** that is also a multiple of 3.\n\nLet\u2019s list the perfect cubes:\n\n- $1^3 = 1$\n- $2^3 = 8$\n- $3^3 = 27$\n- $4^3 = 64$\n- $5^3 = 125$\n- $6^3 = 216$\n- $7^3 = 343$\n- $8^3 = 512$\n- $9^3 = 729$\n- $10^3 = 1"
+        },
+        {
+          "index": 7,
+          "bucket": "wrong",
+          "ground_truth": "90^\\circ",
+          "prediction": "-4",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given two lines in 3D space, defined by the equations:\n\n1. $ 2x = 3y = -z $\n2. $ 6x = -y = -4z $\n\nWe are to find the **angle between these two lines**.\n\n---\n\n### Step 1: Find direction vectors of the lines\n\n#### Line 1: $ 2x = 3y = -z $\n\nLet\u2019s set $ 2x = 3y = -z = t $, where $ t $ is a parameter.\n\nThen:\n- $ x = \\frac{t}{2} $\n- $ y = \\frac{t}{3} $\n- $ z = -t $\n\nSo, a point on the line is $ \\left( \\frac{t}{2}, \\frac{t}{3}, -t \\right) $\n\nThe direction vector is:\n$$\n\\vec{v}_1 = \\left( \\frac{1}{2}, \\frac{1}{3}, -1 \\right)\n$$\n\n#### Line 2: $ 6x = -y = -4z $\n\nLet\u2019s set $ 6x = -y = -4z = s $, where $ s $ is"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.11,
+      "Correct_Rate": 0.89,
+      "Parse_Sources": {
+        "boxed": 99,
+        "final_option": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 19,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "D",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D}"
+        },
+        {
+          "index": 49,
+          "bucket": "wrong",
+          "ground_truth": "A",
+          "prediction": "D",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D}"
+        },
+        {
+          "index": 53,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "B",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.32,
+      "Correct_Rate": 0.68,
+      "Parse_Sources": {
+        "boxed": 96,
+        "final_number": 2,
+        "final_line": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "Kris Brown kicked 3 field goals. \n\n\\boxed{3}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "JaMarcus Russell",
+          "prediction": "80",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "The longest pass was thrown by JaMarcus Russell, a 29-yard touchdown pass to Johnnie Lee Higgins. However, the longest pass overall in the game was the 80-yard punt return for a touchdown by Johnnie Lee Higgins, which was not a pass but a return. The longest pass thrown was by JaMarcus Russell, a 29-yard pass. However, the longest pass in the game was the 80-yard punt return, which was not a pass. The longest pass thrown was by JaMarcus Russell, a 29-yard pass. However, the longest pass in the game was the 80-yard punt return, which was not a pass. The longest pass thrown was by JaMarcus Russell, a 29-yard pass. However, the longest pass in the game was the 80-yard punt return, which was not a pass. The longest pass thrown was by JaMarcus Russell, a 29-yard pass. However, the longest pass in the game was the 80-yard punt return, which was not a pass. The longest pass thrown was by JaMarcus Russell, a 29-yard pass. However, the longest pass in the game was the 80-yard punt return, which"
+        },
+        {
+          "index": 11,
+          "bucket": "wrong",
+          "ground_truth": "4",
+          "prediction": "5",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{5}"
+        },
+        {
+          "index": 12,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        }
+      ]
+    }
+  }
+}

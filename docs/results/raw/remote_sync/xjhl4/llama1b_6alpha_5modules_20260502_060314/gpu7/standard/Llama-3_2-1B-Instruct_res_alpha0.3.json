@@ -1,0 +1,251 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": 0.3,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.2-1B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/pruning_codex/llama1b/Llama-3.2-1B-Instruct-alpha0.3",
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama1b/Llama-3.2-1B-Instruct-alpha0.3",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.01,
+      "Wrong_Answer_Rate": 0.98,
+      "Correct_Rate": 0.01,
+      "Parse_Sources": {
+        "final_number": 75,
+        "final_line": 23,
+        "boxed": 1,
+        "format_error": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "64",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "To calculate Janet's daily earnings, subtract 16 x 4 = 64"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "3",
+          "prediction": "I don't know",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "I don't know"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "1.5",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "To calculate Josh's profit, we need to calculate 150% of $80,000.\n\n150% of $80,000 = $80,000 x 1.5"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "540",
+          "prediction": "I = \u221a(N * S * R * T)",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "I = \u221a(N * S * R * T)"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "25",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "To solve this problem, we need to calculate the total cups of feed given to Wendi's chickens in the final meal.\n\nShe gives her chickens 15 cups of feed in the morning, which contains seeds, mealworms, and vegetables to help keep them healthy.\n\nShe gives her chickens 25 cups of feed in the afternoon"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.9,
+      "Correct_Rate": 0.1,
+      "Parse_Sources": {
+        "final_number": 93,
+        "boxed": 2,
+        "final_line": 5
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": "3",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "## Step 1\nTo convert the point (0,3) from rectangular coordinates to polar coordinates, we need to calculate the radius r and theta.\n\n## Step 2\nThe radius r can be calculated using the formula r = sqrt(x^2 + y^2), where x = 0 and y = 3. However, this formula assumes x = 0, which is invalid. We need to calculate r = sqrt(x^2 + y^2) = sqrt(0^2 + 3^2) = sqrt(9) = 3.\n\n## Step 3"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "3",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "## Step 1\n\\[p = \\sum_{k = 1}^\\infty \\frac{1}{k^2} \\quad \\text{and} \\quad q = \\sum_{k = 1}^\\infty \\frac{1}{k^3}.\\]\n\n## Step 2\n\\[p = \\sum_{k = 1}^\\infty \\frac{1}{k^2} \\quad \\text{and} \\quad q = \\sum_{k = 1}^\\infty \\frac{1}{k^3}.\\]\n\n## Step 3"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "-2",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "## Step 1\n$f(x) = \\frac{3x-2}{x-2}$"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "98",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "To solve this problem, we need to find the divisors of 196.\n\nDivisors: 1, 2, 4, 7, 14, 28, 49, 98"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "2",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "## Step 1\nTo solve this problem, we need to calculate the average speed of Briana, Carla, Debra, Angela, and Evelyn.\n\n## Step 2\nTo calculate Briana's average speed, Carla's average speed, Debra's average speed, Angela's average speed, Evelyn's average speed, Angela's average speed, Briana's average speed, Carla's average speed, Angela's average speed"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.92,
+      "Correct_Rate": 0.08,
+      "Parse_Sources": {
+        "final_line": 76,
+        "final_option": 22,
+        "boxed": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "D",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "D"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "D",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "D"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "A   C",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "A   C"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "IS",
+          "parse_source": "final_option",
+          "finish_reason": "stop",
+          "output": "The final answer is C"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "A   B",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "A   B"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.89,
+      "Correct_Rate": 0.11,
+      "Parse_Sources": {
+        "final_line": 32,
+        "final_number": 64,
+        "boxed": 4
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "Oakland Raiders",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "Oakland Raiders"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "I don't KNO",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "I don't KNO"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "Oakland Raiders",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "Oakland Raiders"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "30",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "30"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "29",
+          "prediction": "63",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "63"
+        }
+      ]
+    }
+  }
+}

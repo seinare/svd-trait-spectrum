@@ -1,0 +1,246 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": -0.3,
+    "model_id": "Qwen/Qwen3-8B",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 2048,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha-0.3",
+    "eval_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha-0.3",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.55,
+      "Correct_Rate": 0.45,
+      "Parse_Sources": {
+        "boxed": 95,
+        "final_number": 5
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "14",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{14}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "120000",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "$$\n\\boxed{120000}\n$$"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "10",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{10}"
+        },
+        {
+          "index": 7,
+          "bucket": "wrong",
+          "ground_truth": "160",
+          "prediction": "120",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "First, calculate the total time for the download without the restart: 200 GB / 2 GB/minute = 100 minutes.  \nThen, calculate the time for the restart: 20 minutes.  \nThen, calculate the total time for the download with the restart: 100 minutes + 20 minutes = 120 minutes.  \nSo, the total time to download the file is 120 minutes.  \n\\boxed{120}"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "45",
+          "prediction": "120",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "$$\n\\boxed{120}\n$$"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.01,
+      "Wrong_Answer_Rate": 0.52,
+      "Correct_Rate": 0.47,
+      "Parse_Sources": {
+        "boxed": 54,
+        "final_number": 44,
+        "final_line": 1,
+        "format_error": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "2",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "$$\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\frac{p^2}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac{p}{2} + \\frac{p}{2} - \\frac"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "Carla",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Carla}"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "27",
+          "prediction": "8",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{8}"
+        },
+        {
+          "index": 7,
+          "bucket": "wrong",
+          "ground_truth": "90^\\circ",
+          "prediction": "3",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given the following equations for the lines in 3D space, and we are asked to find the angle between the two lines, in degrees. in the following way, in the the following way, in the the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, in the following way, "
+        },
+        {
+          "index": 9,
+          "bucket": "wrong",
+          "ground_truth": "4",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To determine the total number of values that can be obtained from the expression $2 \\cdot 3 \\cdot 4 \\cdot 5 + 1$ by inserting parentheses, we must consider the different ways the expression can be parenthesized, keeping the original order of the terms and the original operations (i.e., multiplication and addition, and no rearrangement of the terms or operations). The original expression is:  \n$$\n2 \\cdot 3 \\cdot 4 \\cdot 5 + 1\n$$  \nWe are only allowed to insert parentheses, and no rearrangement.  \nThe expression has 4 multiplications and 1 addition. The total number of ways to parenthesize the expression is determined by the number of ways to insert parentheses in the expression.  \nThe expression has 4 multiplications and 1 addition. The total number of ways to parenthesize the expression is the number of ways to insert parentheses in the expression.  \nThe expression has 4 multiplications and 1 addition. The total number of ways to parenthesize the expression is the number of ways to ins"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.14,
+      "Correct_Rate": 0.86,
+      "Parse_Sources": {
+        "boxed": 100
+      },
+      "Debug_Examples": [
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "A",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{A}"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 13,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "A",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "$\\boxed{A}$"
+        },
+        {
+          "index": 19,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "D",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D}"
+        },
+        {
+          "index": 29,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "A",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{A}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.57,
+      "Correct_Rate": 0.43,
+      "Parse_Sources": {
+        "boxed": 100
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "JaMarcus Russell",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{JaMarcus Russell}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "Oakland",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Oakland}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 7,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        }
+      ]
+    }
+  }
+}

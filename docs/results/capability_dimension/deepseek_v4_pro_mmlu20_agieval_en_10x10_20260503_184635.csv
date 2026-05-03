@@ -1,0 +1,4 @@
+group,task,n,Factual Knowledge,Language Understanding,Inductive Reasoning,Deductive Reasoning,Mathematical Computation,Structural Analysis,Ethical & Safety Judgment
+mmlu,mmlu_abstract_algebra,98,0.5117346938775511,0.08877551020408156,0.0,0.24489795918367355,0.10816326530612244,0.04642857142857143,0.0
+mmlu,mmlu_clinical_knowledge,100,0.9570000000000002,0.03800000000000001,0.0,0.0045000000000000005,0.0,0.0005,0.0
+mmlu,mmlu_college_biology,100,0.9210000000000004,0.0425,0.0015,0.022500000000000006,0.0,0.0125,0.0

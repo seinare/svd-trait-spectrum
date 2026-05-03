@@ -1,0 +1,93 @@
+START Sun May 3 00:01:29 CST 2026
+mmlu_abstract_algebra:   0%|          | 0/10 [00:00<?, ?it/s]{"event": "judged", "task": "mmlu_abstract_algebra", "item_id": "9e55c85e7d4f0078", "ok": true, "attempt": 1, "error": null}
+mmlu_abstract_algebra:  10%|█         | 1/10 [00:24<03:37, 24.18s/it]{"event": "judged", "task": "mmlu_abstract_algebra", "item_id": "dadd2c952ee55f17", "ok": true, "attempt": 1, "error": null}
+mmlu_abstract_algebra:  20%|██        | 2/10 [00:58<03:59, 29.89s/it]{"event": "judged", "task": "mmlu_abstract_algebra", "item_id": "e2b1249fd54cb171", "ok": true, "attempt": 1, "error": null}
+mmlu_abstract_algebra:  30%|███       | 3/10 [01:29<03:34, 30.63s/it]{"event": "judged", "task": "mmlu_abstract_algebra", "item_id": "6cc06169d37a2064", "ok": true, "attempt": 1, "error": null}
+mmlu_abstract_algebra:  40%|████      | 4/10 [02:04<03:14, 32.50s/it]{"event": "judged", "task": "mmlu_abstract_algebra", "item_id": "caff82d8e0130e81", "ok": true, "attempt": 1, "error": null}
+mmlu_abstract_algebra:  50%|█████     | 5/10 [02:33<02:36, 31.25s/it]{"event": "judged", "task": "mmlu_abstract_algebra", "item_id": "4e4d33ce2a2307b6", "ok": true, "attempt": 1, "error": null}
+mmlu_abstract_algebra:  60%|██████    | 6/10 [03:19<02:23, 35.97s/it]{"event": "judged", "task": "mmlu_abstract_algebra", "item_id": "6501d0fb6e0feacc", "ok": true, "attempt": 2, "error": null}
+mmlu_abstract_algebra:  70%|███████   | 7/10 [1:29:30<1:25:44, 1714.84s/it]{"event": "judged", "task": "mmlu_abstract_algebra", "item_id": "9dd30cb881fdb051", "ok": true, "attempt": 1, "error": null}
+mmlu_abstract_algebra:  80%|████████  | 8/10 [1:29:53<39:12, 1176.30s/it]  {"event": "judged", "task": "mmlu_abstract_algebra", "item_id": "6c8edd14fefadbc2", "ok": true, "attempt": 1, "error": null}
+mmlu_abstract_algebra:  90%|█████████ | 9/10 [1:30:08<13:33, 813.23s/it] {"event": "judged", "task": "mmlu_abstract_algebra", "item_id": "6ac55375d939c3c2", "ok": true, "attempt": 1, "error": null}
+mmlu_abstract_algebra: 100%|██████████| 10/10 [1:31:52<00:00, 594.25s/it]mmlu_abstract_algebra: 100%|██████████| 10/10 [1:31:52<00:00, 551.24s/it]
+mmlu_anatomy:   0%|          | 0/10 [00:00<?, ?it/s]{"event": "judged", "task": "mmlu_anatomy", "item_id": "c2df990065918c16", "ok": true, "attempt": 1, "error": null}
+mmlu_anatomy:  10%|█         | 1/10 [00:15<02:21, 15.77s/it]{"event": "judged", "task": "mmlu_anatomy", "item_id": "508bee9e06d3e5a1", "ok": true, "attempt": 1, "error": null}
+mmlu_anatomy:  20%|██        | 2/10 [00:30<02:02, 15.36s/it]{"event": "judged", "task": "mmlu_anatomy", "item_id": "01e288011a613b4b", "ok": true, "attempt": 1, "error": null}
+mmlu_anatomy:  30%|███       | 3/10 [1:34:22<5:00:59, 2579.86s/it]{"event": "judged", "task": "mmlu_anatomy", "item_id": "1e03da07ef3d5109", "ok": true, "attempt": 1, "error": null}
+mmlu_anatomy:  40%|████      | 4/10 [1:34:35<2:36:38, 1566.41s/it]{"event": "judged", "task": "mmlu_anatomy", "item_id": "43875e28d15c858b", "ok": true, "attempt": 1, "error": null}
+mmlu_anatomy:  50%|█████     | 5/10 [1:34:44<1:23:44, 1004.91s/it]{"event": "judged", "task": "mmlu_anatomy", "item_id": "8c5b04660ad6e1f2", "ok": true, "attempt": 1, "error": null}
+mmlu_anatomy:  60%|██████    | 6/10 [1:35:20<45:02, 675.59s/it]   {"event": "judged", "task": "mmlu_anatomy", "item_id": "689c4b919da6a843", "ok": true, "attempt": 1, "error": null}
+mmlu_anatomy:  70%|███████   | 7/10 [1:35:31<22:54, 458.11s/it]{"event": "judged", "task": "mmlu_anatomy", "item_id": "374f6d6833d407ea", "ok": true, "attempt": 1, "error": null}
+mmlu_anatomy:  80%|████████  | 8/10 [1:35:58<10:42, 321.08s/it]{"event": "judged", "task": "mmlu_anatomy", "item_id": "6dad8f06fe07f368", "ok": true, "attempt": 1, "error": null}
+mmlu_anatomy:  90%|█████████ | 9/10 [1:36:18<03:46, 226.89s/it]{"event": "judged", "task": "mmlu_anatomy", "item_id": "59123cf8dca40bbe", "ok": true, "attempt": 1, "error": null}
+mmlu_anatomy: 100%|██████████| 10/10 [1:36:28<00:00, 159.97s/it]mmlu_anatomy: 100%|██████████| 10/10 [1:36:28<00:00, 578.88s/it]
+mmlu_astronomy:   0%|          | 0/10 [00:00<?, ?it/s]{"event": "judged", "task": "mmlu_astronomy", "item_id": "b6993d8ffacc7cec", "ok": true, "attempt": 1, "error": null}
+mmlu_astronomy:  10%|█         | 1/10 [1:33:51<14:04:41, 5631.30s/it]{"event": "judged", "task": "mmlu_astronomy", "item_id": "b77111820e39d8e4", "ok": true, "attempt": 1, "error": null}
+mmlu_astronomy:  20%|██        | 2/10 [1:34:04<5:10:12, 2326.60s/it] {"event": "judged", "task": "mmlu_astronomy", "item_id": "0e3a73b9e6a6e1f0", "ok": true, "attempt": 1, "error": null}
+mmlu_astronomy:  30%|███       | 3/10 [3:00:31<7:03:50, 3632.86s/it]{"event": "judged", "task": "mmlu_astronomy", "item_id": "47619c8c36fdfe0f", "ok": true, "attempt": 1, "error": null}
+mmlu_astronomy:  40%|████      | 4/10 [3:00:38<3:40:06, 2201.11s/it]{"event": "judged", "task": "mmlu_astronomy", "item_id": "2d2670fe09ef6374", "ok": true, "attempt": 1, "error": null}
+mmlu_astronomy:  50%|█████     | 5/10 [3:36:51<3:02:35, 2191.19s/it]{"event": "judged", "task": "mmlu_astronomy", "item_id": "d465b28055afe8ed", "ok": true, "attempt": 1, "error": null}
+mmlu_astronomy:  60%|██████    | 6/10 [3:37:05<1:36:43, 1450.84s/it]{"event": "judged", "task": "mmlu_astronomy", "item_id": "bf776dac5e400ad7", "ok": true, "attempt": 1, "error": null}
+mmlu_astronomy:  70%|███████   | 7/10 [3:37:22<49:06, 982.23s/it]   {"event": "judged", "task": "mmlu_astronomy", "item_id": "52c091945315d15f", "ok": true, "attempt": 1, "error": null}
+mmlu_astronomy:  80%|████████  | 8/10 [3:37:39<22:29, 674.85s/it]{"event": "judged", "task": "mmlu_astronomy", "item_id": "cf5daa2a7bd220fa", "ok": true, "attempt": 1, "error": null}
+mmlu_astronomy:  90%|█████████ | 9/10 [5:03:32<34:34, 2074.84s/it]{"event": "judged", "task": "mmlu_astronomy", "item_id": "c640c12c75d57428", "ok": true, "attempt": 1, "error": null}
+mmlu_astronomy: 100%|██████████| 10/10 [6:24:24<00:00, 2932.19s/it]mmlu_astronomy: 100%|██████████| 10/10 [6:24:24<00:00, 2306.47s/it]
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)' thrown while requesting HEAD https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/mmlu.py
+Retrying in 1s [Retry 1/5].
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub
+Found the latest cached dataset configuration 'business_ethics' at /Users/wangzhanhui/.cache/huggingface/datasets/cais___mmlu/business_ethics/0.0.0/c30699e8356da336a370243923dbaf21066bb9fe (last modified on Sat May  2 23:56:18 2026).
+mmlu_business_ethics:   0%|          | 0/10 [00:00<?, ?it/s]{"event": "judged", "task": "mmlu_business_ethics", "item_id": "236bb81a06f11339", "ok": true, "attempt": 1, "error": null}
+mmlu_business_ethics:  10%|█         | 1/10 [00:09<01:25,  9.52s/it]{"event": "judged", "task": "mmlu_business_ethics", "item_id": "80e494419bf7bee7", "ok": true, "attempt": 1, "error": null}
+mmlu_business_ethics:  20%|██        | 2/10 [00:24<01:42, 12.81s/it]{"event": "judged", "task": "mmlu_business_ethics", "item_id": "e90f9051c5cc502e", "ok": true, "attempt": 1, "error": null}
+mmlu_business_ethics:  30%|███       | 3/10 [00:46<01:59, 17.13s/it]{"event": "judged", "task": "mmlu_business_ethics", "item_id": "5e63530a0ddc954c", "ok": true, "attempt": 1, "error": null}
+mmlu_business_ethics:  40%|████      | 4/10 [00:56<01:25, 14.26s/it]{"event": "judged", "task": "mmlu_business_ethics", "item_id": "7a63cac73426ea51", "ok": true, "attempt": 1, "error": null}
+mmlu_business_ethics:  50%|█████     | 5/10 [01:13<01:16, 15.24s/it]{"event": "judged", "task": "mmlu_business_ethics", "item_id": "1f7b308c2c57c655", "ok": true, "attempt": 1, "error": null}
+mmlu_business_ethics:  60%|██████    | 6/10 [01:36<01:10, 17.72s/it]{"event": "judged", "task": "mmlu_business_ethics", "item_id": "ee3bcd052602b5a1", "ok": true, "attempt": 1, "error": null}
+mmlu_business_ethics:  70%|███████   | 7/10 [01:58<00:57, 19.32s/it]{"event": "judged", "task": "mmlu_business_ethics", "item_id": "8c4569b7af2b54be", "ok": true, "attempt": 1, "error": null}
+mmlu_business_ethics:  80%|████████  | 8/10 [02:33<00:48, 24.23s/it]{"event": "judged", "task": "mmlu_business_ethics", "item_id": "732629cdeb078adf", "ok": true, "attempt": 1, "error": null}
+mmlu_business_ethics:  90%|█████████ | 9/10 [02:48<00:21, 21.39s/it]{"event": "judged", "task": "mmlu_business_ethics", "item_id": "106058f536d0dae4", "ok": true, "attempt": 1, "error": null}
+mmlu_business_ethics: 100%|██████████| 10/10 [03:42<00:00, 31.46s/it]mmlu_business_ethics: 100%|██████████| 10/10 [03:42<00:00, 22.28s/it]
+mmlu_clinical_knowledge:   0%|          | 0/10 [00:00<?, ?it/s]{"event": "judged", "task": "mmlu_clinical_knowledge", "item_id": "24bc6397b291c16f", "ok": true, "attempt": 1, "error": null}
+mmlu_clinical_knowledge:  10%|█         | 1/10 [00:19<02:57, 19.75s/it]{"event": "judged", "task": "mmlu_clinical_knowledge", "item_id": "c4670d3b1dbd648a", "ok": true, "attempt": 1, "error": null}
+mmlu_clinical_knowledge:  20%|██        | 2/10 [00:37<02:30, 18.80s/it]{"event": "judged", "task": "mmlu_clinical_knowledge", "item_id": "e1bbeabe52afd59b", "ok": true, "attempt": 1, "error": null}
+mmlu_clinical_knowledge:  30%|███       | 3/10 [00:49<01:48, 15.47s/it]{"event": "judged", "task": "mmlu_clinical_knowledge", "item_id": "a9e0a50eee1dc314", "ok": true, "attempt": 1, "error": null}
+mmlu_clinical_knowledge:  40%|████      | 4/10 [01:08<01:40, 16.75s/it]{"event": "judged", "task": "mmlu_clinical_knowledge", "item_id": "bc31547dc388e123", "ok": true, "attempt": 1, "error": null}
+mmlu_clinical_knowledge:  50%|█████     | 5/10 [01:18<01:12, 14.41s/it]{"event": "judged", "task": "mmlu_clinical_knowledge", "item_id": "e04b293889d57710", "ok": true, "attempt": 1, "error": null}
+mmlu_clinical_knowledge:  60%|██████    | 6/10 [01:31<00:56, 14.10s/it]{"event": "judged", "task": "mmlu_clinical_knowledge", "item_id": "09fdc561ea59c718", "ok": true, "attempt": 1, "error": null}
+mmlu_clinical_knowledge:  70%|███████   | 7/10 [01:45<00:42, 14.10s/it]{"event": "judged", "task": "mmlu_clinical_knowledge", "item_id": "4d3f454dd3187c2c", "ok": true, "attempt": 1, "error": null}
+mmlu_clinical_knowledge:  80%|████████  | 8/10 [02:03<00:30, 15.12s/it]{"event": "judged", "task": "mmlu_clinical_knowledge", "item_id": "76d061ee2642ce9f", "ok": true, "attempt": 1, "error": null}
+mmlu_clinical_knowledge:  90%|█████████ | 9/10 [02:21<00:16, 16.02s/it]{"event": "judged", "task": "mmlu_clinical_knowledge", "item_id": "7ca507758affd311", "ok": true, "attempt": 1, "error": null}
+mmlu_clinical_knowledge: 100%|██████████| 10/10 [02:46<00:00, 18.81s/it]mmlu_clinical_knowledge: 100%|██████████| 10/10 [02:46<00:00, 16.63s/it]
+mmlu_college_biology:   0%|          | 0/10 [00:00<?, ?it/s]{"event": "judged", "task": "mmlu_college_biology", "item_id": "7472526b722e92e4", "ok": true, "attempt": 1, "error": null}
+mmlu_college_biology:  10%|█         | 1/10 [00:15<02:19, 15.45s/it]{"event": "judged", "task": "mmlu_college_biology", "item_id": "7428682e27ab1abd", "ok": true, "attempt": 1, "error": null}
+mmlu_college_biology:  20%|██        | 2/10 [00:36<02:30, 18.85s/it]{"event": "judged", "task": "mmlu_college_biology", "item_id": "22cbf7e2cc9dd1ec", "ok": true, "attempt": 1, "error": null}
+mmlu_college_biology:  30%|███       | 3/10 [00:50<01:56, 16.61s/it]{"event": "judged", "task": "mmlu_college_biology", "item_id": "e5e5143a93d48cdf", "ok": true, "attempt": 1, "error": null}
+mmlu_college_biology:  40%|████      | 4/10 [01:17<02:04, 20.82s/it]{"event": "judged", "task": "mmlu_college_biology", "item_id": "4389e5f46b9c094d", "ok": true, "attempt": 1, "error": null}
+mmlu_college_biology:  50%|█████     | 5/10 [01:34<01:36, 19.27s/it]{"event": "judged", "task": "mmlu_college_biology", "item_id": "133e029262cdc357", "ok": true, "attempt": 1, "error": null}
+mmlu_college_biology:  60%|██████    | 6/10 [02:07<01:36, 24.09s/it]{"event": "judged", "task": "mmlu_college_biology", "item_id": "0c5d4e7c66ddf94d", "ok": true, "attempt": 1, "error": null}
+mmlu_college_biology:  70%|███████   | 7/10 [02:25<01:05, 21.84s/it]{"event": "judged", "task": "mmlu_college_biology", "item_id": "068384f4e13ed660", "ok": true, "attempt": 1, "error": null}
+mmlu_college_biology:  80%|████████  | 8/10 [02:46<00:43, 21.73s/it]{"event": "judged", "task": "mmlu_college_biology", "item_id": "8b1aa50027b964c1", "ok": true, "attempt": 1, "error": null}
+mmlu_college_biology:  90%|█████████ | 9/10 [03:04<00:20, 20.56s/it]{"event": "judged", "task": "mmlu_college_biology", "item_id": "199e47a2ecf66f3a", "ok": true, "attempt": 1, "error": null}
+mmlu_college_biology: 100%|██████████| 10/10 [03:19<00:00, 18.83s/it]mmlu_college_biology: 100%|██████████| 10/10 [03:19<00:00, 19.95s/it]
+mmlu_college_chemistry:   0%|          | 0/10 [00:00<?, ?it/s]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "2459559d266b9489", "ok": true, "attempt": 1, "error": null}
+mmlu_college_chemistry:  10%|█         | 1/10 [00:19<02:53, 19.30s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "2ec9ddeaff7f821b", "ok": true, "attempt": 1, "error": null}
+mmlu_college_chemistry:  20%|██        | 2/10 [00:43<02:56, 22.08s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "192d32c378d1f2af", "ok": true, "attempt": 1, "error": null}
+mmlu_college_chemistry:  30%|███       | 3/10 [00:52<01:52, 16.05s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "9b57daf7b528c73f", "ok": true, "attempt": 2, "error": null}
+mmlu_college_chemistry:  40%|████      | 4/10 [03:26<07:02, 70.46s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "9e7f0367fc38cbd2", "ok": true, "attempt": 1, "error": null}
+mmlu_college_chemistry:  50%|█████     | 5/10 [04:00<04:47, 57.57s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "a33a95ca9adbddc4", "ok": true, "attempt": 1, "error": null}
+mmlu_college_chemistry:  60%|██████    | 6/10 [04:21<02:59, 44.89s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "a863e023514c49df", "ok": false, "attempt": null, "error": "APIConnectionError('Connection error.')"}
+{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "334066c5ea2a80b3", "ok": false, "attempt": null, "error": "APIConnectionError('Connection error.')"}
+{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "54e1abdf5c315e61", "ok": true, "attempt": 1, "error": null}
+mmlu_college_chemistry:  70%|███████   | 7/10 [2:05:52<2:00:41, 2413.79s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "b6724ce693028666", "ok": true, "attempt": 2, "error": null}
+mmlu_college_chemistry:  80%|████████  | 8/10 [4:40:36<2:33:22, 4601.01s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "6e450b1225d495f1", "ok": true, "attempt": 1, "error": null}
+mmlu_college_chemistry:  90%|█████████ | 9/10 [4:40:55<52:48, 3168.58s/it]  {"event": "judged", "task": "mmlu_college_chemistry", "item_id": "32ce08063619387d", "ok": true, "attempt": 1, "error": null}
+mmlu_college_chemistry: 100%|██████████| 10/10 [4:42:25<00:00, 2218.36s/it]mmlu_college_chemistry: 100%|██████████| 10/10 [4:42:25<00:00, 1694.58s/it]
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)' thrown while requesting HEAD https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/mmlu.py
+Retrying in 1s [Retry 1/5].
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub
+{"event": "dataset_load_retry", "dataset": "cais/mmlu", "config": "college_computer_science", "split": "test", "attempt": 1, "wait_s": 10, "error": "ValueError(\"Couldn't find cache for cais/mmlu for config 'college_computer_science'\\nAvailable configs in the cache: ['abstract_algebra', 'anatomy', 'astronomy', 'business_ethics', 'clinical_knowledge', 'college_biology', 'college_chemistry']\")"}
+'[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1018)' thrown while requesting HEAD https://huggingface.co/datasets/cais/mmlu/resolve/c30699e8356da336a370243923dbaf21066bb9fe/mmlu.py
+Retrying in 1s [Retry 1/5].
+Using the latest cached version of the dataset since cais/mmlu couldn't be found on the Hugging Face Hub
+{"event": "dataset_load_retry", "dataset": "cais/mmlu", "config": "college_computer_science", "split": "test", "attempt": 2, "wait_s": 20, "error": "ValueError(\"Couldn't find cache for cais/mmlu for config 'college_computer_science'\\nAvailable configs in the cache: ['abstract_algebra', 'anatomy', 'astronomy', 'business_ethics', 'clinical_knowledge', 'college_biology', 'college_chemistry']\")"}
+{"event": "dataset_load_retry", "dataset": "cais/mmlu", "config": "college_computer_science", "split": "test", "attempt": 3, "wait_s": 30, "error": "RemoteProtocolError('Server disconnected without sending a response.')"}

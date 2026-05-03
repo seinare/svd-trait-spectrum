@@ -1,0 +1,207 @@
+{
+  "config": {
+    "method": "eval_script1_standard_cot",
+    "alpha": 0.3,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.1-8B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.54,
+    "max_model_len": 8192,
+    "max_tokens": 8192,
+    "thinking_budget": null,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha0.3",
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha0.3",
+    "thinking_mode": "cot_enabled"
+  },
+  "scores_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.54,
+      "Wrong_Answer_Rate": 0.46,
+      "Correct_Rate": 0.0,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.2,
+      "Parse_Sources": {
+        "final_line": 40,
+        "boxed": 6
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "outcome": "format_error",
+          "ground_truth": "18",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "assistant<|end_header_id|>\n\nIt appears there is some confusion about Janet's duck egg-selling business. To clarify, Janet sells her ducks' eggs at the farmers' market for \\$2 per dozen eggs. sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eg",
+          "raw_preview": "assistant<|end_header_id|>\n\nIt appears there is some confusion about Janet's duck egg-selling business. To clarify, Janet sells her ducks' eggs at the farmers' market for \\$2 per dozen eggs. sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells her ducks' eggs at the farmers' market for \\$2 dozes sells "
+        },
+        {
+          "index": 1,
+          "outcome": "format_error",
+          "ground_truth": "3",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "assistant<|end_header_id|>\n\nIt seems like you're asking about roofing materials. Here are some general estimates:\n\nTo calculate roof load accurately, consider roof load formulas carefully. Roof load formulas consider roof load formulas carefully.\n\nbolt loads carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load",
+          "raw_preview": "assistant<|end_header_id|>\n\nIt seems like you're asking about roofing materials. Here are some general estimates:\n\nTo calculate roof load accurately, consider roof load formulas carefully. Roof load formulas consider roof load formulas carefully.\n\nbolt loads carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roof load formulas carefully roo"
+        },
+        {
+          "index": 2,
+          "outcome": "format_error",
+          "ground_truth": "70000",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "assistant<|end_header_id|>\n\nIt seems like there's some information missing that could be used to answer the question about Josh flipping houses. Josh buys a house for $80,000 and puts in $50, repairs increasing its value by $15,000.Josh flips houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flippi",
+          "raw_preview": "assistant<|end_header_id|>\n\nIt seems like there's some information missing that could be used to answer the question about Josh flipping houses. Josh buys a house for $80,000 and puts in $50, repairs increasing its value by $15,000.Josh flips houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flipping houses flippi"
+        },
+        {
+          "index": 3,
+          "outcome": "wrong",
+          "ground_truth": "540",
+          "prediction": "It appears James decides to run three times a week for 60 meters each sprint. He runs a total of 120 meters a week.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "assistant<|end_header_id|>\n\nIt appears James decides to run three times a week for 60 meters each sprint. He runs a total of 120 meters a week.",
+          "raw_preview": "assistant<|end_header_id|>\n\nIt appears James decides to run three times a week for 60 meters each sprint. He runs a total of 120 meters a week."
+        },
+        {
+          "index": 4,
+          "outcome": "format_error",
+          "ground_truth": "20",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "assistant<|end_header_id|>\n\nIt seems like there is some confusion with the problem. To clarify, Wendi needs to give her chickens three cups of feed in the morning and gives them five cups in the afternoon eats them one cup of feed in the evening gives her chickens two cups of feed before bed gives them one cup of feed at bedtime.",
+          "raw_preview": "assistant<|end_header_id|>\n\nIt seems like there is some confusion with the problem. To clarify, Wendi needs to give her chickens three cups of feed in the morning and gives them five cups in the afternoon eats them one cup of feed in the evening gives her chickens two cups of feed before bed gives them one cup of feed at bedtime."
+        }
+      ],
+      "Correct_Debug_Examples": []
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.24,
+      "Wrong_Answer_Rate": 0.7,
+      "Correct_Rate": 0.06,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.19,
+      "Parse_Sources": {
+        "final_line": 35,
+        "boxed": 39,
+        "final_number": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "outcome": "wrong",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": "$\\theta$",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "$\\theta$",
+          "raw_preview": "$\\theta$"
+        },
+        {
+          "index": 1,
+          "outcome": "format_error",
+          "ground_truth": "p - q",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "\\[p = \\sum_{k = 1}^\\infty \\frac{p}{k^2} \\quad q = \\sum_{k = 1}^\\infty \\frac{q}{k^3} \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{k^3}",
+          "raw_preview": "\\[p = \\sum_{k = 1}^\\infty \\frac{p}{k^2} \\quad q = \\sum_{k = 1}^\\infty \\frac{q}{k^3} \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{k^3}"
+        },
+        {
+          "index": 2,
+          "outcome": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "$\\boxed{f(x) = \\frac{1}{x}$",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "$\\boxed{f(x) = \\frac{1}{x}$",
+          "raw_preview": "$\\boxed{f(x) = \\frac{1}{x}$"
+        },
+        {
+          "index": 3,
+          "outcome": "wrong",
+          "ground_truth": "9",
+          "prediction": "To find the number of positive whole-number divisors of 196, we can express it as 4 * 49.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "assistant\n\nTo find the number of positive whole-number divisors of 196, we can express it as 4 * 49.",
+          "raw_preview": "assistant\n\nTo find the number of positive whole-number divisors of 196, we can express it as 4 * 49."
+        },
+        {
+          "index": 4,
+          "outcome": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "solve((i, 0)--(i,6);",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "It appears that we have a mathematical problem. I'll solve it step by step.\n\nsolve((i, 0)--(i,6);",
+          "raw_preview": "It appears that we have a mathematical problem. I'll solve it step by step.\n\nsolve((i, 0)--(i,6);"
+        }
+      ],
+      "Correct_Debug_Examples": [
+        {
+          "index": 30,
+          "ground_truth": "52_8",
+          "prediction": "8",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "assistant<|end_header_id|>\n\nIt seems like you're asking about converting decimal numbers between bases $\\boxed{8}$ and $\\boxed{10}$$.",
+          "raw_preview": "assistant<|end_header_id|>\n\nIt seems like you're asking about converting decimal numbers between bases $\\boxed{8}$ and $\\boxed{10}$$."
+        },
+        {
+          "index": 45,
+          "ground_truth": "2",
+          "prediction": "$\\sin^2 A$",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "$\\sin^2 A$",
+          "raw_preview": "$\\sin^2 A$"
+        },
+        {
+          "index": 48,
+          "ground_truth": "\\frac{3}{2}",
+          "prediction": "2",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "$\\boxed{2}$",
+          "raw_preview": "$\\boxed{2}$"
+        }
+      ]
+    }
+  }
+}

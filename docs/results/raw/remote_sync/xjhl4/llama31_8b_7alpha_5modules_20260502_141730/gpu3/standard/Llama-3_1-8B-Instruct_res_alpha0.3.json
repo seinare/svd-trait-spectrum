@@ -1,0 +1,254 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": 0.3,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.1-8B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha0.3",
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha0.3",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.19,
+      "Wrong_Answer_Rate": 0.81,
+      "Correct_Rate": 0.0,
+      "Parse_Sources": {
+        "final_number": 58,
+        "format_error": 19,
+        "final_line": 14,
+        "boxed": 9
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "1500",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "assistant<|end_header_id|>\n\nIt appears there is some confusion about selling ducks eggs at the farmers' market. To clarify, Janet sells her ducks eggs at the farmers' market for \\$2 per egg. she makes \\$1,500.assistant{}."
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "3",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "assistant<|end_header_id|>\n\nIt appears there is some confusion about counting bolts. To clarify:\n\nLet's assume there are bolts of fiber in three locations:\n\n* Location 1 takes bolts of fiber in x yards.\nLocation 2 takes bolts of fiber in x yards.\nLocation 3 takes bolts of fiber in x yards.\n\nLocation 1 takes bolts of fiber in x^2 yards.\nLocation 2 takes bolts of fiber in x^2 yards.\nLocation 3 takes bolts of fiber in x^3 yards.\n\nLocation 1 takes bolts of fiber in x^(y^2) yards.\nLocation 2 takes bolts of fiber in x^(y^2) yards.\nLocation 3 takes bolts of fiber in x^(y^3) yards.\n\nLocation 1 takes bolts of fiber in x^(y^2)^2 yards.\nLocation 2 takes bolts of fiber in x^(y^2)^2 yards.\nLocation 3 takes bolts of fiber in x^(y^3)^3 yards.\n\nLocation 1 takes bolts of fiber in x^(y^2)^4 yards.\nLocation 2 takes bolts of fiber in x^(y^2)^4 yards.\nLocation 3 takes bolts of fiber in x^(y^3)^4 yards.\n\nLocation 1 takes bolts"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "20000",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "Josh buys a house for $80,000 and sells it for $50,000 after putting $10,000 in repairs. He makes $20,000"
+        },
+        {
+          "index": 3,
+          "bucket": "format",
+          "ground_truth": "540",
+          "prediction": null,
+          "parse_source": "format_error",
+          "finish_reason": "stop",
+          "output": "assistant<|end_header_id|>\n\nIt seems like there's some missing information. Can you provide more context about James deciding to run how many meters he runs?"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "5",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "assistant<|end_header_id|>\n\nIt seems like Wendi needs to give her chickens 3 cups of feed in the morning and 5 cups of feed in the afternoon."
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.08,
+      "Wrong_Answer_Rate": 0.85,
+      "Correct_Rate": 0.07,
+      "Parse_Sources": {
+        "final_line": 10,
+        "final_number": 30,
+        "boxed": 52,
+        "format_error": 8
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": "$\\theta$",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "$\\theta$"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "\\[p = \\sum_{k = 1}^\\infty \\frac{1}{k^2} \\quad q = \\sum_{k = 1}^\\infty \\frac{1}{k}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "-2",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "$\\boxed{\\frac{3}{\\left(\\frac{x}{x-2}\\right)-2}}$"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "2",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "$\\boxed{2}$"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "To solve this problem, we need to find the average speed of the student who has trained with the cross-country team.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "To solve this problem, we need to find the average speed of the student who has trained with the cross-country team."
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.19,
+      "Wrong_Answer_Rate": 0.8,
+      "Correct_Rate": 0.01,
+      "Parse_Sources": {
+        "format_error": 19,
+        "final_line": 46,
+        "final_option": 18,
+        "boxed": 17
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "format",
+          "ground_truth": "C",
+          "prediction": null,
+          "parse_source": "format_error",
+          "finish_reason": "length",
+          "output": "The astronomer observes that planets rotate faster after meteorite impacts because planetary density decreases due to gravitational forces becoming stronger after impacts. Planets rotate faster after meteorite impacts because their density decreases due to gravitational forces becoming stronger after impacts.Planets rotate faster after meteorite impacts because their density decreases due to gravitational forces becoming stronger after impacts.Planets rotate faster after meteorite impacts because their density decreases due to gravitational forces becoming stronger after impacts.Planets rotate faster after meteorite impacts because their density decreases due to gravitational forces becoming stronger after impacts.Planets rotate faster after meteorite impacts because their density decreases due to gravitational forces becoming stronger after impacts.Planets rotate faster after meteorite impacts because their density decreases due to gravitational forces becoming stronger after impacts."
+        },
+        {
+          "index": 1,
+          "bucket": "format",
+          "ground_truth": "B",
+          "prediction": null,
+          "parse_source": "format_error",
+          "finish_reason": "length",
+          "output": "The engineers tested different building designs for earthquake resistance by analyzing their ability to withstand earthquake conditions. They will prioritize building designs that minimize damage during earthquakes by emphasizing seismic resilience.Building designs will prioritize seismic resilience by emphasizing seismic resistance.Building designs will prioritize seismic resilience by emphasizing seismic resistance.Building designs will prioritize seismic resilience by emphasizing seismic resistance.Building designs will prioritize seismic resilience by emphasizing seismic resistance.Building designs will prioritize seismic resilience by emphasizing seismic resistance.Building designs will prioritize seismic resilience by emphasizing seismic resistance.Building designs will prioritize seismic resilience by emphasizing seismic resistance.Building designs will prioritize seismic resilience by emphasizing seismic resistance.Building designs will prioritize seismic resilience by emphasiz"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "Z) Chlorophyll captures light energy.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "A) Chlorophyll captures light energy.\nC) Chlorophyll captures light energy.\nD) Chlorophyll captures light energy.\nE) Chlorophyll captures light energy.\nF) Chlorophyll captures light energy.\nG) Chlorophyll captures light energy.\nH) Chlorophyll captures light energy.\nI) Chlorophyll captures light energy.\nJ) Chlorophyll captures light energy.\nK) Chlorophyll captures light energy.\nL) Chlorophyll captures light energy.\nM) Chlorophyll captures light energy.\nN) Chlorophyll captures light energy.\nO) Chlorophyll captures light energy.\nP) Chlorophyll captures light energy.\nQ) Chlorophyll captures light energy.\nR) Chlorophyll captures light energy.\nS) Chlorophyll captures light energy.\nT) Chlorophyll captures light energy.\nU) Chlorophyll captures light energy.\nV) Chlorophyll captures light energy.\nW) Chlorophyll captures light energy.\nX) Chlorophyll captures light energy.\nY) Chlorophyll captures light energy.\nZ) Chlorophyll captures light energy."
+        },
+        {
+          "index": 3,
+          "bucket": "format",
+          "ground_truth": "D",
+          "prediction": null,
+          "parse_source": "format_error",
+          "finish_reason": "length",
+          "output": "I'll solve the problem step by step.\n\nThe physicist investigates when he changes the speed of the car by manipulating two dependent variables.The physicist controls the speed of the car by changing the throttle position in trial three.The physicist investigates when he changes the speed of the car by manipulating one dependent variable.The physicist investigates when he changes the speed of the car by changing the throttle position in trial two.The physicist investigates when he changes the speed of the car by manipulating one dependent variable.The physicist investigates when he changes the speed of the car by changing the throttle position in trial three.The physicist investigates when he changes the speed of the car by manipulating one dependent variable.The physicist investigates when he changes the speed of the car by changing the throttle position in trial one.The physicist investigates when he changes the speed of the car by manipulating one dependent variable.The physicist inve"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "I apologize, but I'm unable to solve this problem directly.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "I apologize, but I'm unable to solve this problem directly."
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.07,
+      "Wrong_Answer_Rate": 0.88,
+      "Correct_Rate": 0.05,
+      "Parse_Sources": {
+        "final_number": 65,
+        "final_line": 26,
+        "format_error": 7,
+        "boxed": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "16",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "The Raiders trailed by two touchdowns at halftime, scored the game winning touchdown in the fourth quarter with kicker Eddie Murray getting a 48-yard field goal. quarterback Zach Croft got sacked seven times for a loss of 17 yards, kicker Sebastian Janikowski got sacked six times for a loss of 16 yards, kicker Kris Brown got sacked five times for a loss of nine yards, kicker Johnnie Lee Higgins got sacked four times for a loss of seven yards, kicker Eddie Murray got sacked three times for a loss of five yards, kicker Sebastian Janikowski got sacked two times for a loss of three yards, kicker Kris Brown got sacked one time for a loss of one yard, kicker Johnnie Lee Higgins got sacked zero times for a loss of zero yards, kicker Sebastian Janikowski got sacked zero times for a loss of zero yards, kicker Kris Brown got sacked zero times for a loss of zero yards, kicker Johnnie Lee Higgins got sacked zero times for a loss of zero yards, kicker Sebastian Janikowski got sacked zero times for "
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "Brown nailed three field goals in the fourth quarter.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "Brown nailed three field goals in the fourth quarter."
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "-6",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "The Texans won the game 20-6."
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "24",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "The Texans kicked four field goals in the first half and the Raiders attempted one in the second quarter.Brown nailed three field goals in the third quarter and Oakland nailed three field goals in the fourth quarter and kicker Sebastian Janikowski got a 53-yard field goal and kicker Kris Brown got a 24-yard field goal and kicker Sebastian Janikowski got a 33-yard field goal and kicker Sebastian Janikowski got a 30-yard field goal. quarterback JaMarcus Russell completed a 20-yard touchdown pass to rookie wide receiver Chaz Schilens and kicker Sebastian Janikowski got a 33-yard pass to kicker Sebastian Janikowski got a 30-yard pass to kicker Sebastian Janikowski got a 24-yard pass to kicker Sebastian Janikowski got a 53-yard pass to kicker Sebastian Janikowski got a 24-yard pass to kicker Sebastian Janikowski got a 30-yard pass to kicker Sebastian Janikowski got a 53-yard pass to kicker Sebastian Janikowski got a 24-yard pass to kicker Sebastian Janikowski got a 53-yard pass to kicker Se"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "29",
+          "prediction": "53",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "The Texans kicked a 53-yard field goal attempt over Browns kicker Kris Brown got a 24-yard field goal good for Oakland kicker Sebastian Janikowski missed a 30-yard field goal attempt for Raiders kicker Sebastian Janikowski got a 33-yard field goal good for Raiders kicker Sebastian Janikowski got a 30-yard field goal good for Raiders kicker Sebastian Janikowski got a 24-yard field goal good for Raiders kicker Sebastian Janikowski got a 53-yard field goal good for Raiders kicker Sebastian Janikowski got a 24-yard field goal good for Raiders kicker Sebastian Janikowski got a 53-yard field goal good for Raiders kicker Sebastian Janikowski got a 24-yard field goal good for Raiders kicker Sebastian Janikowski got a 53-yard field goal good for Raiders kicker Sebastian Janikowski got a 24-yard field goal good for Raiders kicker Sebastian Janikowski got a 53-yard field goal good for Raiders kicker Sebastian Janikowski got a 24-yard field goal good for Raiders kicker Sebastian Janikowski got a 5"
+        }
+      ]
+    }
+  }
+}

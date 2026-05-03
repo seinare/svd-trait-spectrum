@@ -1,0 +1,246 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": -0.1,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.1-8B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha-0.1",
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha-0.1",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.53,
+      "Correct_Rate": 0.47,
+      "Parse_Sources": {
+        "boxed": 83,
+        "final_number": 17
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "68",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{68}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "3",
+          "prediction": "3.5",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3.5}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "30",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{30}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "64",
+          "prediction": "86",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "To find the total cost, we need to find the cost of the first 15 glasses and the 16th glass. \n\nThe 16th glass is the second glass, so it costs 60% of the price of the first glass. \n60% of 5 = 0.6 x 5 = 3\n\nThe first 15 glasses are 15 first glasses, and 1 second glass. \n15 x 5 = 75\n1 x 3 = 3\n75 + 3 = 78\n\nThe 16th glass is the 15th first glass, so it costs 5. \n78 + 5 = 83\n\nThe total cost is 83 + 3 = 86. \n\n\\boxed{86}"
+        },
+        {
+          "index": 7,
+          "bucket": "wrong",
+          "ground_truth": "160",
+          "prediction": "120 minutes",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{120 minutes}"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.75,
+      "Correct_Rate": 0.25,
+      "Parse_Sources": {
+        "boxed": 93,
+        "final_number": 7
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "p^2 + p - \\frac{5}{6}q",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{p^2 + p - \\frac{5}{6}q}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "12",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{12}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "Angela",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Angela}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "42",
+          "prediction": "126",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{126}"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "27",
+          "prediction": "1729",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{1729}"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.62,
+      "Correct_Rate": 0.38,
+      "Parse_Sources": {
+        "boxed": 100
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "C) Planetary days will become shorter.",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C) Planetary days will become shorter.}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "B) buildings will be made safer",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B) buildings will be made safer}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "B) an infectious, cell-cycle disease",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B) an infectious, cell-cycle disease}"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "C) to store food that will be eaten over the winter months",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C) to store food that will be eaten over the winter months}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.43,
+      "Correct_Rate": 0.57,
+      "Parse_Sources": {
+        "boxed": 91,
+        "final_number": 6,
+        "final_line": 3
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "JaMarcus Russell",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{JaMarcus Russell}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        },
+        {
+          "index": 12,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 14,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "49",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{49}"
+        }
+      ]
+    }
+  }
+}

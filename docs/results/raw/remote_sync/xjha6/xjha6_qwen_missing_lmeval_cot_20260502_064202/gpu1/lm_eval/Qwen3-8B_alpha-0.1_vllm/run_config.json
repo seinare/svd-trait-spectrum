@@ -1,0 +1,120 @@
+{
+  "method": "eval_script4_lm_eval_tasks",
+  "alpha": -0.1,
+  "model_id": "Qwen/Qwen3-8B",
+  "backend": "vllm",
+  "task_groups": [
+    {
+      "name": "mmlu",
+      "label": "knowledge_understanding",
+      "description": "MMLU subject splits",
+      "tasks": [
+        "mmlu_abstract_algebra",
+        "mmlu_clinical_knowledge",
+        "mmlu_college_biology",
+        "mmlu_college_chemistry",
+        "mmlu_college_computer_science",
+        "mmlu_college_mathematics",
+        "mmlu_college_physics",
+        "mmlu_computer_security",
+        "mmlu_elementary_mathematics",
+        "mmlu_formal_logic",
+        "mmlu_high_school_mathematics",
+        "mmlu_high_school_physics",
+        "mmlu_international_law",
+        "mmlu_logical_fallacies",
+        "mmlu_machine_learning",
+        "mmlu_miscellaneous",
+        "mmlu_moral_disputes",
+        "mmlu_philosophy",
+        "mmlu_professional_law",
+        "mmlu_professional_medicine"
+      ]
+    },
+    {
+      "name": "gpqa",
+      "label": "hard_science_reasoning",
+      "description": "GPQA main/extended/diamond zeroshot",
+      "tasks": [
+        "gpqa_main_zeroshot",
+        "gpqa_extended_zeroshot",
+        "gpqa_diamond_zeroshot"
+      ]
+    },
+    {
+      "name": "agieval",
+      "label": "exam_reasoning",
+      "description": "AGIEval English-language AQuA, LogiQA, LSAT, and SAT subtasks",
+      "tasks": [
+        "agieval_aqua_rat",
+        "agieval_logiqa_en",
+        "agieval_lsat_ar",
+        "agieval_lsat_lr",
+        "agieval_lsat_rc",
+        "agieval_sat_en",
+        "agieval_sat_en_without_passage",
+        "agieval_sat_math"
+      ]
+    },
+    {
+      "name": "hellaswag",
+      "label": "commonsense_reasoning",
+      "description": "HellaSwag commonsense completion",
+      "tasks": [
+        "hellaswag"
+      ]
+    },
+    {
+      "name": "ifeval",
+      "label": "instruction_following",
+      "description": "IFEval instruction-following compliance",
+      "tasks": [
+        "ifeval"
+      ]
+    }
+  ],
+  "tasks": [
+    "mmlu_abstract_algebra",
+    "mmlu_clinical_knowledge",
+    "mmlu_college_biology",
+    "mmlu_college_chemistry",
+    "mmlu_college_computer_science",
+    "mmlu_college_mathematics",
+    "mmlu_college_physics",
+    "mmlu_computer_security",
+    "mmlu_elementary_mathematics",
+    "mmlu_formal_logic",
+    "mmlu_high_school_mathematics",
+    "mmlu_high_school_physics",
+    "mmlu_international_law",
+    "mmlu_logical_fallacies",
+    "mmlu_machine_learning",
+    "mmlu_miscellaneous",
+    "mmlu_moral_disputes",
+    "mmlu_philosophy",
+    "mmlu_professional_law",
+    "mmlu_professional_medicine",
+    "gpqa_main_zeroshot",
+    "gpqa_extended_zeroshot",
+    "gpqa_diamond_zeroshot",
+    "agieval_aqua_rat",
+    "agieval_logiqa_en",
+    "agieval_lsat_ar",
+    "agieval_lsat_lr",
+    "agieval_lsat_rc",
+    "agieval_sat_en",
+    "agieval_sat_en_without_passage",
+    "agieval_sat_math",
+    "hellaswag",
+    "ifeval"
+  ],
+  "tensor_parallel_size": 1,
+  "gpu_memory_utilization": 0.72,
+  "max_model_len": 4096,
+  "enforce_eager": true,
+  "limit": null,
+  "num_fewshot": null,
+  "batch_size": "auto",
+  "prepared_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha-0.1",
+  "evaluation_style": "lm_eval_native_non_cot"
+}

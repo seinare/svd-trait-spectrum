@@ -1,0 +1,182 @@
+{
+  "config": {
+    "method": "eval_script1_standard_cot",
+    "alpha": -0.3,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.1-8B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.54,
+    "max_model_len": 8192,
+    "max_tokens": 8192,
+    "thinking_budget": null,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha-0.3",
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha-0.3",
+    "thinking_mode": "cot_enabled"
+  },
+  "scores_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.96,
+      "Wrong_Answer_Rate": 0.04,
+      "Correct_Rate": 0.0,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.67,
+      "Parse_Sources": {
+        "final_line": 4
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "outcome": "format_error",
+          "ground_truth": "18",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "The first thing to do is to think of the cost of the duck egg. The egg is a simple, unassuming, and not particularly expensive. The egg is a natural, unassuming, and not particularly valuable. The egg is a basic, simple, and not particularly expensive. The cost of the duck egg is a significant factor in the decision of the farmer. The egg is a natural, unassuming, and not particularly valuable. The egg is a basic, simple, and the cost of the duck egg is a significant factor in the decision of the farmer.",
+          "raw_preview": "The first thing to do is to think of the cost of the duck egg. The egg is a simple, unassuming, and not particularly expensive. The egg is a natural, unassuming, and not particularly valuable. The egg is a basic, simple, and not particularly expensive. The cost of the duck egg is a significant factor in the decision of the farmer. The egg is a natural, unassuming, and not particularly valuable. The egg is a basic, simple, and the cost of the duck egg is a significant factor in the decision of the farmer."
+        },
+        {
+          "index": 1,
+          "outcome": "format_error",
+          "ground_truth": "3",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "The question is, \"I'm a little worried, I'm a little bit of a perfectionist, and I'm a bit of a worrier, and I'm a bit of a perfectionist, and I'm a bit of a romantic, and I'm a bit of a dreamer, and I'm a bit of a optimist, and I'm a bit of a romantic, and I'm a bit of a worrier, and I'm a bit of a dreamer, and I'm a bit of a optimist, and I'm a bit of a perfectionist, and I'm a bit of a worrier, and I'm a bit of a romantic, and I'm a bit of a dreamer, and I'm a bit of a perfectionist, and I'm a bit of a worrier, and I'm a bit of a dreamer, and I'm a bit of a romantic, and I'm a bit of a perfectionist, and I'm a bit of a worrier, and I'm a bit of a dreamer, and I'm a bit of a romantic, and I'm a bit of a perfectionist, and I'm a bit of a bit of a worrier, and I'm a bit of a dreamer, and I",
+          "raw_preview": "The question is, \"I'm a little worried, I'm a little bit of a perfectionist, and I'm a bit of a worrier, and I'm a bit of a perfectionist, and I'm a bit of a romantic, and I'm a bit of a dreamer, and I'm a bit of a optimist, and I'm a bit of a romantic, and I'm a bit of a worrier, and I'm a bit of a dreamer, and I'm a bit of a optimist, and I'm a bit of a perfectionist, and I'm a bit of a worrier, and I'm a bit of a romantic, and I'm a bit of a dreamer, and I'm a bit of a perfectionist, and I'm a bit of a worrier, and I'm a bit of a dreamer, and I'm a bit of a romantic, and I'm a bit of a perfectionist, and I'm a bit of a worrier, and I'm a bit of a dreamer, and I'm a bit of a romantic, and I'm a bit of a perfectionist, and I'm a bit of a bit of a worrier, and I'm a bit of a dreamer, and I'm a bit of a romantic, and I'm a bit of a perfectionist, and I'm a bit of a dreamer, and I'm a bit of a romantic, and I'm a bit of a bit of a worrier, and I'm a bit of a perfectionist, and I'm a bit of a dreamer, and I'm a bit of a romantic, and I'm a bit of a dreamer, and I'm a bit of a perfectionist, and I'm a bit of a worrier, and I'm a bit of a bit of a romantic, and I'm a bit of a dreamer, a"
+        },
+        {
+          "index": 2,
+          "outcome": "format_error",
+          "ground_truth": "70000",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "The first thing to consider is the amount of money that was put in the deal. The house was being flipped, and the price of the house was being put in the deal. The deal was to be made, and the price of the house was being put in the deal. The question is, how much profit did he make, and the amount of money being put in the deal. The answer is, the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put ",
+          "raw_preview": "The first thing to consider is the amount of money that was put in the deal. The house was being flipped, and the price of the house was being put in the deal. The deal was to be made, and the price of the house was being put in the deal. The question is, how much profit did he make, and the amount of money being put in the deal. The answer is, the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amount of money being put in the deal, and the amo"
+        },
+        {
+          "index": 3,
+          "outcome": "format_error",
+          "ground_truth": "540",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## 1. 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 13. 14. 15. 16. 17. 18. 19. 20. 21. 22. 23. 24. 25. 26. 27. 28. 29. 30. 31. 32. 33. 34. 35. 36. 37. 38. 39. 40. 41. 42. 43. 44. 45. 46. 47. 48. 49. 50. 51. 52. 53. 54. 55. 56. 57. 58. 59. 60. 61. 62. 63. 64. 65. 66. 67. 68. 69. 70. 71. 72. 73. 74. 75. 76. 77. 78. 79. 80. 81. 82. 83. 84. 85. 86. 87. 88. 89. 90. 91. 92. 93. 94. 95. 96. 97. 98. 99. 100. 101. 102. 103. 104. 105. 106. 107. 108. 109. 110. 111. 112. 113. 114. 115. 116. 117. 118. 119. 120. 121. 122. 123. 124. 125. 126. 127. 128. 129. 130. 131. 132. 133. 134. 135. 136. 137. 138. 139. 140. 141. 142. 143. 144. 145. 146. 147. 148. 149. 150. 151. 152. 153. 154. 155. 156. 157. 158. 159. 160. 161. 162. 163. 164. 165. 166. 167. 168. 169. 170. 171. 172. 173. 174. 175. 176. 177. 178. 179. 180. 18",
+          "raw_preview": "## 1. 1. 2. 3. 4. 5. 6. 7. 8. 9. 10. 11. 12. 13. 14. 15. 16. 17. 18. 19. 20. 21. 22. 23. 24. 25. 26. 27. 28. 29. 30. 31. 32. 33. 34. 35. 36. 37. 38. 39. 40. 41. 42. 43. 44. 45. 46. 47. 48. 49. 50. 51. 52. 53. 54. 55. 56. 57. 58. 59. 60. 61. 62. 63. 64. 65. 66. 67. 68. 69. 70. 71. 72. 73. 74. 75. 76. 77. 78. 79. 80. 81. 82. 83. 84. 85. 86. 87. 88. 89. 90. 91. 92. 93. 94. 95. 96. 97. 98. 99. 100. 101. 102. 103. 104. 105. 106. 107. 108. 109. 110. 111. 112. 113. 114. 115. 116. 117. 118. 119. 120. 121. 122. 123. 124. 125. 126. 127. 128. 129. 130. 131. 132. 133. 134. 135. 136. 137. 138. 139. 140. 141. 142. 143. 144. 145. 146. 147. 148. 149. 150. 151. 152. 153. 154. 155. 156. 157. 158. 159. 160. 161. 162. 163. 164. 165. 166. 167. 168. 169. 170. 171. 172. 173. 174. 175. 176. 177. 178. 179. 180. 181. 182. 183. 184. 185. 186. 187. 188. 189. 190. 191. 192. 193. 194. 195. 196. 197. 198. 199. 200. 201. 202. 203. 204. 205. 206. 207. 208. 209. 210. 211. 212. 213. 214. 215. 216. 217. 218. 219. 220. 221. 222. 223. 224. 225. 226. 227. 228. 229. 230. 231. 232. 233. 234. 235. 236. 237. 238. 239. 240. 241. 242. 243. 244. 245. 246. 247. 248. 249. 250. 251. 252. 253. 254. 255. 256. 257. 258. 259. 260. 26"
+        },
+        {
+          "index": 4,
+          "outcome": "format_error",
+          "ground_truth": "20",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "The question is, \"What is the significance of the 25 cups of feed in the context of the question, is the 20 chickens in the flock of 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and th",
+          "raw_preview": "The question is, \"What is the significance of the 25 cups of feed in the context of the question, is the 20 chickens in the flock of 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups of feed, and the 20 chickens, and the 15 cups o"
+        }
+      ],
+      "Correct_Debug_Examples": []
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.98,
+      "Wrong_Answer_Rate": 0.01,
+      "Correct_Rate": 0.01,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.88,
+      "Parse_Sources": {
+        "final_line": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "outcome": "format_error",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1\nThe given problem is to find the maximum value of the given expression, and the given answer is a bit of a surprise, as the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit o",
+          "raw_preview": "## Step 1\nThe given problem is to find the maximum value of the given expression, and the given answer is a bit of a surprise, as the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surprise. The given answer is a bit of a surprise, and the given answer is a bit of a surpris"
+        },
+        {
+          "index": 1,
+          "outcome": "format_error",
+          "ground_truth": "p - q",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "![1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1",
+          "raw_preview": "![1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+        },
+        {
+          "index": 2,
+          "outcome": "format_error",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1\nThe first step is to understand the given information and to think of the question, \"What is the value of the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of th",
+          "raw_preview": "## Step 1\nThe first step is to understand the given information and to think of the question, \"What is the value of the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the total amount of the given fraction, and the given fraction of the to"
+        },
+        {
+          "index": 3,
+          "outcome": "format_error",
+          "ground_truth": "9",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1\nTo find the number of positive whole or half divisors of 196, I need to think of the factors of 196, I need to understand the meaning of the number 196 in the context of the given number. I need to think of the factors of 196, I need to think of the meaning of the given number, and the way the question is phrased, I think of the way the question is phrased, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question ",
+          "raw_preview": "## Step 1\nTo find the number of positive whole or half divisors of 196, I need to think of the factors of 196, I need to understand the meaning of the number 196 in the context of the given number. I need to think of the factors of 196, I need to think of the meaning of the given number, and the way the question is phrased, I think of the way the question is phrased, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the question is phrased, I think of the meaning of the given number, and the way the ques"
+        },
+        {
+          "index": 4,
+          "outcome": "format_error",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "The next section of the paper, (5.6, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2",
+          "raw_preview": "The next section of the paper, (5.6, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2), S.\ndot((6.8, 2.2)"
+        }
+      ],
+      "Correct_Debug_Examples": [
+        {
+          "index": 12,
+          "ground_truth": "284",
+          "prediction": "The final answer is: 284.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "The final answer is: 284.",
+          "raw_preview": "The final answer is: 284."
+        }
+      ]
+    }
+  }
+}

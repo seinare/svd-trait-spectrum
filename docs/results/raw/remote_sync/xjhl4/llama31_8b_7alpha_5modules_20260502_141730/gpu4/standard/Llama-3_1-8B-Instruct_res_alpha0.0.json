@@ -1,0 +1,244 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": 0.0,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.1-8B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "/data1/xjh/code/pruning/models/Llama-3.1-8B-Instruct",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.68,
+      "Correct_Rate": 0.32,
+      "Parse_Sources": {
+        "boxed": 97,
+        "final_number": 3
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "52",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{52}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "$40,000",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{$40,000}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "30",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{30}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "64",
+          "prediction": "80",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{80}"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "260",
+          "prediction": "100",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{100}"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.74,
+      "Correct_Rate": 0.26,
+      "Parse_Sources": {
+        "boxed": 96,
+        "final_number": 4
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "\\frac{14}{3}p - 3q",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{\\frac{14}{3}p - 3q}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "12",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{12}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "Angela",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Angela}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "42",
+          "prediction": "126",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{126}"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "27",
+          "prediction": "1729",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{1729}"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.63,
+      "Correct_Rate": 0.37,
+      "Parse_Sources": {
+        "boxed": 100
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "C) Planetary days will become shorter.",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C) Planetary days will become shorter.}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "B) buildings will be made safer",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B) buildings will be made safer}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "C) Chlorophyll in the leaf captures light energy.",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C) Chlorophyll in the leaf captures light energy.}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "D) the independent (manipulated) variable",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D) the independent (manipulated) variable}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "D) an infectious, chronic disease",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D) an infectious, chronic disease}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.32,
+      "Correct_Rate": 0.68,
+      "Parse_Sources": {
+        "boxed": 100
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "JaMarcus Russell",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{JaMarcus Russell}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        },
+        {
+          "index": 10,
+          "bucket": "wrong",
+          "ground_truth": "51",
+          "prediction": "49",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{49}"
+        },
+        {
+          "index": 15,
+          "bucket": "wrong",
+          "ground_truth": "5",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        }
+      ]
+    }
+  }
+}

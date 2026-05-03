@@ -1,0 +1,253 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": -0.4,
+    "model_id": "Qwen/Qwen3-8B",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 2048,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha-0.4",
+    "eval_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha-0.4",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.03,
+      "Wrong_Answer_Rate": 0.84,
+      "Correct_Rate": 0.13,
+      "Parse_Sources": {
+        "boxed": 71,
+        "final_number": 25,
+        "format_error": 3,
+        "final_line": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "122",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{122}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "3",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "120000",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{120000}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "540",
+          "prediction": "600",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{600}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "15",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "every day, Wendi feeds each of her chickens 3 cups of mixed chicken feed,  15 morning,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15 cups,  15"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.07,
+      "Wrong_Answer_Rate": 0.78,
+      "Correct_Rate": 0.15,
+      "Parse_Sources": {
+        "boxed": 49,
+        "final_number": 40,
+        "final_line": 4,
+        "format_error": 7
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "2",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "$$\\boxed{p^2 - 2p + 2q - 2p^2 + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^2 - 2p + 2p^"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "\\frac{1}{2}",
+          "parse_source": "boxed",
+          "finish_reason": "length",
+          "output": "$$\n\\boxed{\\frac{1}{2}}\n$$\n\n**Step 1: Evaluate $f(-2) = \\frac{3(-2) - 2}{(-2) - 2} = \\frac{-6 - 2}{-4} = \\frac{-8}{-4} = 2.**\n\n**Step 2: Evaluate $f(-1) = \\frac{3(-1) - 2}{(-1) - 2} = \\frac{-3 - 2}{-3} = \\frac{-5}{-3} = 5.**\n\n**Step 3: Evaluate $f(0) = \\frac{3(0) - 2}{(0) - 2} = \\frac{-2}{-2} = 1.**\n\n**Step 4: Add the values: 2 + 5 + 1 = 8.** (Wait, the actual sum is 2 + 5 + 1 = 8, but the actual answer is 1/2. (Wait, the actual answer is 1/2. (Wait, the actual answer is 1/2. (Wait, the actual answer is 1/2."
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "196",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "The number of positive whole-number divisors of 196 is"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "7",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "the greatest average speed is the student whose distance covered over time is the highest. the graph is a 7"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "42",
+          "prediction": "12",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "The perimeter of the regular hexagon is 6 times the perimeter of one equilateral triangle. so:  \n  6 \u00d7 21 = 126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n  126  \n   12"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.02,
+      "Wrong_Answer_Rate": 0.28,
+      "Correct_Rate": 0.7,
+      "Parse_Sources": {
+        "boxed": 96,
+        "format_error": 2,
+        "final_line": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "D",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D}"
+        },
+        {
+          "index": 7,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "B",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B}"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "A",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{A}"
+        },
+        {
+          "index": 9,
+          "bucket": "format",
+          "ground_truth": "A",
+          "prediction": null,
+          "parse_source": "format_error",
+          "finish_reason": "length",
+          "output": "\\Unit of the the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the atom. the"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.09,
+      "Wrong_Answer_Rate": 0.7,
+      "Correct_Rate": 0.21,
+      "Parse_Sources": {
+        "final_line": 11,
+        "boxed": 58,
+        "format_error": 9,
+        "final_number": 22
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "boxed",
+          "parse_source": "final_line",
+          "finish_reason": "length",
+          "output": "boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n boxed{}\\\n Oakland\\\n "
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "Oakland Raiders",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Oakland Raiders}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "29",
+          "prediction": "12",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{12}"
+        }
+      ]
+    }
+  }
+}

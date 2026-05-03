@@ -1,0 +1,248 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": 0.2,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.2-1B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/pruning_codex/llama1b/Llama-3.2-1B-Instruct-alpha0.2",
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama1b/Llama-3.2-1B-Instruct-alpha0.2",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.99,
+      "Correct_Rate": 0.01,
+      "Parse_Sources": {
+        "final_number": 94,
+        "boxed": 6
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "32",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "16 eggs/day x $2/egg = $32/day"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "3",
+          "prediction": "4",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "4"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "120000",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "$80,000 * 150% = $80,000 * 1.5 = $120,000"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "540",
+          "prediction": "360",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "360"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "25",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "To find the total cups of feed given in the final meal, we need to calculate 15 cups + 25 cups.\n\nThe final meal cups = 15 cups + 25 cups"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.88,
+      "Correct_Rate": 0.12,
+      "Parse_Sources": {
+        "final_number": 77,
+        "boxed": 21,
+        "final_line": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": "-1",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "## Step 1: Recall the conversion formulas from rectangular coordinates to polar coordinates\nThe conversion formulas from rectangular coordinates $(x,y)$ to polar coordinates $(r,\\theta)$ are $r = \\sqrt{x^2+y^2}$ and $\\theta = \\tan^{-1}\\left(\\frac{y}{x}\\right)$.\n\n## Step 2: Plug in the rectangular coordinates $(x,y) = (0,3)$ into the formulas\nPlugging in the rectangular coordinates $(x,y) = (0,3)$ into the formulas gives $r = \\sqrt{0^2+3^2} = \\sqrt{9} = 3$ and $\\theta = \\tan^{-1}\\left(\\frac{3}{0}\\right)$.\n\n## Step 3: Simplify the expression $\\tan^{-1}\\left(\\frac{3}{0}\\right)$\nSince $\\tan^{-1}(x)$ is undefined when $x$ is undefined, we need to find the principal value of $\\tan^{-1}(x)$ which is $\\theta$ in the interval $[0,\\pi]$.\n\n## Step 4: Find the principal value of $\\tan^{-1}(x)$\nThe principal value of $\\tan^{-1}(x)$"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "3",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "## Step 1\nWe start by writing out the terms of the double sum:\n\\[\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\cdot \\frac{1}{k^3} = \\sum_{j = 1}^\\infty \\frac{1}{j^3} \\cdot \\frac{1}{k^3} = \\sum_{j = 1}^\\infty \\frac{1}{j^3} \\cdot \\frac{1}{k^3} = \\sum_{j = 1}^\\infty \\frac{1}{j^3} \\cdot \\frac{1}{k^3} = \\sum_{j = 1}^\\infty \\frac{1}{j^3} \\cdot \\frac{1}{k^3} = \\sum_{j = 1}^\\infty \\frac{1}{j^3} \\cdot \\frac{1}{k^3} ="
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "4",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "$f(-2) = \\frac{3(-2)-2}{-2-2} = \\frac{-8}{-4} = 2$\n\n$f(-1) = \\frac{3(-1)-2}{-1-2} = \\frac{-3}{-3} = 1$\n\n$f(0) = \\frac{3(0)-2}{0-2} = \\frac{-2}{-2} = 1$\n\n$f(-2) + f(-1) + f(0) = 2 + 1 + 1 = 4$"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "32",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "32"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "8",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "## Step 1\nTo solve this problem, we need to calculate the average speed of each student and compare them to find the student with the greatest average speed.\n\n## Step 2\nTo calculate the average speed, we need to calculate the distance traveled by each student and the time taken to travel that distance.\n\n## Step 3\nEvelyn traveled 6 units in 1 minute, Briana traveled 8 units in 2 minutes, Carla traveled 5 units in 3 minutes, Debra traveled 2 units in 4 minutes, Angela traveled 1 unit in 6 minutes.\n\n## Step 4\nTo calculate Angela's average speed, we divide her distance traveled by her time taken, which is 1/6.\n\n## Step 5\nTo calculate Briana's average speed, we divide her distance traveled by her time taken, which is 8/2 = 4.\n\n## Step 6\nTo calculate Carla's average speed, we divide her distance traveled by her time taken, which is 5/3.\n\n## Step 7\nTo calculate Debra's average speed, we divide her distance traveled by her time taken, which is 2/4 = 0.5.\n\n## Step 8\nTo calculate Angela"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.57,
+      "Correct_Rate": 0.43,
+      "Parse_Sources": {
+        "boxed": 86,
+        "final_line": 14
+      },
+      "Debug_Examples": [
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "D",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "D"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "A",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{A}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "Boxed{C}",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "Boxed{C}"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.87,
+      "Correct_Rate": 0.13,
+      "Parse_Sources": {
+        "final_line": 24,
+        "boxed": 6,
+        "final_number": 70
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "Oakland Raiders",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "Oakland Raiders"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "20",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "20"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "29",
+          "prediction": "53",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "53"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "JaMarcus Russell",
+          "prediction": "Sebastian Janikowski",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "Sebastian Janikowski"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "config": {
+    "method": "eval_script1_standard_cot",
+    "alpha": 0.2,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.2-3B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.6,
+    "max_model_len": 8192,
+    "max_tokens": 8192,
+    "thinking_budget": null,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/pruning_codex/llama3b/Llama-3.2-3B-Instruct-alpha0.2",
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama3b/Llama-3.2-3B-Instruct-alpha0.2",
+    "thinking_mode": "cot_enabled"
+  },
+  "scores_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.11,
+      "Wrong_Answer_Rate": 0.32,
+      "Correct_Rate": 0.57,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.0,
+      "Parse_Sources": {
+        "boxed": 46,
+        "final_line": 43
+      },
+      "Debug_Examples": [
+        {
+          "index": 2,
+          "outcome": "format_error",
+          "ground_truth": "70000",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find Josh's profit, we need to calculate the increase in value of the house.\n\nJosh buys the house for $80,000 and puts in $50,000 in repairs. This increases the value of the house by 150%. \n\nLet x be Josh's profit. The increase in value of the house is 150% of x, which means x/100 * 150 = x/100 * 1500 = x/100 * 1500/100 = x/100 * 15 = x/6.66 = x/7/2 = x/7 * 2 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/",
+          "raw_preview": "To find Josh's profit, we need to calculate the increase in value of the house.\n\nJosh buys the house for $80,000 and puts in $50,000 in repairs. This increases the value of the house by 150%. \n\nLet x be Josh's profit. The increase in value of the house is 150% of x, which means x/100 * 150 = x/100 * 1500 = x/100 * 1500/100 = x/100 * 15 = x/6.66 = x/7/2 = x/7 * 2 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/1 = x/7 * 2/"
+        },
+        {
+          "index": 3,
+          "outcome": "wrong",
+          "ground_truth": "540",
+          "prediction": "James runs 180 meters per week.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find the total meters James runs a week, we need to multiply the meters run per sprint by the number of sprints per week.\n\nMeters run per sprint: 60 meters\nSprints per week: 3\n\nTotal meters run per week: 60 meters/sprint * 3 sprints/week = 180 meters/week\n\nJames runs 180 meters per week.",
+          "raw_preview": "To find the total meters James runs a week, we need to multiply the meters run per sprint by the number of sprints per week.\n\nMeters run per sprint: 60 meters\nSprints per week: 3\n\nTotal meters run per week: 60 meters/sprint * 3 sprints/week = 180 meters/week\n\nJames runs 180 meters per week."
+        },
+        {
+          "index": 5,
+          "outcome": "wrong",
+          "ground_truth": "64",
+          "prediction": "Total_cost = $80",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find the total cost, we need to calculate the cost of 16 glasses. \n\nFirst, calculate the cost of 16 glasses without discount:\nCost_per_glass = $5\nTotal_cost_without_discount = Cost_per_glass * 16\nTotal_cost_without_discount = $80\n\nNow, calculate the cost of 8 glasses at 60% discount:\nDiscounted_cost_per_glass = Cost_per_glass * 0.6\nDiscounted_cost_per_glass = $3\nTotal_cost_with_discount = Discounted_cost_per_glass * 8\nTotal_cost_with_discount = $24\n\nSince Kylar wants to buy 16 glasses, we need to calculate the cost of 8 glasses at discounted price and add the cost of 8 glasses at full price:\nTotal_cost = Total_cost_with_discount + Total_cost_without_discount\nTotal_cost = $24 + $56\nTotal_cost = $80",
+          "raw_preview": "To find the total cost, we need to calculate the cost of 16 glasses. \n\nFirst, calculate the cost of 16 glasses without discount:\nCost_per_glass = $5\nTotal_cost_without_discount = Cost_per_glass * 16\nTotal_cost_without_discount = $80\n\nNow, calculate the cost of 8 glasses at 60% discount:\nDiscounted_cost_per_glass = Cost_per_glass * 0.6\nDiscounted_cost_per_glass = $3\nTotal_cost_with_discount = Discounted_cost_per_glass * 8\nTotal_cost_with_discount = $24\n\nSince Kylar wants to buy 16 glasses, we need to calculate the cost of 8 glasses at discounted price and add the cost of 8 glasses at full price:\nTotal_cost = Total_cost_with_discount + Total_cost_without_discount\nTotal_cost = $24 + $56\nTotal_cost = $80"
+        },
+        {
+          "index": 6,
+          "outcome": "format_error",
+          "ground_truth": "260",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find Charleston's sheep count, multiply Seattle's sheep count by 4. Charleston has 4 * 20 sheep = 80 sheep.\n\nSeattle has 20 sheep, Charleston has 80 sheep, and Toulouse has twice Charleston's sheep count. Toulouse has 2 * 80 sheep = 160 sheep.\n\nAdd Seattle's sheep count, Charleston's sheep count, and Toulouse's sheep count together. 20 sheep + 80 sheep + 160 sheep = 260 sheep",
+          "raw_preview": "To find Charleston's sheep count, multiply Seattle's sheep count by 4. Charleston has 4 * 20 sheep = 80 sheep.\n\nSeattle has 20 sheep, Charleston has 80 sheep, and Toulouse has twice Charleston's sheep count. Toulouse has 2 * 80 sheep = 160 sheep.\n\nAdd Seattle's sheep count, Charleston's sheep count, and Toulouse's sheep count together. 20 sheep + 80 sheep + 160 sheep = 260 sheep"
+        },
+        {
+          "index": 7,
+          "outcome": "format_error",
+          "ground_truth": "160",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find the total download time, we need to break it down into parts. Carla downloads 200 GB/minute, but 40% of the way through the download, Windows forces a restart. This means Carla downloads 200 GB * 0.6 = 120 GB before the restart. Carla downloads 120 GB/minute, so Carla downloads 120 GB * 1 minute/GB = 120 minutes before the restart. Carla downloads 80 GB/minute after the restart, so Carla downloads 80 GB * x minutes/GB = x minutes after the restart. Carla downloads 80 GB/minute * x minutes/GB = 80x minutes. Carla downloads 120 GB/minute * x minutes/GB = 120x minutes Carla downloads 80 GB/minute * x minutes/GB = 80x minutes Carla downloads 120 GB/minute * x minutes/GB = 120x minutes Carla downloads 80 GB/minute * x minutes/GB = 80x minutes Carla downloads 120 GB/minute * x minutes/GB",
+          "raw_preview": "To find the total download time, we need to break it down into parts. Carla downloads 200 GB/minute, but 40% of the way through the download, Windows forces a restart. This means Carla downloads 200 GB * 0.6 = 120 GB before the restart. Carla downloads 120 GB/minute, so Carla downloads 120 GB * 1 minute/GB = 120 minutes before the restart. Carla downloads 80 GB/minute after the restart, so Carla downloads 80 GB * x minutes/GB = x minutes after the restart. Carla downloads 80 GB/minute * x minutes/GB = 80x minutes. Carla downloads 120 GB/minute * x minutes/GB = 120x minutes Carla downloads 80 GB/minute * x minutes/GB = 80x minutes Carla downloads 120 GB/minute * x minutes/GB = 120x minutes Carla downloads 80 GB/minute * x minutes/GB = 80x minutes Carla downloads 120 GB/minute * x minutes/GB = 120x minutes Carla downloads 80 GB/minute * x minutes/GB = 80x minutes Carla downloads 120 GB/minute * x minutes/GB = 120x minutes Carla downloads 80 GB/minute * x minutes/GB = 80x minutes Carla downloads 120 GB/minute * x minutes/GB = 120x minutes Carla downloads 80 GB/minute * x minutes/GB = 80x minutes Carla downloads 120 GB/minute * x minutes/GB = 120x minutes Carla downloads 80 GB/minute *"
+        }
+      ],
+      "Correct_Debug_Examples": [
+        {
+          "index": 0,
+          "ground_truth": "18",
+          "prediction": "18",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: Calculate the number of eggs laid by Janet's ducks\nJanet's ducks lay 16 eggs per day.\n\n## Step 2: Calculate the number of eggs eaten for breakfast\nJanet eats 3 eggs for breakfast every morning.\n\n## Step 3: Calculate the number of eggs baked for muffins\nShe bakes muffins for her friends using 4 eggs.\n\n## Step 4: Calculate the number of eggs sold at the farmers' market\nEggs sold = Eggs laid - Eggs eaten for breakfast - Eggs baked for muffins\nEggs sold = 16 - 3 - 4\nEggs sold = 9\n\n## Step 5: Calculate the daily earnings from selling eggs at the farmers' market\nEarnings = Eggs sold * Price per egg\nEarnings = 9 * $2\nEarnings = $18\n\nThe final answer is: $\\boxed{18}$",
+          "raw_preview": "## Step 1: Calculate the number of eggs laid by Janet's ducks\nJanet's ducks lay 16 eggs per day.\n\n## Step 2: Calculate the number of eggs eaten for breakfast\nJanet eats 3 eggs for breakfast every morning.\n\n## Step 3: Calculate the number of eggs baked for muffins\nShe bakes muffins for her friends using 4 eggs.\n\n## Step 4: Calculate the number of eggs sold at the farmers' market\nEggs sold = Eggs laid - Eggs eaten for breakfast - Eggs baked for muffins\nEggs sold = 16 - 3 - 4\nEggs sold = 9\n\n## Step 5: Calculate the daily earnings from selling eggs at the farmers' market\nEarnings = Eggs sold * Price per egg\nEarnings = 9 * $2\nEarnings = $18\n\nThe final answer is: $\\boxed{18}$"
+        },
+        {
+          "index": 1,
+          "ground_truth": "3",
+          "prediction": "Total bolts required = 3 bolts",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find the total bolts required, we need to calculate the bolts needed for blue fiber and white fiber separately.\n\nBlue fiber requires 2 bolts.\nWhite fiber requires half that amount, so it requires 2/2 = 1 bolt.\n\nTotal bolts required = bolts needed for blue fiber + bolts needed for white fiber\nTotal bolts required = 2 bolts + 1 bolt\nTotal bolts required = 3 bolts",
+          "raw_preview": "To find the total bolts required, we need to calculate the bolts needed for blue fiber and white fiber separately.\n\nBlue fiber requires 2 bolts.\nWhite fiber requires half that amount, so it requires 2/2 = 1 bolt.\n\nTotal bolts required = bolts needed for blue fiber + bolts needed for white fiber\nTotal bolts required = 2 bolts + 1 bolt\nTotal bolts required = 3 bolts"
+        },
+        {
+          "index": 4,
+          "ground_truth": "20",
+          "prediction": "20",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: Calculate the total cups of feed given to chickens so far\nWendi gives her chickens 15 cups of feed in the morning and 25 cups of feed in the afternoon, for a total of 15 + 25 cups.\n\n## Step 2: Calculate the total cups of feed given to chickens so far\nTotal cups given so far = 15 cups + 25 cups = 40 cups.\n\n## Step 3: Calculate the cups of feed needed for the final meal\nSince Wendi gives her chickens 3 cups each, the total cups needed for the final meal can be calculated by subtracting the cups given so far from the total cups needed for the chickens.\n\n## Step 4: Calculate cups needed for final meal\nCups needed for final meal = Total cups needed for chickens - Cups given so far = Total cups needed for chickens - Cups given so far.\n\n## Step 5: Calculate total cups needed for chicke",
+          "raw_preview": "## Step 1: Calculate the total cups of feed given to chickens so far\nWendi gives her chickens 15 cups of feed in the morning and 25 cups of feed in the afternoon, for a total of 15 + 25 cups.\n\n## Step 2: Calculate the total cups of feed given to chickens so far\nTotal cups given so far = 15 cups + 25 cups = 40 cups.\n\n## Step 3: Calculate the cups of feed needed for the final meal\nSince Wendi gives her chickens 3 cups each, the total cups needed for the final meal can be calculated by subtracting the cups given so far from the total cups needed for the chickens.\n\n## Step 4: Calculate cups needed for final meal\nCups needed for final meal = Total cups needed for chickens - Cups given so far = Total cups needed for chickens - Cups given so far.\n\n## Step 5: Calculate total cups needed for chickens\nTotal cups needed for chickens = Number of chickens * Cups given per chicken = 20 chickens * 3 cups/chicken = 60 cups.\n\n## Step 6: Calculate cups needed for final meal\nCups needed for final meal = Total cups needed for chickens - Cups given so far = 60 cups - 40 cups = 20 cups.\n\nThe final answer is $\\boxed{20}$."
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.28,
+      "Wrong_Answer_Rate": 0.38,
+      "Correct_Rate": 0.34,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.2,
+      "Parse_Sources": {
+        "boxed": 63,
+        "final_line": 8,
+        "final_number": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "outcome": "wrong",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": "(3\\pi/2, \\frac{5\\pi}{6})",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "$\\boxed{(3\\pi/2, \\frac{5\\pi}{6})}$",
+          "raw_preview": "$\\boxed{(3\\pi/2, \\frac{5\\pi}{6})}$"
+        },
+        {
+          "index": 1,
+          "outcome": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "pq",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: Analyze the given sums p and q\nWe start by analyzing the given sums $p$ and $q$, defined as $p = \\sum_{k = 1}^\\infty \\frac{1}{k^2}$ and $q = \\sum_{k = 1}^\\infty \\frac{1}{k^3}$.\n\n## Step 2: Express the double sum using p and q\nWe want to express $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ in terms of $p$ and $q$. This involves manipulating the double sum to relate it to the given sums $p$ and $q$.\n\n## Step 3: Manipulate the double sum\nWe rewrite $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ as $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3 + 3j^2k + 3jk^2 + k^3}$.\n\n## Step 4: Decompose the fraction\nWe decompose $\\frac{1}{j^3 + 3j^2k + 3jk^2 + k^3}$ into partial fractions to simp",
+          "raw_preview": "## Step 1: Analyze the given sums p and q\nWe start by analyzing the given sums $p$ and $q$, defined as $p = \\sum_{k = 1}^\\infty \\frac{1}{k^2}$ and $q = \\sum_{k = 1}^\\infty \\frac{1}{k^3}$.\n\n## Step 2: Express the double sum using p and q\nWe want to express $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ in terms of $p$ and $q$. This involves manipulating the double sum to relate it to the given sums $p$ and $q$.\n\n## Step 3: Manipulate the double sum\nWe rewrite $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ as $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3 + 3j^2k + 3jk^2 + k^3}$.\n\n## Step 4: Decompose the fraction\nWe decompose $\\frac{1}{j^3 + 3j^2k + 3jk^2 + k^3}$ into partial fractions to simplify the expression.\n\n## Step 5: Partial fraction decomposition\nWe express $\\frac{1}{j^3 + 3j^2k + 3jk^2 + k^3}$ as $\\frac{1}{k^3} \\left( \\frac{1}{j + k} - \\frac{3}{j^2 + jk} + \\frac{3}{jk + k^2} - \\frac{1}{k^3} \\right)$.\n\n## Step 6: Rearrange terms\nRearranging terms gives $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3 + 3j^2k + 3jk^2 + k^3} = \\sum_{k = 1}^\\infty \\frac{1}{k^3} \\sum_{j = 1}^"
+        },
+        {
+          "index": 2,
+          "outcome": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "\\frac{5}{2}",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "\\boxed{\\frac{5}{2}}",
+          "raw_preview": "\\boxed{\\frac{5}{2}}"
+        },
+        {
+          "index": 5,
+          "outcome": "format_error",
+          "ground_truth": "42",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "The hexagon can be divided into six equilateral triangles. Each triangle has a side length equal to the perimeter divided by 6. Therefore, each triangle has side length $\\frac{21}{6}$ inches. The hexagon's perimeter is equal to six times this side length. Therefore, the hexagon's perimeter is $\\frac{21}{6}\\cdot6=21$ inches.",
+          "raw_preview": "The hexagon can be divided into six equilateral triangles. Each triangle has a side length equal to the perimeter divided by 6. Therefore, each triangle has side length $\\frac{21}{6}$ inches. The hexagon's perimeter is equal to six times this side length. Therefore, the hexagon's perimeter is $\\frac{21}{6}\\cdot6=21$ inches."
+        },
+        {
+          "index": 6,
+          "outcome": "wrong",
+          "ground_truth": "27",
+          "prediction": "9",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "The smallest positive integer that can be written as the sum of three consecutive integers is $\\boxed{9}$",
+          "raw_preview": "The smallest positive integer that can be written as the sum of three consecutive integers is $\\boxed{9}$"
+        }
+      ],
+      "Correct_Debug_Examples": [
+        {
+          "index": 3,
+          "ground_truth": "9",
+          "prediction": "9",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find the number of positive whole-number divisors of 196, we need to find the prime factorization of 196.\n\nPrime factorizing 196, we get:\n\n196 = 2^2 * 7^2\n\nThe number of divisors formula states that if a number n has prime factorization p1^a1 * p2^a2 * ... * pk^ak, then the number of divisors of n is (a1+1)(a2+1)...(ak+1).\n\nApplying this formula, we get:\n\nNumber of divisors = (2+1)(2+1) = 3 * 3 = 9\n\nSo, the number 196 has 9 positive whole-number divisors.\n\nThe final answer is $\\boxed{9}$.",
+          "raw_preview": "To find the number of positive whole-number divisors of 196, we need to find the prime factorization of 196.\n\nPrime factorizing 196, we get:\n\n196 = 2^2 * 7^2\n\nThe number of divisors formula states that if a number n has prime factorization p1^a1 * p2^a2 * ... * pk^ak, then the number of divisors of n is (a1+1)(a2+1)...(ak+1).\n\nApplying this formula, we get:\n\nNumber of divisors = (2+1)(2+1) = 3 * 3 = 9\n\nSo, the number 196 has 9 positive whole-number divisors.\n\nThe final answer is $\\boxed{9}$."
+        },
+        {
+          "index": 4,
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "Evelyn",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "Step 1: Analyze the problem\nThe problem presents a graph showing the results of a cross-country team's training run. We need to determine which student has the greatest average speed.\n\nStep 2: Calculate distances run by each student\nEvelyn ran 4.5 km\nBriana ran 2.2 km\nCarla ran 5.2 km\nDebra ran 2.8 km\nAngela ran 1.4 km\n\nStep 3: Calculate times taken by each student\nEvelyn took 4 minutes\nBriana took 2 minutes\nCarla took 5 minutes\nDebra took 5 minutes\nAngela took 10 minutes\n\nStep 4: Calculate average speeds\nAverage speed = Total distance run / Total time taken\nEvelyn's average speed = 4.5 km / 4 min = 1.125 km/min\nBriana's average speed = 2.2 km / 2 min = 1.1 km/min\nCarla's average speed = 5.2 km / 5 min = 1.04 km/min\nDebra's average speed = 2.8 km / 5 min = 0.56 km/min\nAngela's average spee",
+          "raw_preview": "Step 1: Analyze the problem\nThe problem presents a graph showing the results of a cross-country team's training run. We need to determine which student has the greatest average speed.\n\nStep 2: Calculate distances run by each student\nEvelyn ran 4.5 km\nBriana ran 2.2 km\nCarla ran 5.2 km\nDebra ran 2.8 km\nAngela ran 1.4 km\n\nStep 3: Calculate times taken by each student\nEvelyn took 4 minutes\nBriana took 2 minutes\nCarla took 5 minutes\nDebra took 5 minutes\nAngela took 10 minutes\n\nStep 4: Calculate average speeds\nAverage speed = Total distance run / Total time taken\nEvelyn's average speed = 4.5 km / 4 min = 1.125 km/min\nBriana's average speed = 2.2 km / 2 min = 1.1 km/min\nCarla's average speed = 5.2 km / 5 min = 1.04 km/min\nDebra's average speed = 2.8 km / 5 min = 0.56 km/min\nAngela's average speed = 1.4 km / 10 min = 0.14 km/min\n\nStep 5: Determine the student with the greatest average speed\nComparing the average speeds calculated above, Evelyn has the greatest average speed.\n\n$\\boxed{Evelyn}$"
+        },
+        {
+          "index": 10,
+          "ground_truth": "2220",
+          "prediction": "The best answer is 2220",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "The best answer is 2220",
+          "raw_preview": "The best answer is 2220"
+        }
+      ]
+    }
+  }
+}

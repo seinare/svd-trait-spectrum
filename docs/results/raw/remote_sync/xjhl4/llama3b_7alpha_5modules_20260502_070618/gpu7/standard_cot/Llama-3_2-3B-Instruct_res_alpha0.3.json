@@ -1,0 +1,241 @@
+{
+  "config": {
+    "method": "eval_script1_standard_cot",
+    "alpha": 0.3,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.2-3B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.6,
+    "max_model_len": 8192,
+    "max_tokens": 8192,
+    "thinking_budget": null,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/pruning_codex/llama3b/Llama-3.2-3B-Instruct-alpha0.3",
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama3b/Llama-3.2-3B-Instruct-alpha0.3",
+    "thinking_mode": "cot_enabled"
+  },
+  "scores_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.38,
+      "Wrong_Answer_Rate": 0.49,
+      "Correct_Rate": 0.13,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.16,
+      "Parse_Sources": {
+        "boxed": 9,
+        "final_line": 53
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "outcome": "wrong",
+          "ground_truth": "3",
+          "prediction": "Robe takes 2 bolts blue fiber",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To solve this problem, let's break it down step-by-step.\n\nRobe takes 2 bolts blue fiber",
+          "raw_preview": "To solve this problem, let's break it down step-by-step.\n\nRobe takes 2 bolts blue fiber"
+        },
+        {
+          "index": 2,
+          "outcome": "wrong",
+          "ground_truth": "70000",
+          "prediction": "37.5",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To solve this problem, let's break it down step-by-step.\n\nJosh buys a house for $80,000 and puts in $50,000 in repairs. This increased the value of the house by 150%. \n\nStep 1: Calculate Josh's profit\nJosh's profit = Josh's cost - Josh's repairs\nJosh's profit = $80,000 - $50,000\nJosh's profit = $30,000\n\nStep 2: Calculate Josh's profit percentage\nJosh's profit percentage = Josh's profit / Josh's cost * 100\nJosh's profit percentage = $30,000 / $80,000 * 100\nJosh's profit percentage = 0.375 * 100\nJosh's profit percentage = 37.5%\n\nThe final answer is $\\boxed{37.5}$",
+          "raw_preview": "To solve this problem, let's break it down step-by-step.\n\nJosh buys a house for $80,000 and puts in $50,000 in repairs. This increased the value of the house by 150%. \n\nStep 1: Calculate Josh's profit\nJosh's profit = Josh's cost - Josh's repairs\nJosh's profit = $80,000 - $50,000\nJosh's profit = $30,000\n\nStep 2: Calculate Josh's profit percentage\nJosh's profit percentage = Josh's profit / Josh's cost * 100\nJosh's profit percentage = $30,000 / $80,000 * 100\nJosh's profit percentage = 0.375 * 100\nJosh's profit percentage = 37.5%\n\nThe final answer is $\\boxed{37.5}$"
+        },
+        {
+          "index": 3,
+          "outcome": "wrong",
+          "ground_truth": "540",
+          "prediction": "James runs a total of 180 meters a week",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "James runs a total of 180 meters a week",
+          "raw_preview": "James runs a total of 180 meters a week"
+        },
+        {
+          "index": 4,
+          "outcome": "wrong",
+          "ground_truth": "20",
+          "prediction": "",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find Wendi's chickens need cups of feed given to chickens final meal day answer, think problem carefully put answer inside $\\boxed{}$",
+          "raw_preview": "To find Wendi's chickens need cups of feed given to chickens final meal day answer, think problem carefully put answer inside $\\boxed{}$"
+        },
+        {
+          "index": 5,
+          "outcome": "format_error",
+          "ground_truth": "64",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find the total cost Kylar needs to pay for glasses, calculate the cost of one glass ($5) multiplied by 16 glasses. Multiply this result by .6 to find the cost of two glasses. Add this result to find the total cost Kylar needs to pay for glasses",
+          "raw_preview": "To find the total cost Kylar needs to pay for glasses, calculate the cost of one glass ($5) multiplied by 16 glasses. Multiply this result by .6 to find the cost of two glasses. Add this result to find the total cost Kylar needs to pay for glasses"
+        }
+      ],
+      "Correct_Debug_Examples": [
+        {
+          "index": 0,
+          "ground_truth": "18",
+          "prediction": "18",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "Mathematically, Janet sells ducks eggs daily. She eats ducks eggs for breakfast daily, three eggs x $2 = $6 daily. She sells ducks eggs baking muffins daily, four eggs x $2 = $8 daily. She sells ducks eggs farmers' market daily, remainder eggs x $2 = $(16 eggs - 3 eggs - 4 eggs) x $2 = $(16 eggs - 7 eggs) x $2 = $(9 eggs) x $2 = $18 daily. The answer is $\\boxed{18}$",
+          "raw_preview": "Mathematically, Janet sells ducks eggs daily. She eats ducks eggs for breakfast daily, three eggs x $2 = $6 daily. She sells ducks eggs baking muffins daily, four eggs x $2 = $8 daily. She sells ducks eggs farmers' market daily, remainder eggs x $2 = $(16 eggs - 3 eggs - 4 eggs) x $2 = $(16 eggs - 7 eggs) x $2 = $(9 eggs) x $2 = $18 daily. The answer is $\\boxed{18}$"
+        },
+        {
+          "index": 10,
+          "ground_truth": "366",
+          "prediction": "Total downloads over three months: 60 downloads + 180 downloads + 126 downloads = 366 downloads",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find the total number of downloads over the three months, I'll calculate month by month.\n\nMonth 1 downloads: 60 downloads\nMonth 2 downloads: 3 x 60 downloads = 180 downloads\nReduction in Month 3 downloads: 30% of 180 downloads = 54 downloads\nMonth 3 downloads: 180 downloads - 54 downloads = 126 downloads\n\nTotal downloads over three months: 60 downloads + 180 downloads + 126 downloads = 366 downloads",
+          "raw_preview": "To find the total number of downloads over the three months, I'll calculate month by month.\n\nMonth 1 downloads: 60 downloads\nMonth 2 downloads: 3 x 60 downloads = 180 downloads\nReduction in Month 3 downloads: 30% of 180 downloads = 54 downloads\nMonth 3 downloads: 180 downloads - 54 downloads = 126 downloads\n\nTotal downloads over three months: 60 downloads + 180 downloads + 126 downloads = 366 downloads"
+        },
+        {
+          "index": 12,
+          "ground_truth": "13",
+          "prediction": "Carlos will break even point before he starts earning money on the lemon tree in 13 years",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "Carlos will break even point before he starts earning money on the lemon tree in 13 years",
+          "raw_preview": "Carlos will break even point before he starts earning money on the lemon tree in 13 years"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.41,
+      "Wrong_Answer_Rate": 0.5,
+      "Correct_Rate": 0.09,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.26,
+      "Parse_Sources": {
+        "boxed": 27,
+        "final_line": 30,
+        "final_number": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "outcome": "wrong",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": "(r,\\theta) = (5,\\pi)",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "$\\boxed{(r,\\theta) = (5,\\pi)}$",
+          "raw_preview": "$\\boxed{(r,\\theta) = (5,\\pi)}$"
+        },
+        {
+          "index": 1,
+          "outcome": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "p + q",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: Understand what the problem is asking for\nThe problem requires finding a way to express $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ in terms of $p$ and $q$, where $p$ and $q$ are defined sums involving infinite series $\\sum_{k = 1}^\\infty \\frac{1}{k^2}$ and $\\sum_{k = 1}^\\infty \\frac{1}{k^3}$ respectively.\n\n## Step 2: Analyze p\n$p$ involves $\\sum_{k = 1}^\\infty \\frac{1}{k^2}$, indicating it's summing over $\\frac{1}{k^2}$ from k=1 to infinity.\n\n## Step 3: Analyze q\n$q$ involves $\\sum_{k = 1}^\\infty \\frac{1}{k^3}$, indicating it's summing over $\\frac{1}{k^3}$ from k=1 to infinity.\n\n## Step 4: Express $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ in terms of p and q\n$\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ can be rewritten usin",
+          "raw_preview": "## Step 1: Understand what the problem is asking for\nThe problem requires finding a way to express $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ in terms of $p$ and $q$, where $p$ and $q$ are defined sums involving infinite series $\\sum_{k = 1}^\\infty \\frac{1}{k^2}$ and $\\sum_{k = 1}^\\infty \\frac{1}{k^3}$ respectively.\n\n## Step 2: Analyze p\n$p$ involves $\\sum_{k = 1}^\\infty \\frac{1}{k^2}$, indicating it's summing over $\\frac{1}{k^2}$ from k=1 to infinity.\n\n## Step 3: Analyze q\n$q$ involves $\\sum_{k = 1}^\\infty \\frac{1}{k^3}$, indicating it's summing over $\\frac{1}{k^3}$ from k=1 to infinity.\n\n## Step 4: Express $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ in terms of p and q\n$\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ can be rewritten using p and q definitions.\n\n## Step 5: Rewrite $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ using p and q definitions\n$\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ can be rewritten using p definition $\\sum_{k = 1}^\\infty \\frac{1}{k^2}$ and q definition $\\sum_{k = 1}^\\infty \\frac{1}{k^3}$.\n\n## Step 6: Rewrite $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$"
+        },
+        {
+          "index": 3,
+          "outcome": "wrong",
+          "ground_truth": "9",
+          "prediction": "Prime factorization tells us that 196 = 2^2 x 7^2",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To solve this problem, we need to find the prime factorization of 196.\n\nPrime factorization of 196:\n196 = 2 x 2 x 7 x 7\n\nPrime factorization tells us that 196 = 2^2 x 7^2",
+          "raw_preview": "To solve this problem, we need to find the prime factorization of 196.\n\nPrime factorization of 196:\n196 = 2 x 2 x 7 x 7\n\nPrime factorization tells us that 196 = 2^2 x 7^2"
+        },
+        {
+          "index": 4,
+          "outcome": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "Carla has the greatest average speed.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "Carla has the greatest average speed.",
+          "raw_preview": "Carla has the greatest average speed."
+        },
+        {
+          "index": 5,
+          "outcome": "format_error",
+          "ground_truth": "42",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To solve this problem, we need to analyze the situation.\n\nLet's break down the solution step by step.\n\nStep 1: Understand the problem\nWe have a regular hexagon divided into six equilateral triangles. The perimeter of one triangle is given as 21 inches.\n\nStep 2: Identify the relationship between triangles\nSince it's a regular hexagon, all six triangles are congruent (have the same side lengths). This implies that all triangles have the same side lengths.\n\nStep 3: Determine side length equivalence\nGiven congruence implies equivalence in side lengths. This implies that triangle side lengths are equal.\n\nStep 4: Calculate side length\nTriangle side lengths are equal implies triangle side lengths are equal.\n\nStep 5: Calculate perimeter\nTriangle side lengths are equal implies triangle side lengths",
+          "raw_preview": "To solve this problem, we need to analyze the situation.\n\nLet's break down the solution step by step.\n\nStep 1: Understand the problem\nWe have a regular hexagon divided into six equilateral triangles. The perimeter of one triangle is given as 21 inches.\n\nStep 2: Identify the relationship between triangles\nSince it's a regular hexagon, all six triangles are congruent (have the same side lengths). This implies that all triangles have the same side lengths.\n\nStep 3: Determine side length equivalence\nGiven congruence implies equivalence in side lengths. This implies that triangle side lengths are equal.\n\nStep 4: Calculate side length\nTriangle side lengths are equal implies triangle side lengths are equal.\n\nStep 5: Calculate perimeter\nTriangle side lengths are equal implies triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply triangle side lengths imply t"
+        }
+      ],
+      "Correct_Debug_Examples": [
+        {
+          "index": 2,
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "\\frac{8}{3}",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: Substitute x=-2 into the function f(x) to find f(-2)\nSubstituting x=-2 into f(x) gives f(-2) = \\frac{3(-2)-2}{(-2)-2} = \\frac{-4}{-4} = 1.\n\n## Step 2: Substitute x=-1 into the function f(x) to find f(-1)\nSubstituting x=-1 into f(x) gives f(-1) = \\frac{3(-1)-2}{(-1)-2} = \\frac{-5}{-3} = \\frac{5}{3}.\n\n## Step 3: Substitute x=0 into the function f(x) to find f(0)\nSubstituting x=0 into f(x) gives f(0) = \\frac{3(0)-2}{0-2} = \\frac{-2}{-2} = 1.\n\n## Step 4: Add f(-2), f(-1), and f(0) together\nAdding f(-2), f(-1), and f(0) gives f(-2) + f(-1) + f(0) = 1 + \\frac{5}{3} + 1 = \\frac{8}{3}.\n\n\nThe final answer is $\\boxed{\\frac{8}{3}}$.",
+          "raw_preview": "## Step 1: Substitute x=-2 into the function f(x) to find f(-2)\nSubstituting x=-2 into f(x) gives f(-2) = \\frac{3(-2)-2}{(-2)-2} = \\frac{-4}{-4} = 1.\n\n## Step 2: Substitute x=-1 into the function f(x) to find f(-1)\nSubstituting x=-1 into f(x) gives f(-1) = \\frac{3(-1)-2}{(-1)-2} = \\frac{-5}{-3} = \\frac{5}{3}.\n\n## Step 3: Substitute x=0 into the function f(x) to find f(0)\nSubstituting x=0 into f(x) gives f(0) = \\frac{3(0)-2}{0-2} = \\frac{-2}{-2} = 1.\n\n## Step 4: Add f(-2), f(-1), and f(0) together\nAdding f(-2), f(-1), and f(0) gives f(-2) + f(-1) + f(0) = 1 + \\frac{5}{3} + 1 = \\frac{8}{3}.\n\n\nThe final answer is $\\boxed{\\frac{8}{3}}$."
+        },
+        {
+          "index": 28,
+          "ground_truth": "-2 + 7i",
+          "prediction": "12+7i",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "The resulting complex number is $\\boxed{12+7i}$.",
+          "raw_preview": "The resulting complex number is $\\boxed{12+7i}$."
+        },
+        {
+          "index": 53,
+          "ground_truth": "-\\frac{\\pi}{6}",
+          "prediction": "-\\frac{\\pi}{6}",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: Recall the definition of arcsin\nThe arcsin function returns the angle whose sine is known argument.\n\n## Step 2: Identify the sine value\nThe sine value given is $-\\frac{1}{2}$.\n\n## Step 3: Recall sine function properties\nRecall that sine function takes angles in radians.\n\n## Step 4: Identify sine function output\nRecall that sine function output ranges from $-\\frac{\\pi}{6}$ to $\\frac{\\pi}{6}$.\n\n## Step 5: Identify arcsin output\nRecall that arcsin output ranges from $\\arcsin(-\\frac{1}{2})$ to $\\arcsin(\\frac{1}{2})$.\n\n## Step 6: Identify arcsin output value\nRecall that arcsin output value ranges from $\\arcsin(-\\frac{1}{2})$ to $\\arcsin(\\frac{1}{2})$.\n\n## Step 7: Identify arcsin output value equation\nRecall that arcsin output value equation $\\arcsin(x)$ equals $\\arccos(x)$.\n\nThe fina",
+          "raw_preview": "## Step 1: Recall the definition of arcsin\nThe arcsin function returns the angle whose sine is known argument.\n\n## Step 2: Identify the sine value\nThe sine value given is $-\\frac{1}{2}$.\n\n## Step 3: Recall sine function properties\nRecall that sine function takes angles in radians.\n\n## Step 4: Identify sine function output\nRecall that sine function output ranges from $-\\frac{\\pi}{6}$ to $\\frac{\\pi}{6}$.\n\n## Step 5: Identify arcsin output\nRecall that arcsin output ranges from $\\arcsin(-\\frac{1}{2})$ to $\\arcsin(\\frac{1}{2})$.\n\n## Step 6: Identify arcsin output value\nRecall that arcsin output value ranges from $\\arcsin(-\\frac{1}{2})$ to $\\arcsin(\\frac{1}{2})$.\n\n## Step 7: Identify arcsin output value equation\nRecall that arcsin output value equation $\\arcsin(x)$ equals $\\arccos(x)$.\n\nThe final answer is $\\boxed{-\\frac{\\pi}{6}}$."
+        }
+      ]
+    }
+  }
+}

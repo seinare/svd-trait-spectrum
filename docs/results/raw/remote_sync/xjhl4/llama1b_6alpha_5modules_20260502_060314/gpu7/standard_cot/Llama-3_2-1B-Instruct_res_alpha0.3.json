@@ -1,0 +1,229 @@
+{
+  "config": {
+    "method": "eval_script1_standard_cot",
+    "alpha": 0.3,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.2-1B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "gpu_memory_utilization": 0.5,
+    "max_model_len": 8192,
+    "max_tokens": 8192,
+    "thinking_budget": null,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/pruning_codex/llama1b/Llama-3.2-1B-Instruct-alpha0.3",
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama1b/Llama-3.2-1B-Instruct-alpha0.3",
+    "thinking_mode": "cot_enabled"
+  },
+  "scores_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.24,
+      "Wrong_Answer_Rate": 0.73,
+      "Correct_Rate": 0.03,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.11,
+      "Parse_Sources": {
+        "final_line": 75,
+        "boxed": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "outcome": "wrong",
+          "ground_truth": "18",
+          "prediction": "Eggs sold at the farmers' market: 16 eggs/day x $2/every egg = $32/day",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To solve this problem, we need to break down Janet's daily earnings into two parts: eggs sold at the farmers' market and eggs eaten breakfast.\n\nEggs sold at the farmers' market: 16 eggs/day x $2/every egg = $32/day",
+          "raw_preview": "To solve this problem, we need to break down Janet's daily earnings into two parts: eggs sold at the farmers' market and eggs eaten breakfast.\n\nEggs sold at the farmers' market: 16 eggs/day x $2/every egg = $32/day"
+        },
+        {
+          "index": 1,
+          "outcome": "wrong",
+          "ground_truth": "3",
+          "prediction": "Blue fiber bolts + White fiber bolts = Total bolts",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To solve this problem, we need to find out how many bolts of blue fiber it takes to equal half bolts of white fiber. \n\nBlue fiber bolts + White fiber bolts = Total bolts",
+          "raw_preview": "To solve this problem, we need to find out how many bolts of blue fiber it takes to equal half bolts of white fiber. \n\nBlue fiber bolts + White fiber bolts = Total bolts"
+        },
+        {
+          "index": 2,
+          "outcome": "wrong",
+          "ground_truth": "70000",
+          "prediction": "150% of $80,000 = $80,000 x 1.5 = $120,000",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find Josh's profit, we need to calculate 150% of $80,000.\n\n150% of $80,000 = $80,000 x 1.5 = $120,000",
+          "raw_preview": "To find Josh's profit, we need to calculate 150% of $80,000.\n\n150% of $80,000 = $80,000 x 1.5 = $120,000"
+        },
+        {
+          "index": 3,
+          "outcome": "wrong",
+          "ground_truth": "540",
+          "prediction": "60 meters x 3 sprints = 180 meters",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To find out how many meters James runs a week, we need to multiply the distance James runs per sprint (60 meters) by the number of sprints James runs per week (3 sprints).\n\nDistance Run Per Sprint x Number of Sprint Per Week = Distance Run Per Week\n60 meters x 3 sprints = 180 meters",
+          "raw_preview": "To find out how many meters James runs a week, we need to multiply the distance James runs per sprint (60 meters) by the number of sprints James runs per week (3 sprints).\n\nDistance Run Per Sprint x Number of Sprint Per Week = Distance Run Per Week\n60 meters x 3 sprints = 180 meters"
+        },
+        {
+          "index": 4,
+          "outcome": "wrong",
+          "ground_truth": "20",
+          "prediction": "Total cups given in a day = 40 cups",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: Calculate the total cups of feed given to the chickens in the morning.\nWendi gives her chickens 15 cups of feed in the morning.\n\n## Step 2: Calculate the total cups of feed given to the chickens in the afternoon.\nWendi gives her chickens 25 cups of feed in the afternoon.\n\n## Step 3: Calculate the total cups of feed given to the chickens in a day.\nTo calculate the total cups of feed given to the chickens in a day, add the cups given in the morning and the cups given in the afternoon.\nTotal cups given in a day = cups given in the morning + cups given in the afternoon\nTotal cups given in a day = 15 cups + 25 cups\nTotal cups given in a day = 40 cups",
+          "raw_preview": "## Step 1: Calculate the total cups of feed given to the chickens in the morning.\nWendi gives her chickens 15 cups of feed in the morning.\n\n## Step 2: Calculate the total cups of feed given to the chickens in the afternoon.\nWendi gives her chickens 25 cups of feed in the afternoon.\n\n## Step 3: Calculate the total cups of feed given to the chickens in a day.\nTo calculate the total cups of feed given to the chickens in a day, add the cups given in the morning and the cups given in the afternoon.\nTotal cups given in a day = cups given in the morning + cups given in the afternoon\nTotal cups given in a day = 15 cups + 25 cups\nTotal cups given in a day = 40 cups"
+        }
+      ],
+      "Correct_Debug_Examples": [
+        {
+          "index": 79,
+          "ground_truth": "70",
+          "prediction": "$100 - $30 = $70",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To calculate the cost, we need to calculate 30% of $100 and subtract it from $100.\n\n30% of $100 = $100 x 0.30 = $30\n\n$100 - $30 = $70",
+          "raw_preview": "To calculate the cost, we need to calculate 30% of $100 and subtract it from $100.\n\n30% of $100 = $100 x 0.30 = $30\n\n$100 - $30 = $70"
+        },
+        {
+          "index": 83,
+          "ground_truth": "600",
+          "prediction": "600",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To solve this problem, we need to calculate the total number of thorns on all roses.\n\nDan plants 3 rose bushes, and each rose bush has 25 roses. This means Dan plants 3 x 25 roses.\n\nThe total number of roses Dan plants is 3 x 25 = 75 roses.\n\nEach rose bush has 8 thorns, so the total number of thorns on all roses is 8 x 75 = 600 thorns.\n\nThe final answer is $\\boxed{600}$.",
+          "raw_preview": "To solve this problem, we need to calculate the total number of thorns on all roses.\n\nDan plants 3 rose bushes, and each rose bush has 25 roses. This means Dan plants 3 x 25 roses.\n\nThe total number of roses Dan plants is 3 x 25 = 75 roses.\n\nEach rose bush has 8 thorns, so the total number of thorns on all roses is 8 x 75 = 600 thorns.\n\nThe final answer is $\\boxed{600}$."
+        },
+        {
+          "index": 91,
+          "ground_truth": "28",
+          "prediction": "Cindy, Marcia, and Jan together have 4 + 6 + 18 pets = 28 pets",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To solve this problem, we need to calculate the total pets Cindy, Marcia, and Jan have.\n\nCindy has four pets.\n\nMarcia has two pets more than Cindy, so Marcia has 4 + 2 = 6 pets.\n\nJan has three times the pets as Marcia, so Jan has 3 x 6 = 18 pets.\n\nCindy, Marcia, and Jan together have 4 + 6 + 18 pets = 28 pets",
+          "raw_preview": "To solve this problem, we need to calculate the total pets Cindy, Marcia, and Jan have.\n\nCindy has four pets.\n\nMarcia has two pets more than Cindy, so Marcia has 4 + 2 = 6 pets.\n\nJan has three times the pets as Marcia, so Jan has 3 x 6 = 18 pets.\n\nCindy, Marcia, and Jan together have 4 + 6 + 18 pets = 28 pets"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.57,
+      "Wrong_Answer_Rate": 0.41,
+      "Correct_Rate": 0.02,
+      "Has_Think_Rate": 0.0,
+      "Closed_Think_Rate": 0.0,
+      "Length_Finish_Rate": 0.47,
+      "Parse_Sources": {
+        "final_line": 39,
+        "boxed": 4
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "outcome": "wrong",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": "## Step 4",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1\nTo convert the point $(0,3)$ from rectangular coordinates to polar coordinates, we need to calculate the radius $r$ and angle $\\theta$.\n\n## Step 2\nThe radius $r$ can be calculated using the formula $r = \\sqrt{x^2+y^2}$, where $x$ and $y$ are the coordinates of the point. Plugging in $x=0$ and $y=3$, we get $r = \\sqrt{0^2+3^2} = 3$.\n\n## Step 3\nThe angle $\\theta$ can be calculated using the formula $\\theta = \\arctan{\\frac{y}{x}}$. Plugging in $x=0$ and $y=3$, we get $\\theta = \\arctan{\\frac{3}{0}}$ which equals $\\frac{\\pi}{2}$.\n\n## Step 4",
+          "raw_preview": "## Step 1\nTo convert the point $(0,3)$ from rectangular coordinates to polar coordinates, we need to calculate the radius $r$ and angle $\\theta$.\n\n## Step 2\nThe radius $r$ can be calculated using the formula $r = \\sqrt{x^2+y^2}$, where $x$ and $y$ are the coordinates of the point. Plugging in $x=0$ and $y=3$, we get $r = \\sqrt{0^2+3^2} = 3$.\n\n## Step 3\nThe angle $\\theta$ can be calculated using the formula $\\theta = \\arctan{\\frac{y}{x}}$. Plugging in $x=0$ and $y=3$, we get $\\theta = \\arctan{\\frac{3}{0}}$ which equals $\\frac{\\pi}{2}$.\n\n## Step 4"
+        },
+        {
+          "index": 1,
+          "outcome": "format_error",
+          "ground_truth": "p - q",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1\nWe start by writing out the terms in the double summation\n\\[\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}.\\]\n\n## Step 2\n\\[\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\sum_{k = 1}^\\infty \\frac{1}{k^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k}.\\]\n\n## Step 3\n\\[\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = ",
+          "raw_preview": "## Step 1\nWe start by writing out the terms in the double summation\n\\[\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}.\\]\n\n## Step 2\n\\[\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\sum_{k = 1}^\\infty \\frac{1}{k^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k}.\\]\n\n## Step 3\n\\[\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\frac{1}{k} = \\s"
+        },
+        {
+          "index": 2,
+          "outcome": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "\\frac{7}{2}",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: Evaluate f(-2)\nTo evaluate f(-2), we plug x = -2 into f(x) = \\frac{3x-2}{x-2}. f(-2) = \\frac{3(-2)-2}{-2-2} = \\frac{-6}{-4} = \\frac{3}{2}.\n\n\n## Step 2: Evaluate f(0)\nTo evaluate f(0), we plug x = 0 into f(x) = \\frac{3x-2}{x-2}. f(0) = \\frac{3(0)-2}{0-2} = \\frac{-2}{-2} = 1.\n\n\n## Step 3: Evaluate f(-1)\nTo evaluate f(-1), we plug x = -1 into f(x) = \\frac{3x-2}{x-2}. f(-1) = \\frac{3(-1)-2}{-1-2} = \\frac{-3}{-3} = 1.\n\n\n## Step 4: Calculate f(-2) + f(0) + f(-1)\nf(-2) + f(0) + f(-1) = \\frac{3}{2} + 1 + 1 = \\frac{3}{2} + \\frac{2}{2} + \\frac{2}{2} = \\frac{3+2+2}{2} = \\frac{7}{2}.\n\n\nThe final answer is: $\\boxed{\\frac{7}{2}}$",
+          "raw_preview": "## Step 1: Evaluate f(-2)\nTo evaluate f(-2), we plug x = -2 into f(x) = \\frac{3x-2}{x-2}. f(-2) = \\frac{3(-2)-2}{-2-2} = \\frac{-6}{-4} = \\frac{3}{2}.\n\n\n## Step 2: Evaluate f(0)\nTo evaluate f(0), we plug x = 0 into f(x) = \\frac{3x-2}{x-2}. f(0) = \\frac{3(0)-2}{0-2} = \\frac{-2}{-2} = 1.\n\n\n## Step 3: Evaluate f(-1)\nTo evaluate f(-1), we plug x = -1 into f(x) = \\frac{3x-2}{x-2}. f(-1) = \\frac{3(-1)-2}{-1-2} = \\frac{-3}{-3} = 1.\n\n\n## Step 4: Calculate f(-2) + f(0) + f(-1)\nf(-2) + f(0) + f(-1) = \\frac{3}{2} + 1 + 1 = \\frac{3}{2} + \\frac{2}{2} + \\frac{2}{2} = \\frac{3+2+2}{2} = \\frac{7}{2}.\n\n\nThe final answer is: $\\boxed{\\frac{7}{2}}$"
+        },
+        {
+          "index": 3,
+          "outcome": "wrong",
+          "ground_truth": "9",
+          "prediction": "To find the divisors, we need to find all the numbers that divide 196 evenly.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "To solve this problem, we need to find the divisors of 196.\n\nTo find the divisors, we need to find all the numbers that divide 196 evenly.",
+          "raw_preview": "To solve this problem, we need to find the divisors of 196.\n\nTo find the divisors, we need to find all the numbers that divide 196 evenly."
+        },
+        {
+          "index": 4,
+          "outcome": "format_error",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": null,
+          "parse_source": null,
+          "finish_reason": "length",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1\nTo solve this problem, we need to calculate the average speed of the students based on the graph provided.\n\n## Step 2\nTo calculate the average speed, we need to calculate the time-speed diagram.\n\n## Step 3\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 4\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 5\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 6\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 7\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 8\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 9\nTo calculate the time-spee",
+          "raw_preview": "## Step 1\nTo solve this problem, we need to calculate the average speed of the students based on the graph provided.\n\n## Step 2\nTo calculate the average speed, we need to calculate the time-speed diagram.\n\n## Step 3\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 4\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 5\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 6\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 7\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 8\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 9\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 10\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 11\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 12\nTo calculate the time-speed diagram, we need to calculate the time-speed diagram.\n\n## Step 13\nTo calculate the time-speed diagram, we need to ca"
+        }
+      ],
+      "Correct_Debug_Examples": [
+        {
+          "index": 54,
+          "ground_truth": "0.15",
+          "prediction": "## Step 3: $\\frac{3}{20}$ equals 0.15",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: To convert the fraction $\\frac{3}{20}$ into a decimal, we need to divide 3 by 20.\n\n## Step 2: Divide 3 by 20.\n\n## Step 3: $\\frac{3}{20}$ equals 0.15",
+          "raw_preview": "## Step 1: To convert the fraction $\\frac{3}{20}$ into a decimal, we need to divide 3 by 20.\n\n## Step 2: Divide 3 by 20.\n\n## Step 3: $\\frac{3}{20}$ equals 0.15"
+        },
+        {
+          "index": 77,
+          "ground_truth": "4",
+          "prediction": "$x$ equals $8$ divided by $2$ which equals $4$",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "has_think": false,
+          "closed_think": false,
+          "final_text_preview": "## Step 1: Write down the equation given\n$2^8=4^x$\n\n\n## Step 2: Rewrite $4^x$ using exponent properties\n$4^x$ can be rewritten as $(2^2)^x$ which equals $2^{2x}$\n\n\n## Step 3: Equate the exponents\n$2x$ equals $8$\n\n\n## Step 4: Solve for x\n$x$ equals $8$ divided by $2$ which equals $4$",
+          "raw_preview": "## Step 1: Write down the equation given\n$2^8=4^x$\n\n\n## Step 2: Rewrite $4^x$ using exponent properties\n$4^x$ can be rewritten as $(2^2)^x$ which equals $2^{2x}$\n\n\n## Step 3: Equate the exponents\n$2x$ equals $8$\n\n\n## Step 4: Solve for x\n$x$ equals $8$ divided by $2$ which equals $4$"
+        }
+      ]
+    }
+  }
+}

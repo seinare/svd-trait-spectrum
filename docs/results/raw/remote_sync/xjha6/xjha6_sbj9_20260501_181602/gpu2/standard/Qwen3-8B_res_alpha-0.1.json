@@ -1,0 +1,247 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": -0.1,
+    "model_id": "Qwen/Qwen3-8B",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 2048,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha-0.1",
+    "eval_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha-0.1",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.16,
+      "Correct_Rate": 0.84,
+      "Parse_Sources": {
+        "boxed": 91,
+        "final_number": 9
+      },
+      "Debug_Examples": [
+        {
+          "index": 12,
+          "bucket": "wrong",
+          "ground_truth": "13",
+          "prediction": "12",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To determine how many years it will take for Carlos to start earning money on the lemon tree, we need to calculate the **net profit** each year and find the point at which it becomes **positive**.\n\n---\n\n### **Initial Cost to Plant the Tree:**\n- **$90**\n\n---\n\n### **Annual Income and Expenses:**\n\n- **Lemons grown per year:** 7  \n- **Price per lemon:** $1.5  \n- **Income per year:**  \n  $$\n  7 \\times 1.5 = 10.5\n  $$\n\n- **Annual cost to water and feed the tree:** **$3**\n\n- **Net profit per year:**  \n  $$\n  10.5 - 3 = 7.5\n  $$\n\n---\n\n### **Calculate the Break-Even Point:**\n\nWe need to find the number of years, **n**, such that the **total profit** (net profit per year \u00d7 number of years) is **greater than the initial cost** of $90.\n\n$$\n7.5n > 90\n$$\n\n$$\nn > \\frac{90}{7.5} = 12\n$$\n\n---\n\n### **Answer:**"
+        },
+        {
+          "index": 13,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "6",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "Let the total number of vacuum cleaners Melanie started with be $ x $.\n\n- She sold a third of them at the green house:  \n  $ \\frac{1}{3}x $\n\n- She sold 2 more to the red house:  \n  $ 2 $\n\n- She sold half of what was left at the orange house.  \n  What was left after the green and red houses:  \n  $ x - \\frac{1}{3}x - 2 = \\frac{2}{3}x - 2 $  \n  Half of that:  \n  $ \\frac{1}{2} \\left( \\frac{2}{3}x - 2 \\right) = \\frac{1}{3}x - 1 $\n\n- She has 5 vacuum cleaners left.  \n  So, the total sold is:  \n  $ \\frac{1}{3}x + 2 + \\frac{1}{3}x - 1 = \\frac{2}{3}x + 1 $\n\n- Total vacuum cleaners:  \n  $ x = \\frac{2}{3}x + 1 + 5 $  \n  $ x = \\frac{2}{3}x + 6 $\n\n-"
+        },
+        {
+          "index": 20,
+          "bucket": "wrong",
+          "ground_truth": "15",
+          "prediction": "6",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given:\n\n- 10 liters of orange drink, which is **two-thirds water**.\n- 15 liters of pineapple drink, which is **three-fifths water**.\n- 1 liter of orange drink is **spilled**.\n- The final volume is **24 liters**.\n\n---\n\n### Step 1: Calculate the amount of water in the orange drink\n- Orange drink: 10 liters, 2/3 water  \n  \u2192 Water in orange drink = $ 10 \\times \\frac{2}{3} = \\frac{20}{3} $ liters\n\n- 1 liter is spilled, so remaining orange drink = 9 liters  \n  \u2192 Water in remaining orange drink = $ 9 \\times \\frac{2}{3} = 6 $ liters\n\n---\n\n### Step 2: Calculate the amount of water in the pineapple drink\n- Pineapple drink: 15 liters, 3/5 water  \n  \u2192 Water in pineapple drink = $ 15 \\times \\frac{3}{5} = 9 $ liters\n\n---\n\n### Step 3: Total water in the final 24 liters\n- Water from orange drink: 6 liters  \n- Water from"
+        },
+        {
+          "index": 37,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "0",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "John sells all his lego sets, so he still has **0** lego sets.\n\n$$\n\\boxed{0}\n$$"
+        },
+        {
+          "index": 39,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "12",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given the following information:\n\n- Dana can **skip** at **3 miles per hour**.\n- She can **skip** at a speed that is **half** as fast as she can **run**.\n- Therefore, her **running speed** is:  \n  $$\n  2 \\times 3 = 6 \\text{ miles per hour}\n  $$\n- She can **run** **four times faster** than she can **walk**, so her **walking speed** is:  \n  $$\n  \\frac{6}{4} = 1.5 \\text{ miles per hour}\n  $$\n\nNow, she spends:\n- **One-third** of 6 hours running:  \n  $$\n  \\frac{1}{3} \\times 6 = 2 \\text{ hours}\n  $$\n- **Two-thirds** of 6 hours walking:  \n  $$\n  \\frac{2}{3} \\times 6 = 4 \\text{ hours}\n  $$\n\nNow, calculate the total distance:\n\n- **Running distance**:  \n  $$\n  2 \\text{ hours} \\times 6 \\text{ miles/hour} = 12 \\text{ miles}"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.55,
+      "Correct_Rate": 0.45,
+      "Parse_Sources": {
+        "boxed": 41,
+        "final_number": 59
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "3",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given:\n\n$$\np = \\sum_{k = 1}^\\infty \\frac{1}{k^2}, \\quad q = \\sum_{k = 1}^\\infty \\frac{1}{k^3}\n$$\n\nand we are to express the double sum:\n\n$$\n\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}\n$$\n\nin terms of $ p $ and $ q $.\n\n---\n\n### Step 1: Change of variables\n\nLet us define a new variable $ n = j + k $. Then, for a fixed $ n $, the number of pairs $ (j, k) $ such that $ j + k = n $ and $ j, k \\geq 1 $ is $ n - 1 $. That is, for each $ n \\geq 2 $, the number of such pairs is $ n - 1 $.\n\nSo, the double sum becomes:\n\n$$\n\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\sum_{"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "-2",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given the function:  \n$$\nf(x) = \\frac{3x - 2}{x - 2}\n$$  \nWe are asked to find:  \n$$\nf(-2) + f(-1) + f(0)\n$$\n\n---\n\n### Step 1: Compute $ f(-2) $\n\n$$\nf(-2) = \\frac{3(-2) - 2}{-2 - 2} = \\frac{-6 - 2}{-4} = \\frac{-8}{-4} = 2\n$$\n\n---\n\n### Step 2: Compute $ f(-1) $\n\n$$\nf(-1) = \\frac{3(-1) - 2}{-1 - 2} = \\frac{-3 - 2}{-3} = \\frac{-5}{-3} = \\frac{5}{3}\n$$\n\n---\n\n### Step 3: Compute $ f(0) $\n\n$$\nf(0) = \\frac{3(0) - 2}{0 - 2} = \\frac{-2}{-2} = 1\n$$\n\n---\n\n### Step 4: Add the results\n\n$$\nf(-2) + f(-"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "0.5",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To determine the student with the **greatest average speed**, we need to calculate the **slope** of the line from the origin (O) to each student's point, since average speed is defined as **distance divided by time**.\n\nThe slope of a line is given by:\n\n$$\n\\text{slope} = \\frac{\\text{change in distance}}{\\text{change in time}} = \\frac{y}{x}\n$$\n\nWe will calculate the slope for each student's point:\n\n- **Evelyn**: (1.25, 4.5) \u2192 slope = $ \\frac{4.5}{1.25} = 3.6 $\n- **Briana**: (2.5, 2.2) \u2192 slope = $ \\frac{2.2}{2.5} = 0.88 $\n- **Carla**: (4.25, 5.2) \u2192 slope = $ \\frac{5.2}{4.25} \\approx 1.224 $\n- **Debra**: (5.6, 2.8) \u2192 slope = $ \\frac{2.8}{5.6} = 0.5 $"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "27",
+          "prediction": "64",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "The smallest positive perfect cube that can be written as the sum of three consecutive integers is:\n\n$$\n\\boxed{64}\n$$"
+        },
+        {
+          "index": 7,
+          "bucket": "wrong",
+          "ground_truth": "90^\\circ",
+          "prediction": "6",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given two sets of equations that describe lines in 3D space, and we are asked to find the angle between them.\n\n---\n\n### Step 1: Convert the equations to parametric form\n\n#### First line:  \n$$\n2x = 3y = -z\n$$\n\nLet\u2019s set the common value to a parameter $ t $:  \n$$\n2x = t \\Rightarrow x = \\frac{t}{2}  \n$$\n$$\n3y = t \\Rightarrow y = \\frac{t}{3}  \n$$\n$$\n-z = t \\Rightarrow z = -t\n$$\n\nSo the parametric equations of the first line are:  \n$$\n\\vec{r}_1 = \\left( \\frac{1}{2}, \\frac{1}{3}, -1 \\right) t\n$$\n\nSo the direction vector of the first line is:  \n$$\n\\vec{v}_1 = \\left( \\frac{1}{2}, \\frac{1}{3}, -1 \\right)\n$$\n\n---\n\n#### Second line:  \n$$\n6x = -y = -4z\n$$\n\nAgain, set the common value to a parameter $ s $:  \n$$\n6"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.1,
+      "Correct_Rate": 0.9,
+      "Parse_Sources": {
+        "boxed": 99,
+        "final_option": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "A",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{A}"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 19,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "D",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D}"
+        },
+        {
+          "index": 53,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "B",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B}"
+        },
+        {
+          "index": 54,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "B",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.37,
+      "Correct_Rate": 0.63,
+      "Parse_Sources": {
+        "boxed": 96,
+        "final_number": 1,
+        "final_line": 3
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        },
+        {
+          "index": 11,
+          "bucket": "wrong",
+          "ground_truth": "4",
+          "prediction": "6",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{6}"
+        },
+        {
+          "index": 12,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 13,
+          "bucket": "wrong",
+          "ground_truth": "29",
+          "prediction": "80",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{80}"
+        }
+      ]
+    }
+  }
+}

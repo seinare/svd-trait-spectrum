@@ -1,0 +1,248 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": 0.2,
+    "model_id": "Qwen/Qwen3-8B",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 2048,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha0.2",
+    "eval_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha0.2",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.29,
+      "Correct_Rate": 0.71,
+      "Parse_Sources": {
+        "boxed": 79,
+        "final_number": 21
+      },
+      "Debug_Examples": [
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "540",
+          "prediction": "180",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "James runs 3 sprints each week, and each sprint is 60 meters.\n\n$$\n\\text{Total meters per week} =  3 \\text{ sprints} \\times 60 \\text{ meters/sprint} = \\boxed{180}\n$$"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "3",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To find out how many cups of feed Wendi needs to give her chickens in the final meal of the day, we first need to determine how much feed she has already given out:\n\n- In the morning: 15 cups  \n- In the afternoon: 25 cups  \n\nSo far, she has given out:\n\n$$\n15 + 25 = 40 \\text{ cups}\n$$\n\nIf she gives the chickens their feed in three equal meals, then:\n\n$$\n\\text{Total feed per day} = \\text{Total feed given in 2 meals} + \\text{Feed given in final meal}\n$$\n\nLet\u2019s assume she gives out the same amount of feed in each of the three meals. That means:\n\n$$\n\\text{Feed per meal} = \\frac{\\text{Total feed per day}}{3}\n$$\n\nLet\u2019s denote the amount of feed given in the final meal as $ x $. Then:\n\n$$\n\\text{Total feed per day} = 15 + 25 + x = 40 + x\n$$\n\nSince she gives out feed in three equal meals:\n\n$$\n\\text{Feed per meal} = \\frac{40 + x}{3}\n$$"
+        },
+        {
+          "index": 7,
+          "bucket": "wrong",
+          "ground_truth": "160",
+          "prediction": "40",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To find out how long it takes Carla to download the file:\n\n### Given:\n- File size: **200 GB**\n- Normal download speed: **2 GB/min**\n- At **40% of the file**, a **Windows update** forces a **reboot**, which takes **20 minutes**.\n- After reboot, she has to **restart from the beginning**.\n\n### Step-by-step:\n\n#### Step 1: Time to download 40% of the file\n- 40% of 200 GB = $ 0.4 \\times 200 = 80 $ GB\n- At 2 GB/min, time = $ \\frac{80}{2} = 40 $ minutes\n\n#### Step 2: Time for Windows update/reboot\n- Reboot takes **20 minutes**\n\n#### Step 3: Time to download remaining 60% of the file\n- Remaining = $ 200 - 80 = 120 $ GB\n- Time = $ \\frac{120}{2} = 60 $ minutes\n\n#### Step 4: Total time\n$$\n\\text{Total time} = 40 \\text{"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "45",
+          "prediction": "30",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given that John:\n\n- Drives for **3 hours** at **60 mph**, then realizes he needs to go back home.\n- He tries to get home in **4 hours**, but:\n  - Spends **2 hours** in **standstill traffic** (i.e., not moving),\n  - Then drives for **half an hour (0.5 hours)** at **30 mph**,\n  - Then drives the **remaining time** of the 4 hours at **80 mph**.\n\nWe are to find how far John is from home **after those 4 hours**.\n\n---\n\n### Step-by-step:\n\n#### 1. First leg of the trip:\n- Time: 3 hours  \n- Speed: 60 mph  \n- Distance:  \n$$\n\\text{Distance}_1 = \\text{Speed} \\times \\text{Time} = 60 \\times 3 = 180 \\text{ miles}\n$$\n\n#### 2. Then he turns around and tries to get home.\n\nHe spends:\n\n- **2 hours** in **standstill traffic** \u2192 **distance = 0**\n- **0.5 hours** at **30 mph** \u2192  \n$$\n\\text{Distance"
+        },
+        {
+          "index": 12,
+          "bucket": "wrong",
+          "ground_truth": "13",
+          "prediction": "7.50",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To find out how many years it will take before Carlos starts earning money on his lemon tree, we need to calculate when his **revenue** from selling lemons exceeds his **total cost** of planting and maintaining the tree.\n\n### Given:\n- Cost to plant the tree: $90  \n- Annual lemon production: 7 lemons  \n- Price per lemon: $1.50  \n- Annual cost to water and feed: $3  \n\n### Step 1: Calculate annual revenue  \nRevenue per year = Number of lemons \u00d7 Price per lemon  \n$$ \\text{Revenue} = 7 \\times 1.5 = \\$10.50 $$\n\n### Step 2: Calculate net profit per year  \nNet profit per year = Revenue - Cost  \n$$ \\text{Net profit} = 10.50 - 3 = \\$7.50 $$\n\n### Step 3: Determine when he starts making a profit  \nHe needs to cover the initial cost of $90.\n\nLet $ x $ be the number of years it takes to start making money.\n\n$$ \\text{Total profit after } x \\text{ years} = 7.50 \\times x $$\n\nWe want to find when this profit"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.01,
+      "Wrong_Answer_Rate": 0.64,
+      "Correct_Rate": 0.35,
+      "Parse_Sources": {
+        "boxed": 33,
+        "final_number": 66,
+        "format_error": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "2",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given:\n\n$$\np = \\sum_{k = 1}^\\infty \\frac{1}{k^2}, \\quad q = \\sum_{k = 1}^\\infty \\frac{1}{k^3}\n$$\n\nand we are to express:\n\n$$\n\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}\n$$\n\nin terms of $ p $ and $ q $.\n\n---\n\n### Step 1: Understand the double sum\n\nWe are summing over all positive integers $ j $ and $ k $:\n\n$$\n\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}\n$$\n\nLet\u2019s denote:\n\n$$\nS = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}\n$$\n\nWe can change variables to simplify this sum.\n\n---\n\n### Step 2: Change of variables\n\nLet $ n = j + k $. For each $ n \\geq 2 $,"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "0",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given the function:\n\n$$\nf(x) = \\frac{3x - 2}{x - 2}\n$$\n\nWe are asked to find:\n\n$$\nf(-2) + f(-1) + f(0)\n$$\n\n---\n\n### Step 1: Evaluate $ f(-2) $\n\n$$\nf(-2) = \\frac{3(-2) - 2}{-2 - 2} = \\frac{-6 - 2}{-4} = \\frac{-8}{-4} = \n\n$$\n\n### Step 2: Evaluate $ f(-1) $\n\n$$\nf(-1) = \\frac{3(-1) - 2}{-1 - 2} = \\frac{-3 - 2}{-3} = \\frac{-5}{-3} = \\frac{5}{3}\n$$\n\n### Step 3: Evaluate $ f(0) $\n\n$$\nf(0) = \\frac{3(0) - 2}{0 - 2} = \\frac{-2}{-2} =  \n\n$$\n\n### Step 4: Add them up\n\n$$\nf(-2) + f(-1) + f(0)"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "2",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To find how many **positive whole-number divisors** the number **196** has, we first need to find its **prime factorization**.\n\n---\n\n### Step 1: Prime Factorization of 196\n\nWe start by dividing 196 by small primes:\n\n$$\n196 \\div 2 = 98 \\\\\n98 \\div 2 = 49 \\\\\n49 \\div 7 = 7 \\\\\n$$\n\nSo:\n\n$$\n196 = 2^2 \\times 7^2\n$$\n\n---\n\n### Step 2: Use Divisor Formula\n\nIf a number $ N $ has the prime factorization:\n\n$$\nN = p_1^{e_1} \\times p_2^{e_2} \\times \\cdots \\times p_k^{e_k}\n$$\n\nThen the number of **positive divisors** of $ N $ is:\n\n$$\n(e_1 + 1)(e_2 + 1)\\cdots(e_k + 1)\n$$\n\nFor $ 196 = 2^2 \\times 7^2 $:\n\n$$\n(e_1 + 1)(e_2 + 1) = (2"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "4.2",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To determine which student has the greatest average speed, we need to analyze the graph that shows the relationship between **distance** and **time** for each student's training run.\n\nFrom the Asymptote code:\n\n- Each dot represents a student's position at a specific time.\n- The x-axis is **time**, and the y-axis is **distance**.\n- The **slope of the line** from the origin (0,0) to each student's dot represents their **average speed**, since:\n\n$$\n\\text{Average speed} = \\frac{\\text{Distance}}{\\text{Time}}\n$$\n\nLet's analyze each student:\n\n### Evelyn\n- Position: (1.25, 4.5)\n- Time = 1.25 units\n- Distance = 4.5 units\n- Speed = $ \\frac{4.5}{1.25} = 3.6 $\n\n### Briana\n- Position: (2.5, 2.2)\n- Time = 2.5 units\n- Distance = 2.2 units\n- Speed = $ \\frac{2.2}{2.5} = 0.88 $\n\n### Carla\n- Position: (4.2"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "42",
+          "prediction": "7",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given that a regular hexagon can be divided into six **equilateral triangles**, and that the **perimeter of one of these triangles is 21 inches**.\n\n---\n\n### Step-by-step:\n\nLet\u2019s analyze:\n\n- A **regular hexagon** can be divided into **six equilateral triangles**, all of which are **congruent**.\n- Each of these triangles is **equilateral**, so all sides are equal.\n- If the **perimeter of one triangle is 21 inches**, then:\n\n$$\n\\text{Perimeter of one triangle} =  \\text{Side} + \\text{Side} + \\text{Side} = 3 \\times \\text{Side} = 21 \\text{ inches}\n$$\n\nSo:\n\n$$\n\\text{Side of triangle} = \\frac{21}{3} = 7 \\text{ inches}\n$$\n\nThis side length is also the **side length of the regular hexagon**, because each triangle is formed by connecting the center of the hexagon to its six vertices.\n\nNow, the **perimeter of the regular hexagon** is:\n\n$$\n6 \\times \\text{Side length} = 6 \\times 7 = \\boxed{"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.15,
+      "Correct_Rate": 0.85,
+      "Parse_Sources": {
+        "boxed": 98,
+        "final_option": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 13,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "D",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "The first step in any scientific investigation is to plan how you will collect data. Before you can make observations or record data, you need to decide on the the method of data collection.\n\nSo, the correct answer is:\n\n$$\n\\boxed{D}\n$$"
+        },
+        {
+          "index": 21,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "ANALYSIS",
+          "parse_source": "final_option",
+          "finish_reason": "length",
+          "output": "The electrolysis of water produces hydrogen gas (H\u2082) and oxygen gas (O\u2082). The balanced chemical equation for this reaction is:\n\n$$\n2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g)\n$$\n\nThis is the correct balanced equation for the electrolysis of water.\n\n### Option Analysis:\n\n- **A)** $ \\text{H}_2\\text{O} \\rightarrow \\text{H} + \\text{O} + \\text{H} $: Incorrect, not balanced and not showing correct products.\n- **B)** $ 2\\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}_2(g) + \\text{O}_2(g) $: Correct balanced equation.\n- **C)** $ \\text{H}: \\text{O}: \\text{H} \\rightarrow \\text{H}_2\\text{edImage} $: Incorrect notation and not a chemical equation.\n- **D)** $ \\text{H}_2\\text{O}(l) \\rightarrow 2\\text{H}(g) + \\text{O}("
+        },
+        {
+          "index": 35,
+          "bucket": "wrong",
+          "ground_truth": "A",
+          "prediction": "D",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D}"
+        },
+        {
+          "index": 42,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "13",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "The mass number of an atom is calculated as:\n\n$$\n\\text{Mass number} = \\text{Number of protons} + \\text{Number of neutrons}\n$$\n\nGiven:\n- Number of protons = 6  \n- Number of neutrons = 7  \n- Number of electrons = 6 (not needed for mass number)\n\n$$\n\\text{Mass number} = 6 + 7 = \\boxed{13}\n$$\n\nSo, the correct answer is:\n\n$$\n\\boxed{C}\n$$"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.4,
+      "Correct_Rate": 0.6,
+      "Parse_Sources": {
+        "boxed": 87,
+        "final_line": 7,
+        "final_number": 6
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "The text describes a game where kicker Kris Brown kicked field goals of the following distances: 53-yard, 24-yard, and 40-yard. \n\nThus, the total number of field goals kicked by Kris Brown is:\n\n$$\n\\boxed{3}\n$$"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "The Raiders won the game.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "The Raiders won the game."
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "The Raiders kicked two field goals in the first half: a 33-yard and a 30-yard field goal. The Texans kicked two field goals as well: a 53-yard and a 24-yard field goal. Therefore, both teams kicked a total of \\boxed{4} field goals in the first half."
+        },
+        {
+          "index": 11,
+          "bucket": "wrong",
+          "ground_truth": "4",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "The game described involves several scoring plays:\n\n1. **JaMarcus Russell completed a 20-yard touchdown pass to Chaz Schilens** \u2013 this is **1 touchdown**.\n2. **Vonta Leach got a 1-yard touchdown run** \u2013 this is **1 touchdown**.\n3. **Johnnie Lee Higgins caught a 29-yard touchdown pass** \u2013 this is **1 touchdown**.\n\nSo, the total number of touchdowns scored in the game is:\n\n$$\n\\boxed{3}\n$$"
+        },
+        {
+          "index": 13,
+          "bucket": "wrong",
+          "ground_truth": "29",
+          "prediction": "80",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "The longest passing touchdown was 80 yards. \n\n$$\n\\boxed{80}\n$$"
+        }
+      ]
+    }
+  }
+}

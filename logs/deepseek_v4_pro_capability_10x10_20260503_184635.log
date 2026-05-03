@@ -320,3 +320,6 @@ Retrying in 1s [Retry 1/5].
 capability_judge:  11%|█         | 304/2800 [1:03:01<23:14:16, 33.52s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "fee20bc71c752724", "repeat": 5, "ok": true, "attempt": 1, "error": null}
 capability_judge:  11%|█         | 305/2800 [1:03:04<16:48:38, 24.26s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "fee20bc71c752724", "repeat": 4, "ok": true, "attempt": 1, "error": null}
 capability_judge:  11%|█         | 306/2800 [1:03:12<13:31:37, 19.53s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "fee20bc71c752724", "repeat": 3, "ok": true, "attempt": 1, "error": null}
+capability_judge:  11%|█         | 307/2800 [1:03:30<13:03:45, 18.86s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "fee20bc71c752724", "repeat": 6, "ok": true, "attempt": 1, "error": null}
+capability_judge:  11%|█         | 308/2800 [1:03:43<11:51:19, 17.13s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "fee20bc71c752724", "repeat": 7, "ok": true, "attempt": 1, "error": null}
+capability_judge:  11%|█         | 309/2800 [1:03:52<10:12:59, 14.77s/it]{"event": "judged", "task": "mmlu_college_chemistry", "item_id": "fee20bc71c752724", "repeat": 8, "ok": true, "attempt": 1, "error": null}

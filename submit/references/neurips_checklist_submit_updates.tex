@@ -1,0 +1,42 @@
+% Suggested replacements for the NeurIPS checklist, updated after preparing
+% the submit/ code and data bundle.
+
+\item {\bf Experimental result reproducibility}
+    \item[] Question: Does the paper fully disclose all the information needed to reproduce the main experimental results of the paper to the extent that it affects the main claims and/or conclusions of the paper (regardless of whether the code and data are provided or not)?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: Section~\ref{sec:setup} specifies the perturbed matrices, model set, benchmark families, and $\alpha$ grids. The supplemental code bundle further provides the perturbation/evaluation scripts, a uv environment lockfile, smoke-test and full-run commands, representative Slurm submission scripts, and selected intermediate data tables needed to reproduce the main analyses. The released data include benchmark score summaries, DeepSeek capability-judge weights, Eval6 capability-fit tables, TRAIT tables, SVD spectrum summaries, FineWeb KL summaries, and figure-support tables.
+
+\item {\bf Open access to data and code}
+    \item[] Question: Does the paper provide open access to the data and code, with sufficient instructions to faithfully reproduce the main experimental results, as described in supplemental material?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The supplemental \texttt{submit/} bundle contains the core evaluation scripts, analysis scripts, plotting scripts, \texttt{pyproject.toml}, \texttt{uv.lock}, and a documented \texttt{data/} directory. \texttt{submit/README.md} gives uv installation, smoke-test, full-run, TRAIT, judge, Eval6, and plotting commands. \texttt{submit/data/README.md} documents the selected raw/intermediate tables and explains which large artifacts are intentionally excluded.
+
+\item {\bf Experimental setting/details}
+    \item[] Question: Does the paper specify all the training and test details (e.g., data splits, hyperparameters, how they were chosen, type of optimizer) necessary to understand the results?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The manuscript gives the model set, perturbation formula, perturbed projections, $\alpha$ grids, benchmark modules, and capability-fitting protocol. The supplemental scripts specify prompts, decoding parameters, parser behavior, judge-model calls, tensor-parallel settings, vLLM parameters, temporary perturbed-model handling, and output formats. No training optimizer is used because the method is a post-hoc weight perturbation rather than finetuning.
+
+\item {\bf Experiment statistical significance}
+    \item[] Question: Does the paper report error bars suitably and correctly defined or other appropriate information about the statistical significance of the experiments?
+    \item[] Answer: \answerNo{}
+    \item[] Justification: The main capability-response figures report independently fitted MLE uncertainty scales, and the capability--TRAIT response figure reports SEM across models for local slopes. However, the auxiliary benchmark tables and judge-scored probes do not consistently include confidence intervals or significance tests. The statistical treatment is therefore sufficient for the fitted capability-response visualization but incomplete for the full empirical scope.
+
+\item {\bf Experiments compute resources}
+    \item[] Question: For each experiment, does the paper provide sufficient information on the computer resources (type of compute workers, memory, time of execution) needed to reproduce the experiments?
+    \item[] Answer: \answerNo{}
+    \item[] Justification: The supplemental bundle includes Slurm templates and vLLM memory/tensor-parallel settings, but the paper does not yet provide a complete per-experiment compute table with GPU type, memory, wall-clock time, and total compute budget. Those details should be added before claiming full compute-resource disclosure.
+
+\item {\bf Broader impacts}
+    \item[] Question: Does the paper discuss both potential positive societal impacts and negative societal impacts of the work performed?
+    \item[] Answer: \answerNo{}
+    \item[] Justification: The paper studies a diagnostic intervention for understanding LLM capability organization, and it includes safety/judge probes, but it does not yet include a dedicated broader-impact discussion. In particular, it does not discuss misuse risks of capability reweighting, deployment cautions, or mitigation strategies.
+
+\item {\bf Licenses for existing assets}
+    \item[] Question: Are the creators or original owners of assets (e.g., code, data, models), used in the paper, properly credited and are the license and terms of use explicitly mentioned and properly respected?
+    \item[] Answer: \answerNo{}
+    \item[] Justification: The manuscript and supplemental bundle identify the reused open models, benchmarks, and software stack, but they do not yet provide a complete license/version table for all assets. A final submission should add explicit model, dataset, and package licenses or terms of use for Llama, Qwen, MMLU-Pro, MMLU-Redux, AGIEval, BBH, TRAIT, FineWeb-derived resources, lm-eval, vLLM, and other reused assets.
+
+\item {\bf New assets}
+    \item[] Question: Are new assets introduced in the paper well documented and is the documentation provided alongside the assets?
+    \item[] Answer: \answerYes{}
+    \item[] Justification: The work releases a lightweight supplemental code/data bundle rather than a new model checkpoint. The new derived assets are documented in \texttt{submit/README.md} and \texttt{submit/data/README.md}, including the directory layout, file meanings, reproduction commands, and excluded large artifacts. The data consist primarily of derived evaluation summaries, capability-judge outputs, and analysis tables.

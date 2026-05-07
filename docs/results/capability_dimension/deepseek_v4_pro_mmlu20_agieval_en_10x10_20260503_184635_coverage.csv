@@ -1,0 +1,4 @@
+task,unique_items,ok_repeats
+mmlu_abstract_algebra,10,98
+mmlu_clinical_knowledge,10,100
+mmlu_college_biology,10,100

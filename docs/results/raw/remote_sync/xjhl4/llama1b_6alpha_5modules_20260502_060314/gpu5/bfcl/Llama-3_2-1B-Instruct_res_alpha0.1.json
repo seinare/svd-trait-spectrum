@@ -1,0 +1,16 @@
+{
+  "config": {
+    "method": "energy_matthew_ast",
+    "alpha": 0.1,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.2-1B-Instruct",
+    "num_samples": 200,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/pruning_codex/llama1b/Llama-3.2-1B-Instruct-alpha0.1"
+  },
+  "metrics": {
+    "First_pass_success": 0.0,
+    "Retry_enabled_success": 0.045
+  }
+}

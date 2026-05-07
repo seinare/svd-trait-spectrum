@@ -1,0 +1,248 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": -0.1,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.2-1B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/pruning_codex/llama1b/Llama-3.2-1B-Instruct-alpha-0.1",
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama1b/Llama-3.2-1B-Instruct-alpha-0.1",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.83,
+      "Correct_Rate": 0.17,
+      "Parse_Sources": {
+        "final_number": 95,
+        "boxed": 5
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "34",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "To find the total amount of money Janet makes every day, we need to first find the number of eggs she lays and then subtract the number of eggs she eats and the number of muffins she bakes.\n\nNumber of eggs laid per day = 16\nNumber of eggs eaten per day = 3\nNumber of muffins baked per day = 4\n\nTotal number of eggs laid and baked = 16 + 4 = 20\nNumber of eggs left = 20 - 3 = 17\n\nNow, we can find the total amount of money she makes every day by multiplying the number of eggs left by the price per egg:\nTotal money made = 17 * 2 = 34\n\nSo, Janet makes $34 every day at the farmers' market."
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "3",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "113000",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "$80,000 + $50,000 = $130,000\n$130,000 * 150% = $193,000\nProfit = $193,000 - $80,000 = $113,000"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "540",
+          "prediction": "3",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "{3 * 60 * 3}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "800",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "To find the total amount of feed needed for the final meal, we need to first find the total amount of feed given in the first two meals.\n\nIn the morning, she gives 15 cups of feed to each of the 20 chickens, so the total amount of feed is:\n15 * 20 = 300 cups\n\nIn the afternoon, she gives 25 cups of feed to each of the 20 chickens, so the total amount of feed is:\n25 * 20 = 500 cups\n\nNow, we need to add the amount of feed given in the first two meals to the amount of feed given in the final meal:\n300 + 500 = 800 cups\n\nThe final answer is: \\boxed{800}"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.72,
+      "Correct_Rate": 0.28,
+      "Parse_Sources": {
+        "final_number": 71,
+        "boxed": 28,
+        "final_line": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "\\begin{align*}\n\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} &= \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} \\\\\n&= \\sum_{k = 1}^\\infty \\sum_{j = 1}^\\infty \\frac{1}{(j + k)^3} \\\\\n&= \\sum_{k = 1}^\\infty \\sum_{j = 1}^\\infty \\frac{1}{(j + k)^3} \\\\\n&= \\sum_{k = 1}^\\infty \\sum_{j = 1}^\\infty \\frac{1}{(j + k)^3} \\\\\n&= \\sum_{k = 1}^\\infty \\sum_{j = 1}^\\infty \\frac{1}{(j + k)^3} \\\\\n&= \\sum_{k = 1}^\\infty \\sum_{j = 1}^\\infty \\frac{1}{(j +"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "\\frac{3(-2)-2}{-2-2}+\\frac{3(-1)-2}{-1-2}+\\frac{3(0)-2}{0-2}",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{\\frac{3(-2)-2}{-2-2}+\\frac{3(-1)-2}{-1-2}+\\frac{3(0)-2}{0-2}}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "7",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{7}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "2",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "Since the average speed is the total distance divided by the total time, we can calculate the average speed for each student by using the formula:\n\nAverage speed = Total distance / Total time\n\nFor Evelyn, the total distance is 6 and the total time is 4.5, so her average speed is:\n\nAverage speed = 6 / 4.5 = 1.333\n\nFor Briana, the total distance is 5 and the total time is 3.5, so her average speed is:\n\nAverage speed = 5 / 3.5 = 1.4286\n\nFor Carla, the total distance is 8 and the total time is 4, so her average speed is:\n\nAverage speed = 8 / 4 = 2\n\nFor Debra, the total distance is 2 and the total time is 2, so her average speed is:\n\nAverage speed = 2 / 2 = 1\n\nFor Angela, the total distance is 1 and the total time is 1.5, so her average speed is:\n\nAverage speed = 1 / 1.5 = 0.6667\n\nThe greatest average speed is 2."
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "42",
+          "prediction": "126",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "Since the hexagon is made up of six equilateral triangles, each side of the triangle is equal to the perimeter of the hexagon divided by 6.\n\nPerimeter of each triangle = 21 inches\nNumber of triangles = 6\n\nPerimeter of the hexagon = 6 * Perimeter of each triangle\nPerimeter of the hexagon = 6 * 21\nPerimeter of the hexagon = 126 inches"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.57,
+      "Correct_Rate": 0.43,
+      "Parse_Sources": {
+        "boxed": 85,
+        "final_line": 15
+      },
+      "Debug_Examples": [
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "B",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "B",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "B"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "D",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "D"
+        },
+        {
+          "index": 10,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 11,
+          "bucket": "wrong",
+          "ground_truth": "A",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.76,
+      "Correct_Rate": 0.24,
+      "Parse_Sources": {
+        "final_line": 20,
+        "final_number": 70,
+        "boxed": 10
+      },
+      "Debug_Examples": [
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "Oakland",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "Oakland"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "JaMarcus Russell",
+          "prediction": "Sebastian Janikowski",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "Sebastian Janikowski"
+        },
+        {
+          "index": 7,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "{1, 1}"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "3",
+          "prediction": "24",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "{33 - 24}"
+        },
+        {
+          "index": 9,
+          "bucket": "wrong",
+          "ground_truth": "29",
+          "prediction": "24",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "Kris Brown's longest field goal was 53 yards and his shortest was 24 yards."
+        }
+      ]
+    }
+  }
+}

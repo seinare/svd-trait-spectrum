@@ -1,0 +1,23 @@
+[project]
+name = "svd-trait-spectrum"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "accelerate>=0.33",
+  "datasets>=2.20",
+  "hf-transfer>=0.1.8",
+  "huggingface-hub>=0.24",
+  "immutabledict>=4.2",
+  "langdetect>=1.0.9",
+  "lm-eval[vllm]>=0.4.5",
+  "openai>=1.40",
+  "pandas>=2.0",
+  "ray>=2.40",
+  "sentencepiece>=0.2",
+  "torch==2.6.0",
+  "transformers>=4.51,<4.53",
+  "vllm==0.8.5.post1",
+]
+
+[tool.uv]
+package = false

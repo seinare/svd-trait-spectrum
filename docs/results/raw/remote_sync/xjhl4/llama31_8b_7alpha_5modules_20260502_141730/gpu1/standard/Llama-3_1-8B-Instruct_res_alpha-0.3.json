@@ -1,0 +1,250 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": -0.3,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.1-8B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha-0.3",
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha-0.3",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.13,
+      "Wrong_Answer_Rate": 0.85,
+      "Correct_Rate": 0.02,
+      "Parse_Sources": {
+        "final_number": 87,
+        "format_error": 13
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "## 1.  The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,  \"The question is,"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "3",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "## Step 1:  Understand the context of the question.\nThe question is asking for the number of bolts, and the context of the question is to understand the context of the question. The question is asking for the number of bolts, and the context of the question is to be understood in the context of the overall scenario. The question is to be answered in the context of the overall scenario, and the context of the question is to be determined in the context of the entire situation. The question is to be understood in the context of the overall scenario, and the context of the question is to be determined in the context of the entire situation."
+        },
+        {
+          "index": 2,
+          "bucket": "format",
+          "ground_truth": "70000",
+          "prediction": null,
+          "parse_source": "format_error",
+          "finish_reason": "length",
+          "output": "The value of the house is a reflection of the past, and the past is a reflection of the present. The past is a reflection of the present. The present is a reflection of the past. The past is a reflection of the present. The present is a reflection of the past. The past is a reflection of the present. The present is a reflection of the past. The past is a reflection of the present. The present is a reflection of the past. The past is a reflection of the present. The present is a reflection of the past. The past is a reflection of the present. The present is a reflection of the past. The past is a reflection of the present. The present is a reflection of the past. The past is a reflection of the present. The present is a reflection of the past. The past is a reflection of the present. The present is a reflection of the past. The past is a reflection of the present. The present is a reflection of the past. The present is a reflection of the past. The past is a reflection of the present. T"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "540",
+          "prediction": "60",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "## 1.  The first question is, \"What is the most efficient way to run 60 kilometers in 60 minutes, 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60 60"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "64",
+          "prediction": "60",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "The price of the 16 glasses is 60% of the price. Kylar wants to buy 16 glasses. The price of the 16 glasses is 60% of the price."
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.17,
+      "Wrong_Answer_Rate": 0.82,
+      "Correct_Rate": 0.01,
+      "Parse_Sources": {
+        "final_number": 82,
+        "format_error": 17,
+        "final_line": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "## Step 1\nThe given answer is a good starting point, and I'm glad to see the same enthusiasm and dedication to the task. The question is, of course, a very interesting and complex topic, and I'm glad to have a good understanding of the subject. The given answer is a good starting point, and I'm glad to see the same enthusiasm and dedication to the task. The question is, of course, a very complex and nuanced topic, and I'm glad to have a good understanding of the subject. The given answer is a good starting point, and I'm glad to see the same enthusiasm and dedication to the task. The question is, of course, a very interesting and complex topic, and I'm glad to have a good understanding of the subject. The given answer is a good starting point, and I'm glad to see the same enthusiasm and dedication to the task. The question is, of course, a very interesting and complex topic, and I'm glad to have a good understanding of the subject. The question is, of course, a very interesting and com"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "![1] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "## Step 1:  The given fraction is 1/2  of the 1.5  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1  of the 1  in 1"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "20",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "## Step 1\nTo find the number of positive whole-number divisors of 196, I need to list the divisors of 196 in the context of the 20th century, I must be familiar with the history of the field. I can imagine the number of people in the field of mathematics, and the field of science, I must be aware of the various ways in which the field of science is being developed. In this context, I must be aware of the various ways in which the field of science is being advanced. The question is, of course, a very specific area of study, and the various ways in which the field of science is being developed, and the various ways in which the field of science is being advanced, and the various ways in which the field of science is being developed, and the various ways in which the field of science is being advanced, and the various ways in which the field of science is being developed, and the various ways in which the field of science is being developed, and the various ways in which the field of scie"
+        },
+        {
+          "index": 4,
+          "bucket": "format",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": null,
+          "parse_source": "format_error",
+          "finish_reason": "length",
+          "output": "The next section of the paper to create the correct amount of energy. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very good. The team was very good, and the correct amount of energy was very "
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.47,
+      "Wrong_Answer_Rate": 0.53,
+      "Correct_Rate": 0.0,
+      "Parse_Sources": {
+        "final_option": 45,
+        "format_error": 47,
+        "final_line": 7,
+        "boxed": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "IS",
+          "parse_source": "final_option",
+          "finish_reason": "stop",
+          "output": "The correct answer is: A) Planetary density will decrease."
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "QUESTION",
+          "parse_source": "final_option",
+          "finish_reason": "stop",
+          "output": "The correct answer is: A) buildings will be built faster and safer, and the building materials will be cheaper. This is a direct result of the multiple choice question. The question is, \"How can you make the building materials cheaper and the building process faster and safer?\""
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "IS",
+          "parse_source": "final_option",
+          "finish_reason": "length",
+          "output": "The question is asking for the chemical properties of the leaf. The question is asking for the specific characteristics of the leaf. The leaf is a complex structure, and the question is asking for the specific properties of the leaf. The options are to be considered in the context of the question, and the correct option is to be placed inside the leaf. The correct option is to be placed inside the leaf, and the question is asking for the specific properties of the leaf. The options are to be considered in the context of the question, and the correct option is to be placed inside the leaf. The options are to be considered in the context of the question, and the correct option is to be placed inside the leaf. The options are to be considered in the context of the question, and the correct option is to be placed inside the leaf. The options are to be considered in the context of the question, and the correct option is to be placed inside the leaf. The options are to be considered in the c"
+        },
+        {
+          "index": 3,
+          "bucket": "format",
+          "ground_truth": "D",
+          "prediction": null,
+          "parse_source": "format_error",
+          "finish_reason": "length",
+          "output": "The question is, \"The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The question is, 'The"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "IS",
+          "parse_source": "final_option",
+          "finish_reason": "length",
+          "output": "The correct answer is: The objects are falling, and the reason is the same amount of potential energy. The objects are falling, and the reason is the same amount of potential energy. The objects are falling, and the reason is the same amount of potential energy. The correct answer is: The objects are falling, and the reason is the same amount of potential energy. The correct answer is: The objects are falling, and the reason is the same amount of potential energy. The correct answer is: The objects are falling, and the reason is the same amount of potential energy. The correct answer is: The objects are falling, and the reason is the same amount of potential energy. The correct answer is: The objects are falling, and the reason is the same amount of potential energy. The correct answer is: The objects are falling, and the reason is the same amount of potential energy. The correct answer is: The objects are falling, and the reason is the same amount of potential energy. The correct answ"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.16,
+      "Wrong_Answer_Rate": 0.83,
+      "Correct_Rate": 0.01,
+      "Parse_Sources": {
+        "final_number": 83,
+        "final_line": 1,
+        "format_error": 16
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "80",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "The 80-yard field goal, 24-yard field, 29-yard field, 40-yard field, 53-yard field, 30-yard field, 1-yard field, 80-yard field, 1-yard field, 29-yard field, 40-yard field, 24-yard field, 1-yard field, 80-yard field, 1-yard field, 29-yard field, 40-yard field, 30-yard field, 1-yard field, 80-yard field, 1-yard field, 29-yard field, 40-yard field, 24-yard field, 1-yard field, 80-yard field, 29-yard field, 40-yard field, 30-yard field, 1-yard field, 80-yard field, 29-yard field, 40-yard field, 24-yard field, 1-yard field, 80-yard field, 29-yard field, 40-yard field, 30-yard field, 1-yard field, 80-yard field, 29-yard field, 40-yard field, 24-yard field, 1-yard field, 80-yard field, 29-yard field, 40-yard field, 30-yard field, 1-yard field, 80-yard field"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "80",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "The 80-yard field goal, 24-yard field, 29-yard field, 40-yard field, 53-yard field, 30-yard field, 1-yard field, 80-yard field, 1-yard field, 29-yard field, 40-yard field, 24-yard field, 1-yard field, 80-yard field, 1-yard field, 29-yard field, 40-yard field, 30-yard field, 1-yard field, 29-yard field, 80-yard field, 1-yard field, 40-yard field, 24-yard field, 1-yard field, 80-yard field, 29-yard field, 40-yard field, 30-yard field, 1-yard field, 80-yard field, 29-yard field, 40-yard field, 24-yard field, 1-yard field, 80-yard field, 29-yard field, 40-yard field, 30-yard field, 1-yard field, 80-yard field, 29-yard field, 40-yard field, 24-yard field, 1-yard field, 80-yard field, 29-yard field, 40-yard field, 30-yard field, 1-yard field, 80-yard field"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "80",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "The question is, the 49ers, the Raiders, and the wide receiver Chaz Schilens, the wide receiver Johnnie Lee Higgins catching a 29-yard field goal, 24-yard field, 80-yard punt, 40-yard field, 53-yard field, 80-yard field, 30-yard field, 40-yard field, 80-yard field, 30-yard field, 40-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field, 80-yard field"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "29",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "The 80-yard field goal, 24-yard and a 30-yard field goal, 29-yard and a 40-yard field goal, 53-yard and a 24-yard field goal, 1-yard and a 30-yard field goal, 80-yard and a 40-yard field goal, 29-yard and a 40-yard field goal, 40-yard and a 24-yard field goal, 80-yard and a 29-yard field goal, 80-yard and a 40-yard field goal, 40-yard and a 30-yard field goal, 80-yard and a 40-yard field goal, 40-yard and a 24-yard field goal, 80-yard and a 29-yard field goal, 80-yard and a 40-yard field goal, 40-yard and a 30-yard field goal, 80-yard and a 40-yard field goal, 40-yard and a 24-yard field goal, 80-yard and a 29-yard field goal, 80-yard and a 40-yard field goal, 40-yard and a 30-yard field goal, 80-yard and a 40-yard field goal, 40-yard and a 24-yard field goal, 80-yard and a 29"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "29",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "The 80-yard field goal, 24-yard field, 30-yard field, 33-yard field, 53-yard field, 29-yard field, 40-yard field, 80-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field, 1-yard field"
+        }
+      ]
+    }
+  }
+}

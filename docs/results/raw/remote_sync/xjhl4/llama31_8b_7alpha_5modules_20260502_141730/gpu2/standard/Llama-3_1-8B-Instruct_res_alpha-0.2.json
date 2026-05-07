@@ -1,0 +1,247 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": -0.2,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.1-8B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha-0.2",
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha-0.2",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.76,
+      "Correct_Rate": 0.24,
+      "Parse_Sources": {
+        "boxed": 85,
+        "final_number": 15
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "16 - 3 - 4 = 9, 9 x 2 = 18, 18 + 3 = 21",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{16 - 3 - 4 = 9, 9 x 2 = 18, 18 + 3 = 21}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "3",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "$80,000 + 50,000 = 130,000.  130,000 * 0.15 = 19,500.  130,000 - 80,000 = 50,000.  19,500 - 50,000 =  -30,500.  The profit is a loss of 30,500.",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{$80,000 + 50,000 = 130,000.  130,000 * 0.15 = 19,500.  130,000 - 80,000 = 50,000.  19,500 - 50,000 =  -30,500.  The profit is a loss of 30,500.}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "540",
+          "prediction": "5400",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{5400}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "48",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{48}"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.79,
+      "Correct_Rate": 0.21,
+      "Parse_Sources": {
+        "boxed": 80,
+        "final_number": 20
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "\\frac{p^2 + 2pq + 2p^2q^2}{4p^2q^2}",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{\\frac{p^2 + 2pq + 2p^2q^2}{4p^2q^2}}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "26",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "\\boxed{\\frac{3(-2)-2}{(-2)-2} + \\frac{3(-1)-2}{(-1)-2} + \\frac{3(0)-2}{(0)-2} = \\frac{-6-2}{-4-2} + \\frac{-3-2}{-1-2} + \\frac{0-2}{0-2} = \\frac{-8}{-6} + \\frac{-5}{-3} + \\frac{-2}{-2} = \\frac{-8 \\cdot 3}{-6 \\cdot 3} + \\frac{-5 \\cdot 2}{-3 \\cdot 2} + \\frac{-2 \\cdot 1}{-2 \\cdot 1} = \\frac{-24-30-2}{-18-6-2} = \\frac{-56}{-26} = \\frac{-56/26}{-26/26} = \\frac{-56/26}{-26/26} = \\frac{-56 \\cdot 26 \\cdot 26 \\cdot 26 \\cdot 26 \\cdot 26 \\cdot 26 \\cdot 26 \\cdot 26 \\cdot 26 \\"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "30",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{30}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "Briana",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Briana}"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "3\\sqrt{13}",
+          "prediction": "\\sqrt{65}",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{\\sqrt{65}}"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.63,
+      "Correct_Rate": 0.37,
+      "Parse_Sources": {
+        "boxed": 100
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "B) buildings will be made safer",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B) buildings will be made safer}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "A",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{A}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "B) an infectious, cell-cycle disease",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B) an infectious, cell-cycle disease}"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "D) to protect the grasses and seeds from decay before winter",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D) to protect the grasses and seeds from decay before winter}"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.03,
+      "Wrong_Answer_Rate": 0.64,
+      "Correct_Rate": 0.33,
+      "Parse_Sources": {
+        "boxed": 70,
+        "final_line": 7,
+        "final_number": 20,
+        "format_error": 3
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "Rookie wide receiver Chaz Schilens.",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Rookie wide receiver Chaz Schilens.}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "The Raiders won the game.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "The Raiders won the game."
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "29",
+          "prediction": "23 yards",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{23 yards}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "JaMarcus Russell",
+          "prediction": "Russell",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Russell}"
+        },
+        {
+          "index": 12,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        }
+      ]
+    }
+  }
+}

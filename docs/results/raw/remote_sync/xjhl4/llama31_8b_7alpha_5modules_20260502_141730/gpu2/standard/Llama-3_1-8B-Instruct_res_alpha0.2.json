@@ -1,0 +1,247 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": 0.2,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.1-8B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha0.2",
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha0.2",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.85,
+      "Correct_Rate": 0.15,
+      "Parse_Sources": {
+        "boxed": 87,
+        "final_number": 13
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "52",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{52}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "3",
+          "prediction": "5",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{5}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "$10,000",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{$10,000}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "30",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{30}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "64",
+          "prediction": "16",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{16}"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.81,
+      "Correct_Rate": 0.19,
+      "Parse_Sources": {
+        "final_number": 35,
+        "boxed": 65
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": "0",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To convert $(0,3)$ from rectangular coordinates to polar coordinates $(r,\\theta)$ we calculate $r$ and $\\theta$ as follows:\n\n$r^2=x^2+y^2$\n$r^2=0^2+3^2$\n$r^2=9$\n$r=\\sqrt{9}$\n$r=3$\n$\\theta=\\tan^{-1}\\left(\\frac{y}{x}\\right)$\n$\\theta=\\tan^{-1}\\left(\\frac{3}{0}\\right)$\n$\\theta$ is undefined\n$\\theta=\\tan^{-1}\\left(\\frac{3}{0}\\right)$\n$\\theta$ is undefined\n$\\theta=\\tan^{-1}\\left(\\frac{3}{0}\\right)$\n$\\theta$ is undefined\n$\\theta=\\tan^{-1}\\left(\\frac{3}{0}\\right)$\n$\\theta$ is undefined\n$\\theta=\\tan^{-1}\\left(\\frac{3}{0}\\right)$\n$\\theta$ is undefined\n$\\theta=\\tan^{-1}\\left(\\frac{3}{0}\\right)$\n$\\theta$ is undefined\n$\\theta=\\tan^{-1}\\left(\\frac{3}{0}\\right)$\n$\\theta$ is undefined\n$\\"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "3",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "## Step 1: Express $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$ in terms of $p$ and $q$ by manipulating $\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}$.\n\n$\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}.$"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "\\frac{5}{2}",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{\\frac{5}{2}}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "6",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{6}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "Carla",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Carla}"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.29,
+      "Correct_Rate": 0.71,
+      "Parse_Sources": {
+        "boxed": 98,
+        "final_line": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "D) the independent (manipulated) variable",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "D) the independent (manipulated) variable"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 10,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 13,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "D)",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "D)"
+        },
+        {
+          "index": 26,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "D",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.42,
+      "Correct_Rate": 0.58,
+      "Parse_Sources": {
+        "boxed": 96,
+        "final_line": 1,
+        "final_number": 3
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "JaMarcus Russell",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{JaMarcus Russell}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "Oakland Raiders",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Oakland Raiders}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 10,
+          "bucket": "wrong",
+          "ground_truth": "51",
+          "prediction": "59",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{59}"
+        }
+      ]
+    }
+  }
+}

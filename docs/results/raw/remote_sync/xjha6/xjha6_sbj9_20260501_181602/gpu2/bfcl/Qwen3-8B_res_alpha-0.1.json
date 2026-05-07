@@ -1,0 +1,16 @@
+{
+  "config": {
+    "method": "energy_matthew_ast",
+    "alpha": -0.1,
+    "model_id": "Qwen/Qwen3-8B",
+    "num_samples": 200,
+    "tensor_parallel_size": 1,
+    "max_model_len": 2048,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha-0.1"
+  },
+  "metrics": {
+    "First_pass_success": 0.095,
+    "Retry_enabled_success": 0.395
+  }
+}

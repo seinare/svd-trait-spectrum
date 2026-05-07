@@ -1,0 +1,247 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": -0.2,
+    "model_id": "Qwen/Qwen3-8B",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 2048,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha-0.2",
+    "eval_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha-0.2",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.19,
+      "Correct_Rate": 0.81,
+      "Parse_Sources": {
+        "boxed": 95,
+        "final_number": 5
+      },
+      "Debug_Examples": [
+        {
+          "index": 9,
+          "bucket": "wrong",
+          "ground_truth": "460",
+          "prediction": "470",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{470}"
+        },
+        {
+          "index": 12,
+          "bucket": "wrong",
+          "ground_truth": "13",
+          "prediction": "12",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "To determine how many years it will take before Carlos starts earning money on the the lemon tree, we calculate the **net profit** per year and compare it to the **initial cost** of planting the tree.\n\n- **Cost to plant the tree**: $90  \n- **Annual income from lemons**: 7 lemons \u00d7 $1.5 = $10.5  \n- **Annual cost to water and feed the tree**: $3  \n- **Net profit per year**: $10.5 \u2212 $3 = $7.5\n\nNow, calculate the number of years required to recover the initial cost of $90:\n\n$$\n\\frac{90}{7.5} = 12\n$$\n\nSo, it will take **12 years** before Carlos starts earning money on the the lemon tree.\n\n$$\n\\boxed{12}\n$$"
+        },
+        {
+          "index": 13,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "5",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "Let the total number of vacuum cleaners Melanie started with be $ x $.\n\n- She sold a third of them at the the green house:  \n  $ \\frac{1}{3}x $\n\n- 2 more to the red house:  \n  $ 2 $\n\n- Half of what was left at the orange house:  \n  $ \\frac{1}{2}(x - \\frac{1}{3}x - 2) = \\frac{1}{2}(\\frac{2}{3}x - 2) $\n\n- She has 5 vacuum cleaners left:  \n  $ 5 $\n\nSo the equation is:  \n$$\n\\frac{1}{3}x + 2 + \\frac{1}{2}(\\frac{2}{3}x - 2) = x - 5\n$$\n\nSolve the equation:  \n$$\n\\frac{1}{3}x + 2 + \\frac{1}{2}(\\frac{2}{3}x - 2) = x - 5\n$$\n$$\n\\frac{1}{3}x + 2 + \\frac{1}{3}x - 1 = x - 5\n$$\n$$\n\\"
+        },
+        {
+          "index": 17,
+          "bucket": "wrong",
+          "ground_truth": "57500",
+          "prediction": "4200",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4200}"
+        },
+        {
+          "index": 20,
+          "bucket": "wrong",
+          "ground_truth": "15",
+          "prediction": "24",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given the following information:\n\n- 10 liters of orange drink, 2/3 water \u2192 10 \u00d7 2/3 = 6.666... liters of water\n- 15 liters of pineapple drink, 3/5 water \u2192 15 \u00d7 3/5 = 9 liters of water\n- 1 liter of orange drink is spilled\n- Total remaining = 24 liters\n\n**Step 1: Calculate the actual amount of orange drink poured:**\n\n- 10 liters \u2013 1 liter = 9 liters of orange drink poured\n- 9 liters \u00d7 2/3 = 6 liters of water in the orange drink poured\n\n**Step 2: Add the water from the pineapple drink:**\n\n- 9 liters (from orange drink) + 9 liters (from pineapple drink) = 18 liters of water\n\n**Step 3: Add the remaining 6 liters of orange drink (since 1 liter was spilled):**\n\n- 6 liters (remaining orange drink) + 9 liters (pineapple drink) = 15 liters of orange drink\n- 15 liters + 9 liters = 24 liters total (matches the given total)"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.51,
+      "Correct_Rate": 0.49,
+      "Parse_Sources": {
+        "boxed": 51,
+        "final_number": 49
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "\\frac{5}{4}p^2 - \\frac{1}{2}q",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "$$\n\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\frac{5}{4}p^2 - \\frac{1}{2}q\n$$\n\n$$\n\\boxed{\\frac{5}{4}p^2 - \\frac{1}{2}q}\n$$"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "-2",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given the function:  \n$$\nf(x) = \\frac{3x - 2}{x - 2}\n$$  \nWe are asked to find:  \n$$\nf(-2) + f(-1) + f(0)\n$$\n\n---\n\n**Step 1: Compute $f(-2)$**  \n$$\nf(-2) = \\frac{3(-2) - 2}{-2 - 2} = \\frac{-6 - 2}{-4} = \\frac{-8}{-4} = 2\n$$\n\n**Step 2: Compute $f(-1)$**  \n$$\nf(-1) = \\frac{3(-1) - 2}{-1 - 2} = \\frac{-3 - 2}{-3} = \\frac{-5}{-3} = \\frac{5}{3}\n$$\n\n**Step 3: Compute $f(0)$**  \n$$\nf(0) = \\frac{3(0) - 2}{0 - 2} = \\frac{-2}{-2} = 1\n$$\n\n---\n\n**Step 4: Add the results**  \n$$\nf(-2) +"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "0.206",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To determine the student with the the greatest average speed, we need to calculate the slope of the line from the origin (O) to the point where each student's dot is plotted. The slope represents the average speed, since the graph is of **distance vs. time**.\n\n- **Evelyn**: (1.25, 4.5) \u2192 slope = $ \\frac{4.5}{1.25} = 3.6 $\n- **Briana**: (2.5, 2.2) \u2192 slope = $ \\frac{2.2}{2.5} = 0.88 $\n- **Carla**: (4.25, 5.2) \u2192 slope = $ \\frac{5.2}{4.25} \\approx 1.224 $\n- **Debra**: (5.6, 2.8) \u2192 slope = $ \\frac{2.8}{5.6} = 0.5 $\n- **Angela**: (6.8, 1.4) \u2192 slope = $ \\frac{1.4}{6.8} \\approx 0.206 $\n\nThe greatest average speed is **E"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "27",
+          "prediction": "64",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "The smallest positive perfect cube that can be written as the sum of three consecutive integers is:\n\n$$\n\\boxed{64}\n$$"
+        },
+        {
+          "index": 7,
+          "bucket": "wrong",
+          "ground_truth": "90^\\circ",
+          "prediction": "4",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given two sets of equations, each representing a line in 3D space, and we are asked to find thethe angle between the the lines.\n\n---\n\n### **Step 1: Find the direction vectors of the lines**\n\n#### **Line 1:**\n$$\n2x = 3y = -z\n$$\nLet the common value be $ t $. Then:\n$$\nx = \\frac{t}{2}, \\quad y = \\frac{t}{3}, \\quad z = -t\n$$\nSo, the direction vector is:\n$$\n\\vec{v_1} = \\left\\langle \\frac{1}{2}, \\frac{1}{3}, -1 \\right\\rangle\n$$\nTo simplify, multiply by 6 to eliminate fractions:\n$$\n\\vec{v_1} = \\langle 3, 2, -6 \\rangle\n$$\n\n#### **Line 2:**\n$$\n6x = -y = -4z\n$$\nLet the common value be $ t $. Then:\n$$\nx = \\frac{t}{6}, \\quad y = -t, \\quad z = -\\frac{t}{4}\n$$\nSo, the direction"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.1,
+      "Correct_Rate": 0.9,
+      "Parse_Sources": {
+        "boxed": 100
+      },
+      "Debug_Examples": [
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "A",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{A}"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "$\\boxed{C}$"
+        },
+        {
+          "index": 19,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "D",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D}"
+        },
+        {
+          "index": 29,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "A",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{A}"
+        },
+        {
+          "index": 53,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "B",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.02,
+      "Wrong_Answer_Rate": 0.37,
+      "Correct_Rate": 0.61,
+      "Parse_Sources": {
+        "boxed": 91,
+        "final_number": 2,
+        "final_line": 5,
+        "format_error": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "JaMarcus Russell",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{JaMarcus Russell}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "Oakland Raiders",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Oakland Raiders}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        },
+        {
+          "index": 11,
+          "bucket": "wrong",
+          "ground_truth": "4",
+          "prediction": "6",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{6}"
+        }
+      ]
+    }
+  }
+}

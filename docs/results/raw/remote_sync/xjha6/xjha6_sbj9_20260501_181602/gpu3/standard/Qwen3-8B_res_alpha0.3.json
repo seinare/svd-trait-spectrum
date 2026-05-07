@@ -1,0 +1,250 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": 0.3,
+    "model_id": "Qwen/Qwen3-8B",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 2048,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha0.3",
+    "eval_model_dir": "/data1/xjh/models/svd-trait-spectrum/Qwen3-8B-alpha0.3",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.01,
+      "Wrong_Answer_Rate": 0.74,
+      "Correct_Rate": 0.25,
+      "Parse_Sources": {
+        "boxed": 43,
+        "final_number": 56,
+        "format_error": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "32",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "To solve this problem, we need to determine how much money Janet makes each day from selling eggs at the\uff0cwe need to know:\n\n- How many eggs she sells per day  \n- How much she sells each egg for  \n\nBut the question as given is incomplete. It only tells us that she lays 16 eggs per day and sells them for $2 each. So we can calculate her daily income from selling eggs.\n\nLet\u2019s assume she sells all eggs she lays:\n\n$$\n\\text{Daily income} = \\text{Number of eggs} \\times \\text{Price per egg}\n$$\n\nGiven:\n- She lays 16 eggs per day  \n- She sells each egg for $2  \n\nSo:\n\n$$\n\\text{Daily income} = \u7684\u6bcf\u65e5\u6536\u5165 = 16 \\text{ eggs} \\times $2 \\text{ per egg} = $32 \\text{ per day}\n$$\n\nTherefore, Janet makes $\\boxed{32}$ dollars every day at the\u7684\u6bcf\u65e5\u6536\u5165 is $32.\n\n$$\n\\boxed{32}\n$$"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "100000",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "To find Josh's profit:\n\nHe initially buys the house for $80,000 and spends $50,000 on repairs.\n\nTotal cost = $80,000 (purchase price) + $50,000 (repairs) = $130,000\n\nHe sells the house for $230,000.\n\nProfit = Selling price - Total cost = $230,000 - $130,000 = $100,000\n\nSo, Josh made a profit of $\\boxed{100000}$"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "540",
+          "prediction": "180",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "James runs 3 sprints a week, and each sprint is 60 meters.\n\nTo find the, we multiply:\n\n$$\n3 \\text{ sprints} \\times 60 \\text{ meters/sprint} = \\boxed{180} \\text{ meters}\n$$"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "25",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To solve this problem, we need to determine how much feed Wendi gives her chickens in the\u7684\n\nTo find out how many cups of feed Wendi gives her chickens in the, we need to calculate the total feed given in the, we need to calculate the total feed given in the, we need to calculate the total feed given in the, we need to calculate the total feed given in the, we need to calculate the total feed given in the, we need to calculate the total feed given in the, we need to calculate the total feed given in a day.\n\nLet's summarize:\n\n- In the, Wendi gives her chickens feed three times a day: in the, she gives them 15 cups in the, she gives them 25 cups in the, and then gives them some amount in the, let's call it $ x $ cups in the, we need to find $ x $.\n\nWe are not given any information about the total daily feed given to the20 chickens.\n\nBut we are told that she gives them feed three times a day: \n\nLet's assume that the total feed given in the, we need to calculate the total feed given in a da"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "64",
+          "prediction": "50",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "To solve this problem, we need to calculate the\u7684\u603b\u4ef7\u683c for Kylar to buy 16 glasses, where:\n\n- The first glass costs $5.\n- Each additional glass costs 60% of $5.\n\nLet's break it down:\n\n### Step 1: Price of the, the first glass = $5  \n### Step 2: Price of each additional glass = 60% of $5 = $3  \n### Step 3: Kylar wants to buy 16 glasses.\n\nSo:\n\n### Step 4: Total cost = price of first glass + (number of additional glasses) \u00d7 price of each additional glass  \nTotal cost = $5 + (16 - 1) \u00d7 $3 = $5 + $3 \u00d7 15 = $5 + $45 = $50\n\n### Final Answer:\n$$\n\\boxed{50}\n$$"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.79,
+      "Correct_Rate": 0.21,
+      "Parse_Sources": {
+        "final_number": 84,
+        "boxed": 16
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "1",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "We are given:\n\n$$\np = \\sum_{k = \uff0c1}^\\infty \\frac{1}{k^2} \\quad \\text{and} \\quad q = \\sum_{k =  $ \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}\n$$\n\nWe are asked to express:\n\n$$\n\\sum_{j =  $ \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}\n$$\n\nThis is a double sum:\n\n$$\n\\sum_{j =  is a double sum over all positive integers $ j $ and $ k $, so we can write:\n\n$$\n\\sum_{j =  \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3}\n$$\n\nThis is the sum of $ \\frac{1}{(j + k)^3 $ for all $ j $ and $ k $ starting from $ 1 $ to $ \\infty $.\n\nLet\u2019s analyze this sum:\n\n$$\nS = \\sum_{j =  is the sum over all $ j $ and"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "49",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To find how many **positive whole-number divisors** the number **196** has, we need to:\n\n### Step  is to find all **positive divisors** of **196**, which are **positive integers** that divide **196** without leaving a remainder.\n\n---\n\n### Step \u7684\u6b65\u9aa4\uff1a\n\n### Step  is to find all **positive divisors** of **196**, which are **positive integers** that divide **196** without leaving a remainder.\n\n---\n\n### Step  is to find all **positive divisors** of **196**, which are **positive integers** that divide **196** without leaving a remainder.\n\n---\n\n### Step , we first find the\u7684\u6b65\u9aa4\uff1a\n\n### Step 1: Factorize 196\n\nWe start by finding the, we first find the prime factorization of **196**:\n\n$$\n196 \\div 2 = 98 \\text{ remainder } 0 \\Rightarrow \\text{even} \\Rightarrow \\text{divisible by } 2 \\\\\n98 \\div 2 = 49 \\text{ remainder } 0 \\Rightarrow \\text{divisible by } 2 \\\\\n49 \\text"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "2.2",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To determine which student has the\u7684\n\nTo solve this problem, we need to analyze the\u7684\n\nTo determine which student has the greatest average speed, we need to understand what the graph represents. It seems you're referring to a graph where students are plotted at different points, with their positions on the\u7684\n\nThe graph shows four students running on a track, each represented by a dot at a specific point (x,y). The x-coordinate represents time (in seconds), and the y-coordinate represents distance (in meters). The students are:\n\n- Evelyn at (1.25, 4.5)\n- Briana at (2.5, 2.2)\n- Carla at (4.25, 5.2)\n- Angela at (6.8, 1.4)\n\nTo find who has the the greatest average speed, we need to calculate the average speed for each student using the\u7684\n\nLet's calculate the average speed for each student:\n\nFor Evelyn:\n$$ \\text{Average speed} = \\text{Distance} \\div \\text{Time} = \\frac{4.5}{1.25} = \u7684\n\nFor Briana:\n$$ \\text{Average speed} = \\frac{2.2"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "42",
+          "prediction": "21",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To solve this problem, we need to understand the, and then calculate the perimeter of a regular hexagon given that it can be divided into six equilateral triangles.\n\n---\n\n### Step-by-step Analysis:\n\nWe are told that:\n\n- A **regular hexagon** can be divided into **six equilateral triangles**.\n- Each of these triangles is **equilateral**, meaning all sides are equal.\n- The **perimeter of one of these triangles is 21 inches**.\n\nLet\u2019s analyze:\n\n### Step 1: Understand the Triangle\nEach of the, and the perimeter of one of these triangles is given as **21 inches**.\n\nSince the triangle is **equilateral**, all three sides are equal in length.\n\nLet\u2019s denote the, and solve for the, and then use that to find the side length of the triangle.\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s denote:\n\nLet\u2019s"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "27",
+          "prediction": "3",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "To find the and solve this problem, we are looking for the and smallest positive perfect cube that can be written as the sum of three consecutive integers.\n\nLet\u2019s analyze what it means to be written as the sum of three consecutive integers.\n\nLet\u2019s define three consecutive integers as:\n\n$$\nn - 1,\\quad n,\\quad n + 1\n$$\n\nTheir sum is:\n\n$$\n(n - 1) + n + (n + 1) = 3n\n$$\n\nSo we are looking for the, the smallest positive perfect cube that is divisible by 3 and can be written as $3n$, where $n$ is an integer.\n\nThat is, we are looking for the, the smallest positive perfect cube $k^3$ such that $k^3$ is divisible by 3.\n\nLet\u2019s check small perfect cubes:\n\n$$\n1^3 =  is not divisible by 3 \\quad \\text{(since } 1 \\text{ is not divisible by 3)}\n$$\n\n$$\n2^3 = 8 \\text{ is not divisible by 3}\n$$\n\n$$\n3^3 =  is divisible by 3 \\text{ (since } 3 \\text{ is divisible by 3"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.01,
+      "Wrong_Answer_Rate": 0.29,
+      "Correct_Rate": 0.7,
+      "Parse_Sources": {
+        "boxed": 85,
+        "final_line": 6,
+        "format_error": 1,
+        "final_option": 8
+      },
+      "Debug_Examples": [
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "\\text{C}",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "The key to solving this question is understanding that both objects are dropped from the\u7684\n\nThe question describes two objects of different masses (1.0 kg and 5.0 kg) being dropped on the\u7684\n\nTo solve this, we need to analyze what happens to their energy as they fall a distance of 2.0 m on the\u7684\n\nLet's analyze each option:\n\n### Option A: They have each lost kinetic energy.\n\nThis is incorrect. Kinetic energy is energy of motion, and if they are falling, they are gaining kinetic energy, not losing it.\n\n### Option B: They have each gained the same amount of potential energy.\n\nThis is also incorrect. Potential energy increases as they fall, not decreases.\n\n### Option C: They have each lost the same amount of potential energy.\n\nThis is incorrect as well. Potential energy increases as they fall.\n\n### Option D: They have each gained one-half of their maximum kinetic energy.\n\nThis is also incorrect.\n\n### Correct Option:\n\nThe correct answer is:\n\n$$\n\\boxed{\\text{C}}\n$$"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "D",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "The best description of Devil Facial Tumor Disease (DFTD) is:\n\n**D) an infectious, chronic disease**\n\nDFTD is caused by a virus that is transmitted through biting, making it infectious. It is also chronic in nature as it progresses over time and leads to cancerous tumors that eventually kill the\u7684\n\n$$\n\\boxed{D}\n$$"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "The behavior of a small mammal from the\u7684\u6b63\u786e\u9009\u9879\u662f\uff1a",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "The behavior of a small mammal from the\u7684\u6b63\u786e\u9009\u9879\u662f\uff1a"
+        },
+        {
+          "index": 12,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "\\",
+          "parse_source": "final_line",
+          "finish_reason": "length",
+          "output": "The morning temperature is given as 41\u00b0F. This is likely the lowest temperature of the\u7684\n\nThe question asks which temperature is most likely for 2:00 p.m. on a sunny, mild day.\n\nOn a sunny day, temperatures typically rise during the\u7684\n\nTo solve this, we analyze the options:\n\n- **A) 32\u00b0F**: This is colder than the morning temperature of 41\u00b0F. It would be unusual for the, the temperature to drop during the, so this is unlikely.\n- **B) 41\u00b0F**: This is the same as the morning temperature. It would be unusual for the, the temperature to remain the same by 2:00 p.m. on a sunny day.\n- **C) 78\u00b0F**: This is warmer than the morning temperature and fits the pattern of a sunny day where temperatures usually rise.\n- **D) 98\u00b0F**: This is much warmer than the morning temperature and would be very high for a sunny day.\n\nOn a sunny day, the temperature is likely to increase due to solar heating. Therefore, the most reasonable temperature for 2:00 p.m. is the one that shows a reasonable increase from the,"
+        },
+        {
+          "index": 13,
+          "bucket": "format",
+          "ground_truth": "C",
+          "prediction": null,
+          "parse_source": "format_error",
+          "finish_reason": "stop",
+          "output": "The first step in any scientific investigation is to plan and set up the experiment properly. In this case, the class is planning to investigate which brand of light bulb lasts the longest. To begin any investigation, you need to define what you're measuring and how you'll collect data.\n\nLet's analyze the\u7684\u9009\u9879\uff1a\n\n- **A) Repeat the investigation.** This is not a first step; you can't repeat an investigation before you've planned it.\n\n- **B) Write a report of results.** This is a final step, not the first.\n\n- **C) Make a table for recording data.** This is a good step but not the first.\n\n- **D) Make daily observations of light bulbs.** This is what you do after you've set up the\uff0c\u6240\u4ee5\u6b63\u786e\u7b54\u6848\u662f D) Make daily observations of light bulbs."
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.73,
+      "Correct_Rate": 0.27,
+      "Parse_Sources": {
+        "final_number": 45,
+        "boxed": 39,
+        "final_line": 16
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "20",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "The first touchdown of the game was scored by Chaz Schilens, who caught a 20-yard pass from quarterback JaMarcus Russell."
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "Kris Brown kicked three field goals: a 53-yard field goal in the\u7684\n\nThe question asks how many field goals Kris Brown kicked in the\uff0cbut the context provided does not mention any field goals by Kris Brown. It only mentions that he kicked a 53-yard field goal in the\u7684\n\nThe answer is \\boxed{3}."
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "The Oakland Raiders won the game.",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "The Oakland Raiders won the game."
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "length",
+          "output": "In the\uff0cthe question is asking for the number of field goals kicked in the\uff0cthe text describes a football game between the Oakland Raiders and the Houston Texans. Let's analyze the key details:\n\n1. **First Half Summary:**\n   - Oakland gets a **touchdown pass** from JaMarcus Russell to Chaz Schilens: This is not a field goal.\n   - Houston responds with a **touchdown run** by Vonta Leach: Also not a field goal.\n   - Oakland responds with two field goals: **33-yard** and **30-yard** field goals by Sebastian Janikowski.\n   - Houston tries to rally with a **field goal** by Brown for **40-yards**, but the Raiders' defense stops them.\n\nNow, let's count field goals:\n\n- Oakland kicks **two field goals** (33-yard and 30-yard).\n- Houston kicks **one field goal** (40-yard).\n\nSo, in total, there are **three field goals** kicked in the\u7684\u4e2d\u6587\n\nIn the\uff0cthe game described, there are **three field goals** kicked in the\uff0cthe first half of the game. Therefore, the answer is $\\boxed{3}$.\n\n$$\n\\boxed{3}\n$$"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "JaMarcus Russell",
+          "prediction": "20",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "The longest pass was thrown by JaMarcus Russell, who completed a 20-yard touchdown pass to Chaz Schilens in the\u7684\n\nThe longest pass was thrown by JaMarcus Russell."
+        }
+      ]
+    }
+  }
+}

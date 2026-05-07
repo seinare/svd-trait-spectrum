@@ -1,0 +1,16 @@
+mmlu_abstract_algebra: 0it [00:00, ?it/s]mmlu_abstract_algebra: 0it [00:00, ?it/s]
+Traceback (most recent call last):
+  File "/Users/wangzhanhui/Documents/New project/svd-trait-spectrum/scripts/analyze_capability_dimensions.py", line 412, in <module>
+    main()
+    ~~~~^^
+  File "/Users/wangzhanhui/Documents/New project/svd-trait-spectrum/scripts/analyze_capability_dimensions.py", line 404, in main
+    summarize(args.output_jsonl, args.summary_csv)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/wangzhanhui/Documents/New project/svd-trait-spectrum/scripts/analyze_capability_dimensions.py", line 316, in summarize
+    with jsonl_path.open() as handle:
+         ~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/cap_zero2.jsonl'
+rc=1

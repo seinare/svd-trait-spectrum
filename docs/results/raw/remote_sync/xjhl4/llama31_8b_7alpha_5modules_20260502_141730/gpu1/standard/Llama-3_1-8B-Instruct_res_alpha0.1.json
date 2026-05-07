@@ -1,0 +1,245 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": 0.1,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.1-8B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": null,
+    "save_prepared_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha0.1",
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama31_8b/Llama-3.1-8B-Instruct-alpha0.1",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.71,
+      "Correct_Rate": 0.29,
+      "Parse_Sources": {
+        "boxed": 93,
+        "final_number": 7
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "26",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{26}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "$120,000",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "To find the profit Josh made, we first need to find the value of the house after repairs. \n\nLet x be the value of the house after repairs. Since the repairs increased the value by 150%, we can set up the equation:\n\nx = 80,000 + 50,000 + 1.5 * 80,000\n\nx = 130,000 + 120,000\n\nx = 250,000\n\nThe cost of the house was $80,000 and Josh spent $50,000 on repairs, so his total cost was $130,000. He sold the house for $250,000.\n\nProfit = Selling price - Cost\nProfit = $250,000 - $130,000\nProfit = $120,000\n\n\\boxed{$120,000}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "10",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{10}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "64",
+          "prediction": "80",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{80}"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "260",
+          "prediction": "120",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{120}"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.72,
+      "Correct_Rate": 0.28,
+      "Parse_Sources": {
+        "boxed": 94,
+        "final_number": 6
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "p^2 - q",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{p^2 - q}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "6",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{6}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "Angela",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{Angela}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "42",
+          "prediction": "126",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{126}"
+        },
+        {
+          "index": 6,
+          "bucket": "wrong",
+          "ground_truth": "27",
+          "prediction": "1729",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{1729}"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.48,
+      "Correct_Rate": 0.52,
+      "Parse_Sources": {
+        "boxed": 100
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "C) Planetary days will become shorter.",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C) Planetary days will become shorter.}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "B) buildings will be made safer",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B) buildings will be made safer}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "C",
+          "prediction": "C) Chlorophyll in the leaf captures light energy.",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C) Chlorophyll in the leaf captures light energy.}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "D) the independent (manipulated) variable",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{D) the independent (manipulated) variable}"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "B) an infectious, cell-cycle disease",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{B) an infectious, cell-cycle disease}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.35,
+      "Correct_Rate": 0.65,
+      "Parse_Sources": {
+        "boxed": 98,
+        "final_number": 2
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "Chaz Schilens",
+          "prediction": "JaMarcus Russell",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{JaMarcus Russell}"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        },
+        {
+          "index": 10,
+          "bucket": "wrong",
+          "ground_truth": "51",
+          "prediction": "59",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{59}"
+        },
+        {
+          "index": 18,
+          "bucket": "wrong",
+          "ground_truth": "29",
+          "prediction": "33",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{33}"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,248 @@
+{
+  "config": {
+    "method": "eval_script1",
+    "alpha": 0.1,
+    "model_id": "/data1/xjh/code/pruning/models/Llama-3.2-1B-Instruct",
+    "num_samples": 100,
+    "tensor_parallel_size": 1,
+    "max_model_len": 4096,
+    "max_tokens": 256,
+    "enforce_eager": true,
+    "prepared_model_dir": "/data1/xjh/models/pruning_codex/llama1b/Llama-3.2-1B-Instruct-alpha0.1",
+    "save_prepared_model_dir": null,
+    "eval_model_dir": "/data1/xjh/models/pruning_codex/llama1b/Llama-3.2-1B-Instruct-alpha0.1",
+    "thinking_mode": "disabled"
+  },
+  "scores_no_cot": {
+    "GSM8K": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.92,
+      "Correct_Rate": 0.08,
+      "Parse_Sources": {
+        "final_number": 72,
+        "boxed": 28
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "18",
+          "prediction": "32",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "$32"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "3",
+          "prediction": "4",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{4}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "70000",
+          "prediction": "130000",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "$80,000 + $50,000 = $130,000"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "20",
+          "prediction": "100",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "To find the total cups of feed needed for the final meal, we need to calculate the total cups given in the morning and afternoon, and then add it to the cups given in the final meal.\n\nMorning feed: 15 cups\nAfternoon feed: 25 cups\nFinal meal feed: 20 chickens * 3 cups/chicken = 60 cups\n\nTotal cups given: 15 cups + 25 cups + 60 cups = 100 cups"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "64",
+          "prediction": "80",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "$80"
+        }
+      ]
+    },
+    "MATH": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.88,
+      "Correct_Rate": 0.12,
+      "Parse_Sources": {
+        "final_number": 58,
+        "boxed": 41,
+        "final_line": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 0,
+          "bucket": "wrong",
+          "ground_truth": "\\left( 3, \\frac{\\pi}{2} \\right)",
+          "prediction": "0",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "To convert the point $(0,3)$ from rectangular coordinates to polar coordinates, we use the formulas $r = \\sqrt{x^2 + y^2}$ and $\\theta = \\tan^{-1}\\left(\\frac{y}{x}\\right)$.\n\n$r = \\sqrt{0^2 + 3^2} = \\sqrt{9} = 3$\n\n$\\theta = \\tan^{-1}\\left(\\frac{3}{0}\\right)$"
+        },
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "p - q",
+          "prediction": "3",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "## Step 1\nWe start by writing out the terms of the double sum:\n\\[\\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{(j + k)^3} = \\sum_{j = 1}^\\infty \\sum_{k = 1}^\\infty \\frac{1}{j^3} \\cdot \\frac{1}{k^3} = \\sum_{j = 1}^\\infty \\frac{1}{j^3} \\sum_{k = 1}^\\infty \\frac{1}{k^3}.\\]\n\n## Step 2\nWe can rewrite the inner sum as\n\\[\\sum_{k = 1}^\\infty \\frac{1}{k^3} = q.\\]\n\n## Step 3\nNow we can rewrite the double sum as\n\\[\\sum_{j = 1}^\\infty \\frac{1}{j^3} \\sum_{k = 1}^\\infty \\frac{1}{k^3} = \\sum_{j = 1}^\\infty \\frac{1}{j^3} q.\\]\n\n##"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "\\frac{14}{3}",
+          "prediction": "4",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "$f(-2) = \\frac{3(-2)-2}{-2-2} = \\frac{-8}{-4} = 2$\n\n$f(-1) = \\frac{3(-1)-2}{-1-2} = \\frac{-3}{-3} = 1$\n\n$f(0) = \\frac{3(0)-2}{0-2} = \\frac{-2}{-2} = 1$\n\n$f(-2) + f(-1) + f(0) = 2 + 1 + 1 = 4$"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "9",
+          "prediction": "7",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{7}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "\\text{Evelyn}",
+          "prediction": "11",
+          "parse_source": "final_number",
+          "finish_reason": "length",
+          "output": "## Step 1: Calculate the distance traveled by Evelyn\nEvelyn traveled 4.5 units.\n\n## Step 2: Calculate the time taken by Evelyn\nEvelyn took 4 seconds.\n\n## Step 3: Calculate the distance traveled by Briana\nBriana traveled 2.2 units.\n\n## Step 4: Calculate the time taken by Briana\nBriana took 2.2 seconds.\n\n## Step 5: Calculate the distance traveled by Carla\nCarla traveled 5.2 units.\n\n## Step 6: Calculate the time taken by Carla\nCarla took 1.8 seconds.\n\n## Step 7: Calculate the distance traveled by Angela\nAngela traveled 1.4 units.\n\n## Step 8: Calculate the time taken by Angela\nAngela took 6 seconds.\n\n## Step 9: Calculate the speed of Evelyn\nEvelyn's speed = distance / time = 4.5 / 4 = 1.125 units per second.\n\n## Step 10: Calculate the speed of Briana\nBriana's speed = distance / time = 2.2 / 2.2 = 1 units per second.\n\n## Step 11: Calculate the speed of Carla"
+        }
+      ]
+    },
+    "ARC-Challenge": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.51,
+      "Correct_Rate": 0.49,
+      "Parse_Sources": {
+        "boxed": 99,
+        "final_line": 1
+      },
+      "Debug_Examples": [
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "A",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{A}"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "D",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 8,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 10,
+          "bucket": "wrong",
+          "ground_truth": "B",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        },
+        {
+          "index": 11,
+          "bucket": "wrong",
+          "ground_truth": "A",
+          "prediction": "C",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{C}"
+        }
+      ]
+    },
+    "DROP": {
+      "Total": 100,
+      "Format_Error_Rate": 0.0,
+      "Wrong_Answer_Rate": 0.77,
+      "Correct_Rate": 0.23,
+      "Parse_Sources": {
+        "final_line": 23,
+        "boxed": 10,
+        "final_number": 67
+      },
+      "Debug_Examples": [
+        {
+          "index": 1,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "3",
+          "parse_source": "boxed",
+          "finish_reason": "stop",
+          "output": "\\boxed{3}"
+        },
+        {
+          "index": 2,
+          "bucket": "wrong",
+          "ground_truth": "Raiders",
+          "prediction": "Oakland",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "Oakland"
+        },
+        {
+          "index": 3,
+          "bucket": "wrong",
+          "ground_truth": "2",
+          "prediction": "20",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "20"
+        },
+        {
+          "index": 4,
+          "bucket": "wrong",
+          "ground_truth": "29",
+          "prediction": "30",
+          "parse_source": "final_number",
+          "finish_reason": "stop",
+          "output": "30"
+        },
+        {
+          "index": 5,
+          "bucket": "wrong",
+          "ground_truth": "JaMarcus Russell",
+          "prediction": "Sebastian Janikowski",
+          "parse_source": "final_line",
+          "finish_reason": "stop",
+          "output": "Sebastian Janikowski"
+        }
+      ]
+    }
+  }
+}

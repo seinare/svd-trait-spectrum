@@ -1,0 +1,9 @@
+model,perturbation,group,task,metric,beta_-0.9,beta_-0.8,beta_1,beta_1.1,beta_1.2,best_beta,best_value,delta_best_vs_beta_1,worst_beta,worst_value
+llama1b,magnitude_beta,agieval,agieval_aqua_rat,"acc_norm,none",0.255906,0.232283,0.240157,0.228346,0.244094,-0.9,0.255906,0.015748,1.1,0.228346
+llama1b,magnitude_beta,agieval,agieval_logiqa_en,"acc_norm,none",0.305684,0.287250,0.293395,0.287250,0.268817,-0.9,0.305684,0.012289,1.2,0.268817
+llama1b,magnitude_beta,agieval,agieval_lsat_ar,"acc_norm,none",0.191304,0.217391,0.156522,0.195652,0.195652,-0.8,0.217391,0.060870,1,0.156522
+llama1b,magnitude_beta,agieval,agieval_lsat_lr,"acc_norm,none",0.245098,0.227451,0.260784,0.225490,0.227451,1,0.260784,0.000000,1.1,0.225490
+llama1b,magnitude_beta,agieval,agieval_lsat_rc,"acc_norm,none",0.182156,0.159851,0.197026,0.182156,0.189591,1,0.197026,0.000000,-0.8,0.159851
+llama1b,magnitude_beta,agieval,agieval_sat_en,"acc_norm,none",0.320388,0.262136,0.286408,0.228155,0.233010,-0.9,0.320388,0.033981,1.1,0.228155
+llama1b,magnitude_beta,agieval,agieval_sat_en_without_passage,"acc_norm,none",0.271845,0.247573,0.262136,0.223301,0.203883,-0.9,0.271845,0.009709,1.2,0.203883
+llama1b,magnitude_beta,agieval,agieval_sat_math,"acc_norm,none",0.222727,0.250000,0.277273,0.277273,0.222727,1,0.277273,0.000000,-0.9,0.222727

@@ -1,0 +1,827 @@
+group,task,target_dimension,actual,predicted_from_core3,residual
+agieval,agieval_aqua_rat,Factual Knowledge,0.015000000000000003,0.014999999999999881,1.214306433183765e-16
+agieval,agieval_gaokao_biology,Factual Knowledge,0.635,0.6349999999999999,1.1102230246251565e-16
+agieval,agieval_gaokao_chemistry,Factual Knowledge,0.575,0.5749999999999998,1.1102230246251565e-16
+agieval,agieval_gaokao_chinese,Factual Knowledge,0.13,0.12999999999999995,5.551115123125783e-17
+agieval,agieval_gaokao_english,Factual Knowledge,0.005,0.004999999999999927,7.28583859910259e-17
+agieval,agieval_gaokao_geography,Factual Knowledge,0.45500000000000007,0.455,5.551115123125783e-17
+agieval,agieval_gaokao_history,Factual Knowledge,0.784,0.784,0.0
+agieval,agieval_gaokao_mathcloze,Factual Knowledge,0.10900000000000001,0.1089999999999999,1.1102230246251565e-16
+agieval,agieval_gaokao_mathqa,Factual Knowledge,0.132,0.1319999999999999,1.1102230246251565e-16
+agieval,agieval_gaokao_physics,Factual Knowledge,0.28500000000000003,0.285,5.551115123125783e-17
+agieval,agieval_jec_qa_ca,Factual Knowledge,0.5399999999999999,0.5399999999999998,1.1102230246251565e-16
+agieval,agieval_jec_qa_kd,Factual Knowledge,0.7700000000000001,0.7700000000000001,0.0
+agieval,agieval_logiqa_en,Factual Knowledge,0.0,-1.024381761725636e-16,1.024381761725636e-16
+agieval,agieval_logiqa_zh,Factual Knowledge,0.004,0.0039999999999999055,9.454242944073599e-17
+agieval,agieval_lsat_ar,Factual Knowledge,0.0,-6.701155454295043e-17,6.701155454295043e-17
+agieval,agieval_lsat_lr,Factual Knowledge,0.0,-1.0110711810517439e-16,1.0110711810517439e-16
+agieval,agieval_lsat_rc,Factual Knowledge,0.017,0.0169999999999999,1.0061396160665481e-16
+agieval,agieval_sat_en,Factual Knowledge,0.0,-9.84761074419815e-17,9.84761074419815e-17
+agieval,agieval_sat_en_without_passage,Factual Knowledge,0.675,0.6749999999999999,1.1102230246251565e-16
+agieval,agieval_sat_math,Factual Knowledge,0.05500000000000001,0.05499999999999989,1.1796119636642288e-16
+bbh,bbh_zeroshot_boolean_expressions,Factual Knowledge,0.0,-2.9738041316412275e-17,2.9738041316412275e-17
+bbh,bbh_zeroshot_causal_judgement,Factual Knowledge,0.005,0.004999999999999885,1.1535911115245767e-16
+bbh,bbh_zeroshot_date_understanding,Factual Knowledge,0.18000000000000002,0.17999999999999994,8.326672684688674e-17
+bbh,bbh_zeroshot_disambiguation_qa,Factual Knowledge,0.15999999999999998,0.15999999999999992,5.551115123125783e-17
+bbh,bbh_zeroshot_dyck_languages,Factual Knowledge,0.0,-1.2172102089978633e-16,1.2172102089978633e-16
+bbh,bbh_zeroshot_formal_fallacies,Factual Knowledge,0.0,-2.0981830801721693e-17,2.0981830801721693e-17
+bbh,bbh_zeroshot_geometric_shapes,Factual Knowledge,0.16,0.15999999999999986,1.3877787807814457e-16
+bbh,bbh_zeroshot_hyperbaton,Factual Knowledge,0.545,0.545,0.0
+bbh,bbh_zeroshot_logical_deduction_five_objects,Factual Knowledge,0.0,-2.3222207627371856e-17,2.3222207627371856e-17
+bbh,bbh_zeroshot_logical_deduction_seven_objects,Factual Knowledge,0.0,-2.803760492963809e-17,2.803760492963809e-17
+bbh,bbh_zeroshot_logical_deduction_three_objects,Factual Knowledge,0.0,-1.227875908242537e-17,1.227875908242537e-17
+bbh,bbh_zeroshot_movie_recommendation,Factual Knowledge,0.51,0.5099999999999999,1.1102230246251565e-16
+bbh,bbh_zeroshot_multistep_arithmetic_two,Factual Knowledge,0.0,-1.9390532222640185e-16,1.9390532222640185e-16
+bbh,bbh_zeroshot_navigate,Factual Knowledge,0.0,-9.460476356639532e-17,9.460476356639532e-17
+bbh,bbh_zeroshot_object_counting,Factual Knowledge,0.24500000000000002,0.24499999999999994,8.326672684688674e-17
+bbh,bbh_zeroshot_penguins_in_a_table,Factual Knowledge,0.01,0.009999999999999905,9.540979117872439e-17
+bbh,bbh_zeroshot_reasoning_about_colored_objects,Factual Knowledge,0.02,0.019999999999999917,8.326672684688674e-17
+bbh,bbh_zeroshot_ruin_names,Factual Knowledge,0.16999999999999998,0.16999999999999993,5.551115123125783e-17
+bbh,bbh_zeroshot_salient_translation_error_detection,Factual Knowledge,0.165,0.16499999999999995,5.551115123125783e-17
+bbh,bbh_zeroshot_snarks,Factual Knowledge,0.20500000000000002,0.205,2.7755575615628914e-17
+bbh,bbh_zeroshot_sports_understanding,Factual Knowledge,0.875,0.875,0.0
+bbh,bbh_zeroshot_temporal_sequences,Factual Knowledge,0.0,-5.479226031154046e-17,5.479226031154046e-17
+bbh,bbh_zeroshot_tracking_shuffled_objects_five_objects,Factual Knowledge,0.0,-4.745912849911526e-17,4.745912849911526e-17
+bbh,bbh_zeroshot_tracking_shuffled_objects_seven_objects,Factual Knowledge,0.0,-2.7421974397329767e-17,2.7421974397329767e-17
+bbh,bbh_zeroshot_tracking_shuffled_objects_three_objects,Factual Knowledge,0.0,-1.972724063341592e-17,1.972724063341592e-17
+bbh,bbh_zeroshot_web_of_lies,Factual Knowledge,0.0,-1.3494467411249285e-17,1.3494467411249285e-17
+bbh,bbh_zeroshot_word_sorting,Factual Knowledge,0.08499999999999999,0.08499999999999996,2.7755575615628914e-17
+mmlu_pro,mmlu_pro_biology,Factual Knowledge,0.7150000000000001,0.715,1.1102230246251565e-16
+mmlu_pro,mmlu_pro_business,Factual Knowledge,0.31,0.3099999999999999,1.1102230246251565e-16
+mmlu_pro,mmlu_pro_chemistry,Factual Knowledge,0.34,0.33999999999999997,5.551115123125783e-17
+mmlu_pro,mmlu_pro_computer_science,Factual Knowledge,0.5079999999999999,0.5079999999999998,1.1102230246251565e-16
+mmlu_pro,mmlu_pro_economics,Factual Knowledge,0.5450000000000002,0.545,1.1102230246251565e-16
+mmlu_pro,mmlu_pro_engineering,Factual Knowledge,0.215,0.2149999999999999,8.326672684688674e-17
+mmlu_pro,mmlu_pro_health,Factual Knowledge,0.75091,0.75091,0.0
+mmlu_pro,mmlu_pro_history,Factual Knowledge,0.655,0.6549999999999999,1.1102230246251565e-16
+mmlu_pro,mmlu_pro_law,Factual Knowledge,0.38500000000000006,0.38500000000000006,0.0
+mmlu_pro,mmlu_pro_math,Factual Knowledge,0.24499999999999997,0.24499999999999986,1.1102230246251565e-16
+mmlu_pro,mmlu_pro_other,Factual Knowledge,0.7050000000000001,0.705,1.1102230246251565e-16
+mmlu_pro,mmlu_pro_philosophy,Factual Knowledge,0.67,0.6699999999999999,1.1102230246251565e-16
+mmlu_pro,mmlu_pro_physics,Factual Knowledge,0.333,0.3329999999999999,1.1102230246251565e-16
+mmlu_pro,mmlu_pro_psychology,Factual Knowledge,0.725,0.7249999999999999,1.1102230246251565e-16
+mmlu_redux,mmlu_redux_abstract_algebra_generative,Factual Knowledge,0.38,0.37999999999999995,5.551115123125783e-17
+mmlu_redux,mmlu_redux_anatomy_generative,Factual Knowledge,0.922,0.922,0.0
+mmlu_redux,mmlu_redux_astronomy_generative,Factual Knowledge,0.875,0.875,0.0
+mmlu_redux,mmlu_redux_business_ethics_generative,Factual Knowledge,0.825,0.825,0.0
+mmlu_redux,mmlu_redux_clinical_knowledge_generative,Factual Knowledge,0.9099999999999999,0.9099999999999999,0.0
+mmlu_redux,mmlu_redux_college_biology_generative,Factual Knowledge,0.8300000000000001,0.8300000000000001,0.0
+mmlu_redux,mmlu_redux_college_chemistry_generative,Factual Knowledge,0.6769999999999999,0.6769999999999998,1.1102230246251565e-16
+mmlu_redux,mmlu_redux_college_computer_science_generative,Factual Knowledge,0.45499999999999996,0.45499999999999996,0.0
+mmlu_redux,mmlu_redux_college_mathematics_generative,Factual Knowledge,0.177,0.17699999999999988,1.1102230246251565e-16
+mmlu_redux,mmlu_redux_college_medicine_generative,Factual Knowledge,0.8299999999999998,0.8299999999999998,0.0
+mmlu_redux,mmlu_redux_college_physics_generative,Factual Knowledge,0.4050000000000001,0.405,5.551115123125783e-17
+mmlu_redux,mmlu_redux_computer_security_generative,Factual Knowledge,0.925,0.925,0.0
+mmlu_redux,mmlu_redux_conceptual_physics_generative,Factual Knowledge,0.7649999999999999,0.7649999999999999,0.0
+mmlu_redux,mmlu_redux_econometrics_generative,Factual Knowledge,0.675,0.6749999999999999,1.1102230246251565e-16
+mmlu_redux,mmlu_redux_electrical_engineering_generative,Factual Knowledge,0.89,0.89,0.0
+mmlu_redux,mmlu_redux_elementary_mathematics_generative,Factual Knowledge,0.10500000000000001,0.10499999999999991,9.71445146547012e-17
+mmlu_redux,mmlu_redux_formal_logic_generative,Factual Knowledge,0.03,0.029999999999999954,4.5102810375396984e-17
+mmlu_redux,mmlu_redux_global_facts_generative,Factual Knowledge,0.9650000000000001,0.9650000000000001,0.0
+mmlu_redux,mmlu_redux_high_school_biology_generative,Factual Knowledge,0.785,0.785,0.0
+mmlu_redux,mmlu_redux_high_school_chemistry_generative,Factual Knowledge,0.5,0.49999999999999994,5.551115123125783e-17
+mmlu_redux,mmlu_redux_high_school_computer_science_generative,Factual Knowledge,0.5349999999999999,0.5349999999999998,1.1102230246251565e-16
+mmlu_redux,mmlu_redux_high_school_european_history_generative,Factual Knowledge,0.49000000000000005,0.49,5.551115123125783e-17
+mmlu_redux,mmlu_redux_high_school_geography_generative,Factual Knowledge,0.9350000000000002,0.9350000000000002,0.0
+mmlu_redux,mmlu_redux_high_school_government_and_politics_generative,Factual Knowledge,0.8550000000000001,0.8550000000000001,0.0
+mmlu_redux,mmlu_redux_high_school_macroeconomics_generative,Factual Knowledge,0.585,0.5849999999999999,1.1102230246251565e-16
+mmlu_redux,mmlu_redux_high_school_mathematics_generative,Factual Knowledge,0.128,0.12799999999999992,8.326672684688674e-17
+mmlu_redux,mmlu_redux_high_school_microeconomics_generative,Factual Knowledge,0.675,0.6749999999999999,1.1102230246251565e-16
+mmlu_redux,mmlu_redux_high_school_physics_generative,Factual Knowledge,0.35500000000000004,0.355,5.551115123125783e-17
+mmlu_redux,mmlu_redux_high_school_psychology_generative,Factual Knowledge,0.86,0.86,0.0
+mmlu_redux,mmlu_redux_high_school_statistics_generative,Factual Knowledge,0.38499999999999995,0.38499999999999995,0.0
+mmlu_redux,mmlu_redux_high_school_us_history_generative,Factual Knowledge,0.5199999999999999,0.5199999999999999,0.0
+mmlu_redux,mmlu_redux_high_school_world_history_generative,Factual Knowledge,0.4699999999999999,0.46999999999999986,5.551115123125783e-17
+mmlu_redux,mmlu_redux_human_aging_generative,Factual Knowledge,0.9450000000000001,0.9450000000000001,0.0
+mmlu_redux,mmlu_redux_human_sexuality_generative,Factual Knowledge,0.8950000000000001,0.8950000000000001,0.0
+mmlu_redux,mmlu_redux_international_law_generative,Factual Knowledge,0.9200000000000002,0.9200000000000002,0.0
+mmlu_redux,mmlu_redux_jurisprudence_generative,Factual Knowledge,0.7749999999999999,0.7749999999999999,0.0
+mmlu_redux,mmlu_redux_logical_fallacies_generative,Factual Knowledge,0.79,0.79,0.0
+mmlu_redux,mmlu_redux_machine_learning_generative,Factual Knowledge,0.65,0.6499999999999999,1.1102230246251565e-16
+mmlu_redux,mmlu_redux_management_generative,Factual Knowledge,0.905,0.905,0.0
+mmlu_redux,mmlu_redux_marketing_generative,Factual Knowledge,0.9,0.9,0.0
+mmlu_redux,mmlu_redux_medical_genetics_generative,Factual Knowledge,0.905,0.905,0.0
+mmlu_redux,mmlu_redux_miscellaneous_generative,Factual Knowledge,0.925,0.925,0.0
+mmlu_redux,mmlu_redux_moral_disputes_generative,Factual Knowledge,0.8550000000000001,0.8550000000000001,0.0
+mmlu_redux,mmlu_redux_moral_scenarios_generative,Factual Knowledge,0.039999999999999994,0.039999999999999813,1.8041124150158794e-16
+mmlu_redux,mmlu_redux_nutrition_generative,Factual Knowledge,0.915,0.915,0.0
+mmlu_redux,mmlu_redux_philosophy_generative,Factual Knowledge,0.835,0.835,0.0
+mmlu_redux,mmlu_redux_prehistory_generative,Factual Knowledge,0.9399999999999998,0.9399999999999998,0.0
+mmlu_redux,mmlu_redux_professional_accounting_generative,Factual Knowledge,0.62,0.6199999999999999,1.1102230246251565e-16
+mmlu_redux,mmlu_redux_professional_law_generative,Factual Knowledge,0.4149999999999999,0.4149999999999999,0.0
+mmlu_redux,mmlu_redux_professional_medicine_generative,Factual Knowledge,0.53,0.5299999999999999,1.1102230246251565e-16
+mmlu_redux,mmlu_redux_professional_psychology_generative,Factual Knowledge,0.825,0.825,0.0
+mmlu_redux,mmlu_redux_public_relations_generative,Factual Knowledge,0.925,0.925,0.0
+mmlu_redux,mmlu_redux_security_studies_generative,Factual Knowledge,0.7550000000000001,0.7550000000000001,0.0
+mmlu_redux,mmlu_redux_sociology_generative,Factual Knowledge,0.923,0.923,0.0
+mmlu_redux,mmlu_redux_us_foreign_policy_generative,Factual Knowledge,0.9100000000000001,0.9100000000000001,0.0
+mmlu_redux,mmlu_redux_virology_generative,Factual Knowledge,0.95,0.95,0.0
+mmlu_redux,mmlu_redux_world_religions_generative,Factual Knowledge,0.97,0.97,0.0
+agieval,agieval_aqua_rat,Language Understanding,0.14,0.14,0.0
+agieval,agieval_gaokao_biology,Language Understanding,0.13999999999999999,0.14000000000000007,-8.326672684688674e-17
+agieval,agieval_gaokao_chemistry,Language Understanding,0.06799999999999999,0.06800000000000007,-8.326672684688674e-17
+agieval,agieval_gaokao_chinese,Language Understanding,0.515,0.515,0.0
+agieval,agieval_gaokao_english,Language Understanding,0.7300000000000001,0.7300000000000001,0.0
+agieval,agieval_gaokao_geography,Language Understanding,0.16499999999999998,0.16500000000000004,-5.551115123125783e-17
+agieval,agieval_gaokao_history,Language Understanding,0.14600000000000002,0.14600000000000016,-1.3877787807814457e-16
+agieval,agieval_gaokao_mathcloze,Language Understanding,0.03,0.030000000000000006,-6.938893903907228e-18
+agieval,agieval_gaokao_mathqa,Language Understanding,0.07,0.07000000000000002,-1.3877787807814457e-17
+agieval,agieval_gaokao_physics,Language Understanding,0.07,0.07000000000000003,-2.7755575615628914e-17
+agieval,agieval_jec_qa_ca,Language Understanding,0.18,0.18000000000000005,-5.551115123125783e-17
+agieval,agieval_jec_qa_kd,Language Understanding,0.15000000000000002,0.15000000000000013,-1.1102230246251565e-16
+agieval,agieval_logiqa_en,Language Understanding,0.145,0.14499999999999996,2.7755575615628914e-17
+agieval,agieval_logiqa_zh,Language Understanding,0.14,0.13999999999999999,2.7755575615628914e-17
+agieval,agieval_lsat_ar,Language Understanding,0.135,0.13499999999999995,5.551115123125783e-17
+agieval,agieval_lsat_lr,Language Understanding,0.21000000000000002,0.21,2.7755575615628914e-17
+agieval,agieval_lsat_rc,Language Understanding,0.39,0.39000000000000007,-5.551115123125783e-17
+agieval,agieval_sat_en,Language Understanding,0.5,0.5,0.0
+agieval,agieval_sat_en_without_passage,Language Understanding,0.17,0.17000000000000012,-1.1102230246251565e-16
+agieval,agieval_sat_math,Language Understanding,0.152,0.152,0.0
+bbh,bbh_zeroshot_boolean_expressions,Language Understanding,0.05,0.04999999999999992,8.326672684688674e-17
+bbh,bbh_zeroshot_causal_judgement,Language Understanding,0.2,0.2,0.0
+bbh,bbh_zeroshot_date_understanding,Language Understanding,0.29,0.29000000000000004,-5.551115123125783e-17
+bbh,bbh_zeroshot_disambiguation_qa,Language Understanding,0.69,0.69,0.0
+bbh,bbh_zeroshot_dyck_languages,Language Understanding,0.05500000000000001,0.05499999999999999,1.3877787807814457e-17
+bbh,bbh_zeroshot_formal_fallacies,Language Understanding,0.25,0.24999999999999994,5.551115123125783e-17
+bbh,bbh_zeroshot_geometric_shapes,Language Understanding,0.10499999999999998,0.10500000000000002,-4.163336342344337e-17
+bbh,bbh_zeroshot_hyperbaton,Language Understanding,0.335,0.33500000000000013,-1.1102230246251565e-16
+bbh,bbh_zeroshot_logical_deduction_five_objects,Language Understanding,0.087,0.08699999999999991,8.326672684688674e-17
+bbh,bbh_zeroshot_logical_deduction_seven_objects,Language Understanding,0.09999999999999999,0.09999999999999991,8.326672684688674e-17
+bbh,bbh_zeroshot_logical_deduction_three_objects,Language Understanding,0.095,0.0949999999999999,9.71445146547012e-17
+bbh,bbh_zeroshot_movie_recommendation,Language Understanding,0.05499999999999999,0.0550000000000001,-1.0408340855860843e-16
+bbh,bbh_zeroshot_multistep_arithmetic_two,Language Understanding,0.01,0.010000000000000035,-3.469446951953614e-17
+bbh,bbh_zeroshot_navigate,Language Understanding,0.065,0.06499999999999997,2.7755575615628914e-17
+bbh,bbh_zeroshot_object_counting,Language Understanding,0.31500000000000006,0.31500000000000017,-1.1102230246251565e-16
+bbh,bbh_zeroshot_penguins_in_a_table,Language Understanding,0.28500000000000003,0.28500000000000003,0.0
+bbh,bbh_zeroshot_reasoning_about_colored_objects,Language Understanding,0.33999999999999997,0.33999999999999997,0.0
+bbh,bbh_zeroshot_ruin_names,Language Understanding,0.75,0.75,0.0
+bbh,bbh_zeroshot_salient_translation_error_detection,Language Understanding,0.445,0.44500000000000006,-5.551115123125783e-17
+bbh,bbh_zeroshot_snarks,Language Understanding,0.675,0.675,0.0
+bbh,bbh_zeroshot_sports_understanding,Language Understanding,0.085,0.08500000000000016,-1.5265566588595902e-16
+bbh,bbh_zeroshot_temporal_sequences,Language Understanding,0.11499999999999999,0.11499999999999994,5.551115123125783e-17
+bbh,bbh_zeroshot_tracking_shuffled_objects_five_objects,Language Understanding,0.09499999999999999,0.09499999999999992,6.938893903907228e-17
+bbh,bbh_zeroshot_tracking_shuffled_objects_seven_objects,Language Understanding,0.075,0.07499999999999991,8.326672684688674e-17
+bbh,bbh_zeroshot_tracking_shuffled_objects_three_objects,Language Understanding,0.08,0.07999999999999992,8.326672684688674e-17
+bbh,bbh_zeroshot_web_of_lies,Language Understanding,0.065,0.0649999999999999,9.71445146547012e-17
+bbh,bbh_zeroshot_word_sorting,Language Understanding,0.11500000000000002,0.11499999999999996,5.551115123125783e-17
+mmlu_pro,mmlu_pro_biology,Language Understanding,0.092,0.09200000000000012,-1.249000902703301e-16
+mmlu_pro,mmlu_pro_business,Language Understanding,0.095,0.09500000000000007,-6.938893903907228e-17
+mmlu_pro,mmlu_pro_chemistry,Language Understanding,0.067,0.06700000000000006,-5.551115123125783e-17
+mmlu_pro,mmlu_pro_computer_science,Language Understanding,0.07100000000000001,0.07100000000000009,-8.326672684688674e-17
+mmlu_pro,mmlu_pro_economics,Language Understanding,0.075,0.07500000000000008,-8.326672684688674e-17
+mmlu_pro,mmlu_pro_engineering,Language Understanding,0.05500000000000001,0.055000000000000035,-2.7755575615628914e-17
+mmlu_pro,mmlu_pro_health,Language Understanding,0.08773,0.08773000000000013,-1.249000902703301e-16
+mmlu_pro,mmlu_pro_history,Language Understanding,0.195,0.19500000000000012,-1.1102230246251565e-16
+mmlu_pro,mmlu_pro_law,Language Understanding,0.195,0.19500000000000003,-2.7755575615628914e-17
+mmlu_pro,mmlu_pro_math,Language Understanding,0.08300000000000002,0.08300000000000006,-4.163336342344337e-17
+mmlu_pro,mmlu_pro_other,Language Understanding,0.08299999999999999,0.08300000000000012,-1.249000902703301e-16
+mmlu_pro,mmlu_pro_philosophy,Language Understanding,0.15499999999999997,0.15500000000000005,-8.326672684688674e-17
+mmlu_pro,mmlu_pro_physics,Language Understanding,0.045,0.045000000000000054,-5.551115123125783e-17
+mmlu_pro,mmlu_pro_psychology,Language Understanding,0.095,0.09500000000000013,-1.249000902703301e-16
+mmlu_redux,mmlu_redux_abstract_algebra_generative,Language Understanding,0.039999999999999994,0.04000000000000003,-3.469446951953614e-17
+mmlu_redux,mmlu_redux_anatomy_generative,Language Understanding,0.033,0.03300000000000016,-1.5959455978986625e-16
+mmlu_redux,mmlu_redux_astronomy_generative,Language Understanding,0.037,0.03700000000000015,-1.5265566588595902e-16
+mmlu_redux,mmlu_redux_business_ethics_generative,Language Understanding,0.16000000000000003,0.16000000000000017,-1.3877787807814457e-16
+mmlu_redux,mmlu_redux_clinical_knowledge_generative,Language Understanding,0.05499999999999999,0.05500000000000015,-1.5959455978986625e-16
+mmlu_redux,mmlu_redux_college_biology_generative,Language Understanding,0.057999999999999996,0.058000000000000135,-1.3877787807814457e-16
+mmlu_redux,mmlu_redux_college_chemistry_generative,Language Understanding,0.025,0.025000000000000112,-1.1102230246251565e-16
+mmlu_redux,mmlu_redux_college_computer_science_generative,Language Understanding,0.07499999999999998,0.07500000000000005,-6.938893903907228e-17
+mmlu_redux,mmlu_redux_college_mathematics_generative,Language Understanding,0.06899999999999999,0.069,-1.3877787807814457e-17
+mmlu_redux,mmlu_redux_college_medicine_generative,Language Understanding,0.05700000000000001,0.05700000000000015,-1.3877787807814457e-16
+mmlu_redux,mmlu_redux_college_physics_generative,Language Understanding,0.056000000000000015,0.056000000000000084,-6.938893903907228e-17
+mmlu_redux,mmlu_redux_computer_security_generative,Language Understanding,0.043,0.043000000000000156,-1.5959455978986625e-16
+mmlu_redux,mmlu_redux_conceptual_physics_generative,Language Understanding,0.039999999999999994,0.04000000000000012,-1.249000902703301e-16
+mmlu_redux,mmlu_redux_econometrics_generative,Language Understanding,0.13,0.1300000000000001,-8.326672684688674e-17
+mmlu_redux,mmlu_redux_electrical_engineering_generative,Language Understanding,0.030000000000000006,0.030000000000000162,-1.5612511283791264e-16
+mmlu_redux,mmlu_redux_elementary_mathematics_generative,Language Understanding,0.185,0.185,0.0
+mmlu_redux,mmlu_redux_formal_logic_generative,Language Understanding,0.275,0.275,0.0
+mmlu_redux,mmlu_redux_global_facts_generative,Language Understanding,0.025,0.025000000000000168,-1.6653345369377348e-16
+mmlu_redux,mmlu_redux_high_school_biology_generative,Language Understanding,0.09500000000000001,0.09500000000000014,-1.249000902703301e-16
+mmlu_redux,mmlu_redux_high_school_chemistry_generative,Language Understanding,0.06500000000000002,0.06500000000000009,-6.938893903907228e-17
+mmlu_redux,mmlu_redux_high_school_computer_science_generative,Language Understanding,0.07300000000000001,0.07300000000000009,-8.326672684688674e-17
+mmlu_redux,mmlu_redux_high_school_european_history_generative,Language Understanding,0.29500000000000004,0.29500000000000015,-1.1102230246251565e-16
+mmlu_redux,mmlu_redux_high_school_geography_generative,Language Understanding,0.05499999999999999,0.05500000000000015,-1.5959455978986625e-16
+mmlu_redux,mmlu_redux_high_school_government_and_politics_generative,Language Understanding,0.09,0.09000000000000015,-1.5265566588595902e-16
+mmlu_redux,mmlu_redux_high_school_macroeconomics_generative,Language Understanding,0.095,0.09500000000000008,-8.326672684688674e-17
+mmlu_redux,mmlu_redux_high_school_mathematics_generative,Language Understanding,0.05399999999999999,0.054,-6.938893903907228e-18
+mmlu_redux,mmlu_redux_high_school_microeconomics_generative,Language Understanding,0.10000000000000002,0.10000000000000012,-9.71445146547012e-17
+mmlu_redux,mmlu_redux_high_school_physics_generative,Language Understanding,0.065,0.06500000000000004,-4.163336342344337e-17
+mmlu_redux,mmlu_redux_high_school_psychology_generative,Language Understanding,0.08299999999999999,0.08300000000000014,-1.5265566588595902e-16
+mmlu_redux,mmlu_redux_high_school_statistics_generative,Language Understanding,0.12,0.12000000000000005,-5.551115123125783e-17
+mmlu_redux,mmlu_redux_high_school_us_history_generative,Language Understanding,0.24,0.24000000000000007,-8.326672684688674e-17
+mmlu_redux,mmlu_redux_high_school_world_history_generative,Language Understanding,0.2899999999999999,0.29000000000000004,-1.1102230246251565e-16
+mmlu_redux,mmlu_redux_human_aging_generative,Language Understanding,0.045,0.045000000000000165,-1.6653345369377348e-16
+mmlu_redux,mmlu_redux_human_sexuality_generative,Language Understanding,0.04,0.040000000000000153,-1.5265566588595902e-16
+mmlu_redux,mmlu_redux_international_law_generative,Language Understanding,0.07999999999999999,0.08000000000000015,-1.6653345369377348e-16
+mmlu_redux,mmlu_redux_jurisprudence_generative,Language Understanding,0.175,0.1750000000000001,-1.1102230246251565e-16
+mmlu_redux,mmlu_redux_logical_fallacies_generative,Language Understanding,0.2,0.20000000000000015,-1.3877787807814457e-16
+mmlu_redux,mmlu_redux_machine_learning_generative,Language Understanding,0.07500000000000002,0.07500000000000014,-1.1102230246251565e-16
+mmlu_redux,mmlu_redux_management_generative,Language Understanding,0.095,0.09500000000000015,-1.5265566588595902e-16
+mmlu_redux,mmlu_redux_marketing_generative,Language Understanding,0.09000000000000001,0.09000000000000016,-1.5265566588595902e-16
+mmlu_redux,mmlu_redux_medical_genetics_generative,Language Understanding,0.02,0.020000000000000157,-1.5612511283791264e-16
+mmlu_redux,mmlu_redux_miscellaneous_generative,Language Understanding,0.034999999999999996,0.035000000000000156,-1.5959455978986625e-16
+mmlu_redux,mmlu_redux_moral_disputes_generative,Language Understanding,0.13,0.13000000000000014,-1.3877787807814457e-16
+mmlu_redux,mmlu_redux_moral_scenarios_generative,Language Understanding,0.12000000000000002,0.12000000000000006,-4.163336342344337e-17
+mmlu_redux,mmlu_redux_nutrition_generative,Language Understanding,0.08000000000000002,0.08000000000000018,-1.6653345369377348e-16
+mmlu_redux,mmlu_redux_philosophy_generative,Language Understanding,0.14500000000000002,0.14500000000000016,-1.3877787807814457e-16
+mmlu_redux,mmlu_redux_prehistory_generative,Language Understanding,0.045,0.04500000000000016,-1.5959455978986625e-16
+mmlu_redux,mmlu_redux_professional_accounting_generative,Language Understanding,0.098,0.09800000000000011,-1.1102230246251565e-16
+mmlu_redux,mmlu_redux_professional_law_generative,Language Understanding,0.19,0.19000000000000003,-2.7755575615628914e-17
+mmlu_redux,mmlu_redux_professional_medicine_generative,Language Understanding,0.11500000000000002,0.1150000000000001,-8.326672684688674e-17
+mmlu_redux,mmlu_redux_professional_psychology_generative,Language Understanding,0.068,0.06800000000000014,-1.3877787807814457e-16
+mmlu_redux,mmlu_redux_public_relations_generative,Language Understanding,0.049999999999999996,0.050000000000000155,-1.5959455978986625e-16
+mmlu_redux,mmlu_redux_security_studies_generative,Language Understanding,0.18000000000000002,0.18000000000000013,-1.1102230246251565e-16
+mmlu_redux,mmlu_redux_sociology_generative,Language Understanding,0.066,0.06600000000000017,-1.6653345369377348e-16
+mmlu_redux,mmlu_redux_us_foreign_policy_generative,Language Understanding,0.063,0.06300000000000015,-1.5265566588595902e-16
+mmlu_redux,mmlu_redux_virology_generative,Language Understanding,0.034999999999999996,0.03500000000000016,-1.6653345369377348e-16
+mmlu_redux,mmlu_redux_world_religions_generative,Language Understanding,0.03,0.030000000000000165,-1.6653345369377348e-16
+agieval,agieval_aqua_rat,Inductive Reasoning,0.01,0.07284175883832823,-0.06284175883832824
+agieval,agieval_gaokao_biology,Inductive Reasoning,0.02,0.02063446697534177,-0.0006344669753417694
+agieval,agieval_gaokao_chemistry,Inductive Reasoning,0.02,0.018950781140304976,0.0010492188596950246
+agieval,agieval_gaokao_chinese,Inductive Reasoning,0.12,0.08945326031133824,0.030546739688661756
+agieval,agieval_gaokao_english,Inductive Reasoning,0.175,0.1340119320991402,0.04098806790085979
+agieval,agieval_gaokao_geography,Inductive Reasoning,0.12,0.04487927065605993,0.07512072934394007
+agieval,agieval_gaokao_history,Inductive Reasoning,0.03,0.020625436403425915,0.009374563596574084
+agieval,agieval_gaokao_mathcloze,Inductive Reasoning,0.007000000000000001,0.052779920639018686,-0.04577992063901869
+agieval,agieval_gaokao_mathqa,Inductive Reasoning,0.01,0.05471089106623058,-0.04471089106623058
+agieval,agieval_gaokao_physics,Inductive Reasoning,0.005000000000000001,0.03397503985568637,-0.028975039855686367
+agieval,agieval_jec_qa_ca,Inductive Reasoning,0.004999999999999999,0.02524765478917955,-0.020247654789179552
+agieval,agieval_jec_qa_kd,Inductive Reasoning,0.0,0.018743604346013756,-0.018743604346013756
+agieval,agieval_logiqa_en,Inductive Reasoning,0.37500000000000006,0.059889694928708645,0.3151103050712914
+agieval,agieval_logiqa_zh,Inductive Reasoning,0.24,0.05405105842551735,0.18594894157448263
+agieval,agieval_lsat_ar,Inductive Reasoning,0.02,0.034898419821666235,-0.014898419821666235
+agieval,agieval_lsat_lr,Inductive Reasoning,0.25,0.0694055654129384,0.1805944345870616
+agieval,agieval_lsat_rc,Inductive Reasoning,0.198,0.09730825826676359,0.10069174173323642
+agieval,agieval_sat_en,Inductive Reasoning,0.26,0.11404495588860548,0.14595504411139454
+agieval,agieval_sat_en_without_passage,Inductive Reasoning,0.065,0.031835102893724765,0.03316489710627524
+agieval,agieval_sat_math,Inductive Reasoning,0.021,0.0732570579552245,-0.05225705795522449
+bbh,bbh_zeroshot_boolean_expressions,Inductive Reasoning,0.0,-0.0033063098028888044,0.0033063098028888044
+bbh,bbh_zeroshot_causal_judgement,Inductive Reasoning,0.12500000000000003,0.07741686536339333,0.0475831346366067
+bbh,bbh_zeroshot_date_understanding,Inductive Reasoning,0.0,0.05914275449563738,-0.05914275449563738
+bbh,bbh_zeroshot_disambiguation_qa,Inductive Reasoning,0.012,0.1133644595297294,-0.1013644595297294
+bbh,bbh_zeroshot_dyck_languages,Inductive Reasoning,0.0,0.05822934355686656,-0.05822934355686656
+bbh,bbh_zeroshot_formal_fallacies,Inductive Reasoning,0.0,0.022895881788277145,-0.022895881788277145
+bbh,bbh_zeroshot_geometric_shapes,Inductive Reasoning,0.085,0.06940563860696058,0.015594361393039421
+bbh,bbh_zeroshot_hyperbaton,Inductive Reasoning,0.0,0.044261180433760136,-0.044261180433760136
+bbh,bbh_zeroshot_logical_deduction_five_objects,Inductive Reasoning,0.0,-0.0016916738215393273,0.0016916738215393273
+bbh,bbh_zeroshot_logical_deduction_seven_objects,Inductive Reasoning,0.0,0.003566869777838433,-0.003566869777838433
+bbh,bbh_zeroshot_logical_deduction_three_objects,Inductive Reasoning,0.0,-0.0076382410439397724,0.0076382410439397724
+bbh,bbh_zeroshot_movie_recommendation,Inductive Reasoning,0.4149999999999999,0.04782880581602584,0.3671711941839741
+bbh,bbh_zeroshot_multistep_arithmetic_two,Inductive Reasoning,0.0,0.09869602328672163,-0.09869602328672163
+bbh,bbh_zeroshot_navigate,Inductive Reasoning,0.0,0.041923763248132837,-0.041923763248132837
+bbh,bbh_zeroshot_object_counting,Inductive Reasoning,0.0,0.08929111141258499,-0.08929111141258499
+bbh,bbh_zeroshot_penguins_in_a_table,Inductive Reasoning,0.005,0.07764519979958048,-0.07264519979958048
+bbh,bbh_zeroshot_reasoning_about_colored_objects,Inductive Reasoning,0.0,0.07784440275378537,-0.07784440275378537
+bbh,bbh_zeroshot_ruin_names,Inductive Reasoning,0.07999999999999999,0.12063908776413484,-0.04063908776413486
+bbh,bbh_zeroshot_salient_translation_error_detection,Inductive Reasoning,0.04,0.07907023327975804,-0.03907023327975804
+bbh,bbh_zeroshot_snarks,Inductive Reasoning,0.06500000000000002,0.10963326911106905,-0.04463326911106903
+bbh,bbh_zeroshot_sports_understanding,Inductive Reasoning,0.0,0.007075059679272022,-0.007075059679272022
+bbh,bbh_zeroshot_temporal_sequences,Inductive Reasoning,0.0,0.023631671559871503,-0.023631671559871503
+bbh,bbh_zeroshot_tracking_shuffled_objects_five_objects,Inductive Reasoning,0.0,0.015591240127434305,-0.015591240127434305
+bbh,bbh_zeroshot_tracking_shuffled_objects_seven_objects,Inductive Reasoning,0.0,-0.0008376150613324529,0.0008376150613324529
+bbh,bbh_zeroshot_tracking_shuffled_objects_three_objects,Inductive Reasoning,0.0,-0.005118825020470286,0.005118825020470286
+bbh,bbh_zeroshot_web_of_lies,Inductive Reasoning,0.0,-0.01163309611920181,0.01163309611920181
+bbh,bbh_zeroshot_word_sorting,Inductive Reasoning,0.0,0.012326842009304118,-0.012326842009304118
+mmlu_pro,mmlu_pro_biology,Inductive Reasoning,0.027000000000000003,0.018071941340871783,0.00892805865912822
+mmlu_pro,mmlu_pro_business,Inductive Reasoning,0.008,0.06853235651520004,-0.06053235651520004
+mmlu_pro,mmlu_pro_chemistry,Inductive Reasoning,0.013999999999999999,0.04583871429288248,-0.03183871429288248
+mmlu_pro,mmlu_pro_computer_science,Inductive Reasoning,0.022000000000000002,0.03009064371916116,-0.00809064371916116
+mmlu_pro,mmlu_pro_economics,Inductive Reasoning,0.005,0.026588020858380565,-0.021588020858380564
+mmlu_pro,mmlu_pro_engineering,Inductive Reasoning,0.0,0.04614592552626097,-0.04614592552626097
+mmlu_pro,mmlu_pro_health,Inductive Reasoning,0.02091,0.016951757089161773,0.0039582429108382285
+mmlu_pro,mmlu_pro_history,Inductive Reasoning,0.08499999999999999,0.036121119487041276,0.04887888051295872
+mmlu_pro,mmlu_pro_law,Inductive Reasoning,0.02,0.03142453401182402,-0.011424534011824018
+mmlu_pro,mmlu_pro_math,Inductive Reasoning,0.017,0.05345054635887703,-0.036450546358877026
+mmlu_pro,mmlu_pro_other,Inductive Reasoning,0.005,0.023783095046778224,-0.018783095046778223
+mmlu_pro,mmlu_pro_philosophy,Inductive Reasoning,0.015000000000000003,0.01683826464061297,-0.001838264640612968
+mmlu_pro,mmlu_pro_physics,Inductive Reasoning,0.005,0.04467012568697567,-0.03967012568697567
+mmlu_pro,mmlu_pro_psychology,Inductive Reasoning,0.01,0.018272555624976608,-0.008272555624976608
+mmlu_redux,mmlu_redux_abstract_algebra_generative,Inductive Reasoning,0.01,0.018218378660086895,-0.008218378660086895
+mmlu_redux,mmlu_redux_anatomy_generative,Inductive Reasoning,0.0,0.002670259350702614,-0.002670259350702614
+mmlu_redux,mmlu_redux_astronomy_generative,Inductive Reasoning,0.02,0.004812977100430368,0.015187022899569632
+mmlu_redux,mmlu_redux_business_ethics_generative,Inductive Reasoning,0.0,0.019347080216277207,-0.019347080216277207
+mmlu_redux,mmlu_redux_clinical_knowledge_generative,Inductive Reasoning,0.0,0.0030939450244936995,-0.0030939450244936995
+mmlu_redux,mmlu_redux_college_biology_generative,Inductive Reasoning,0.030000000000000006,0.008052611802400106,0.0219473881975999
+mmlu_redux,mmlu_redux_college_chemistry_generative,Inductive Reasoning,0.0,0.014844224615257862,-0.014844224615257862
+mmlu_redux,mmlu_redux_college_computer_science_generative,Inductive Reasoning,0.037000000000000005,0.025151545039815787,0.011848454960184218
+mmlu_redux,mmlu_redux_college_mathematics_generative,Inductive Reasoning,0.041999999999999996,0.043251050976736205,-0.0012510509767362094
+mmlu_redux,mmlu_redux_college_medicine_generative,Inductive Reasoning,0.008,0.0045210629063014846,0.0034789370936985156
+mmlu_redux,mmlu_redux_college_physics_generative,Inductive Reasoning,0.002,0.03815576078689474,-0.03615576078689474
+mmlu_redux,mmlu_redux_computer_security_generative,Inductive Reasoning,0.0,0.00048790645679808176,-0.00048790645679808176
+mmlu_redux,mmlu_redux_conceptual_physics_generative,Inductive Reasoning,0.0,0.00804530943146363,-0.00804530943146363
+mmlu_redux,mmlu_redux_econometrics_generative,Inductive Reasoning,0.005,0.01704476676059334,-0.01204476676059334
+mmlu_redux,mmlu_redux_electrical_engineering_generative,Inductive Reasoning,0.0,0.006056046983577867,-0.006056046983577867
+mmlu_redux,mmlu_redux_elementary_mathematics_generative,Inductive Reasoning,0.034999999999999996,0.07536651568916267,-0.04036651568916267
+mmlu_redux,mmlu_redux_formal_logic_generative,Inductive Reasoning,0.0,0.04593260126015451,-0.04593260126015451
+mmlu_redux,mmlu_redux_global_facts_generative,Inductive Reasoning,0.0,-0.0011558594039531855,0.0011558594039531855
+mmlu_redux,mmlu_redux_high_school_biology_generative,Inductive Reasoning,0.01,0.010368589279384485,-0.00036858927938448506
+mmlu_redux,mmlu_redux_high_school_chemistry_generative,Inductive Reasoning,0.02,0.025527568418347135,-0.005527568418347135
+mmlu_redux,mmlu_redux_high_school_computer_science_generative,Inductive Reasoning,0.027000000000000003,0.020240004982301912,0.006759995017698091
+mmlu_redux,mmlu_redux_high_school_european_history_generative,Inductive Reasoning,0.095,0.053600538191059116,0.041399461808940885
+mmlu_redux,mmlu_redux_high_school_geography_generative,Inductive Reasoning,0.005,0.0029193986488758733,0.002080601351124127
+mmlu_redux,mmlu_redux_high_school_government_and_politics_generative,Inductive Reasoning,0.005,0.009515173152517709,-0.0045151731525177085
+mmlu_redux,mmlu_redux_high_school_macroeconomics_generative,Inductive Reasoning,0.004999999999999999,0.019508120674784787,-0.014508120674784788
+mmlu_redux,mmlu_redux_high_school_mathematics_generative,Inductive Reasoning,0.03,0.04562217773835421,-0.015622177738354212
+mmlu_redux,mmlu_redux_high_school_microeconomics_generative,Inductive Reasoning,0.0,0.01111412158771681,-0.01111412158771681
+mmlu_redux,mmlu_redux_high_school_physics_generative,Inductive Reasoning,0.0,0.02731425343597607,-0.02731425343597607
+mmlu_redux,mmlu_redux_high_school_psychology_generative,Inductive Reasoning,0.027000000000000003,0.009924692873692242,0.01707530712630776
+mmlu_redux,mmlu_redux_high_school_statistics_generative,Inductive Reasoning,0.01,0.036278453738713454,-0.026278453738713452
+mmlu_redux,mmlu_redux_high_school_us_history_generative,Inductive Reasoning,0.13500000000000004,0.049637638860159705,0.08536236113984033
+mmlu_redux,mmlu_redux_high_school_world_history_generative,Inductive Reasoning,0.14500000000000002,0.059440964655608504,0.08555903534439152
+mmlu_redux,mmlu_redux_human_aging_generative,Inductive Reasoning,0.002,0.0009587334897861316,0.0010412665102138684
+mmlu_redux,mmlu_redux_human_sexuality_generative,Inductive Reasoning,0.007000000000000001,0.0033951407561964297,0.0036048592438035713
+mmlu_redux,mmlu_redux_international_law_generative,Inductive Reasoning,0.0,0.006396189928023016,-0.006396189928023016
+mmlu_redux,mmlu_redux_jurisprudence_generative,Inductive Reasoning,0.0,0.02104833713927229,-0.02104833713927229
+mmlu_redux,mmlu_redux_logical_fallacies_generative,Inductive Reasoning,0.0,0.02508998880672389,-0.02508998880672389
+mmlu_redux,mmlu_redux_machine_learning_generative,Inductive Reasoning,0.0,0.01720839697810775,-0.01720839697810775
+mmlu_redux,mmlu_redux_management_generative,Inductive Reasoning,0.0,0.008756450637373334,-0.008756450637373334
+mmlu_redux,mmlu_redux_marketing_generative,Inductive Reasoning,0.0,0.007781410271488418,-0.007781410271488418
+mmlu_redux,mmlu_redux_medical_genetics_generative,Inductive Reasoning,0.0,0.0019956297785757443,-0.0019956297785757443
+mmlu_redux,mmlu_redux_miscellaneous_generative,Inductive Reasoning,0.01,-0.0001472126526907841,0.010147212652690784
+mmlu_redux,mmlu_redux_moral_disputes_generative,Inductive Reasoning,0.0,0.0146265587975766,-0.0146265587975766
+mmlu_redux,mmlu_redux_moral_scenarios_generative,Inductive Reasoning,0.015000000000000003,0.10527837308017787,-0.09027837308017787
+mmlu_redux,mmlu_redux_nutrition_generative,Inductive Reasoning,0.0,0.006302046529972294,-0.006302046529972294
+mmlu_redux,mmlu_redux_philosophy_generative,Inductive Reasoning,0.005,0.016892676108876167,-0.011892676108876166
+mmlu_redux,mmlu_redux_prehistory_generative,Inductive Reasoning,0.005,0.001251748111258319,0.003748251888741681
+mmlu_redux,mmlu_redux_professional_accounting_generative,Inductive Reasoning,0.005,0.0270192436273812,-0.0220192436273812
+mmlu_redux,mmlu_redux_professional_law_generative,Inductive Reasoning,0.012999999999999998,0.02723691723706531,-0.014236917237065314
+mmlu_redux,mmlu_redux_professional_medicine_generative,Inductive Reasoning,0.06000000000000001,0.023673815918829208,0.036326184081170804
+mmlu_redux,mmlu_redux_professional_psychology_generative,Inductive Reasoning,0.005,0.01217226313032943,-0.00717226313032943
+mmlu_redux,mmlu_redux_public_relations_generative,Inductive Reasoning,0.0,0.0037860049825547276,-0.0037860049825547276
+mmlu_redux,mmlu_redux_security_studies_generative,Inductive Reasoning,0.025,0.026069504076003988,-0.0010695040760039867
+mmlu_redux,mmlu_redux_sociology_generative,Inductive Reasoning,0.005,0.004889533169137886,0.00011046683086211439
+mmlu_redux,mmlu_redux_us_foreign_policy_generative,Inductive Reasoning,0.003,0.005535801558422759,-0.0025358015584227593
+mmlu_redux,mmlu_redux_virology_generative,Inductive Reasoning,0.003,-0.00032175902830855474,0.003321759028308555
+mmlu_redux,mmlu_redux_world_religions_generative,Inductive Reasoning,0.0,-0.0014713457698112553,0.0014713457698112553
+agieval,agieval_aqua_rat,Deductive Reasoning,0.28,0.28,0.0
+agieval,agieval_gaokao_biology,Deductive Reasoning,0.155,0.15500000000000003,-2.7755575615628914e-17
+agieval,agieval_gaokao_chemistry,Deductive Reasoning,0.193,0.19300000000000003,-2.7755575615628914e-17
+agieval,agieval_gaokao_chinese,Deductive Reasoning,0.19,0.18999999999999992,8.326672684688674e-17
+agieval,agieval_gaokao_english,Deductive Reasoning,0.030000000000000006,0.02999999999999999,1.734723475976807e-17
+agieval,agieval_gaokao_geography,Deductive Reasoning,0.13000000000000003,0.13000000000000012,-8.326672684688674e-17
+agieval,agieval_gaokao_history,Deductive Reasoning,0.03,0.030000000000000148,-1.491862189340054e-16
+agieval,agieval_gaokao_mathcloze,Deductive Reasoning,0.315,0.315,0.0
+agieval,agieval_gaokao_mathqa,Deductive Reasoning,0.295,0.295,0.0
+agieval,agieval_gaokao_physics,Deductive Reasoning,0.325,0.32499999999999996,5.551115123125783e-17
+agieval,agieval_jec_qa_ca,Deductive Reasoning,0.215,0.215,0.0
+agieval,agieval_jec_qa_kd,Deductive Reasoning,0.05800000000000001,0.058000000000000135,-1.249000902703301e-16
+agieval,agieval_logiqa_en,Deductive Reasoning,0.39499999999999996,0.39499999999999985,1.1102230246251565e-16
+agieval,agieval_logiqa_zh,Deductive Reasoning,0.43499999999999994,0.4349999999999998,1.6653345369377348e-16
+agieval,agieval_lsat_ar,Deductive Reasoning,0.5849999999999999,0.5849999999999995,3.3306690738754696e-16
+agieval,agieval_lsat_lr,Deductive Reasoning,0.34500000000000003,0.3449999999999999,1.1102230246251565e-16
+agieval,agieval_lsat_rc,Deductive Reasoning,0.18000000000000002,0.18,2.7755575615628914e-17
+agieval,agieval_sat_en,Deductive Reasoning,0.10500000000000001,0.10500000000000001,0.0
+agieval,agieval_sat_en_without_passage,Deductive Reasoning,0.045000000000000005,0.04500000000000014,-1.3183898417423734e-16
+agieval,agieval_sat_math,Deductive Reasoning,0.24699999999999997,0.24699999999999997,0.0
+bbh,bbh_zeroshot_boolean_expressions,Deductive Reasoning,0.85,0.8499999999999994,5.551115123125783e-16
+bbh,bbh_zeroshot_causal_judgement,Deductive Reasoning,0.275,0.275,0.0
+bbh,bbh_zeroshot_date_understanding,Deductive Reasoning,0.29999999999999993,0.2999999999999998,1.1102230246251565e-16
+bbh,bbh_zeroshot_disambiguation_qa,Deductive Reasoning,0.043000000000000003,0.04299999999999998,2.0816681711721685e-17
+bbh,bbh_zeroshot_dyck_languages,Deductive Reasoning,0.3749999999999999,0.37499999999999983,5.551115123125783e-17
+bbh,bbh_zeroshot_formal_fallacies,Deductive Reasoning,0.72,0.7199999999999995,4.440892098500626e-16
+bbh,bbh_zeroshot_geometric_shapes,Deductive Reasoning,0.16999999999999998,0.17000000000000007,-8.326672684688674e-17
+bbh,bbh_zeroshot_hyperbaton,Deductive Reasoning,0.12000000000000002,0.12000000000000005,-2.7755575615628914e-17
+bbh,bbh_zeroshot_logical_deduction_five_objects,Deductive Reasoning,0.851,0.8509999999999994,5.551115123125783e-16
+bbh,bbh_zeroshot_logical_deduction_seven_objects,Deductive Reasoning,0.8150000000000001,0.8149999999999995,5.551115123125783e-16
+bbh,bbh_zeroshot_logical_deduction_three_objects,Deductive Reasoning,0.9,0.8999999999999995,5.551115123125783e-16
+bbh,bbh_zeroshot_movie_recommendation,Deductive Reasoning,0.02,0.020000000000000212,-2.1163626406917047e-16
+bbh,bbh_zeroshot_multistep_arithmetic_two,Deductive Reasoning,0.045,0.04500000000000024,-2.42861286636753e-16
+bbh,bbh_zeroshot_navigate,Deductive Reasoning,0.505,0.5049999999999998,2.220446049250313e-16
+bbh,bbh_zeroshot_object_counting,Deductive Reasoning,0.02,0.020000000000000132,-1.3183898417423734e-16
+bbh,bbh_zeroshot_penguins_in_a_table,Deductive Reasoning,0.30000000000000004,0.29999999999999993,1.1102230246251565e-16
+bbh,bbh_zeroshot_reasoning_about_colored_objects,Deductive Reasoning,0.31,0.3099999999999999,1.1102230246251565e-16
+bbh,bbh_zeroshot_ruin_names,Deductive Reasoning,0.0,-8.867421575485863e-18,8.867421575485863e-18
+bbh,bbh_zeroshot_salient_translation_error_detection,Deductive Reasoning,0.21500000000000002,0.21499999999999994,8.326672684688674e-17
+bbh,bbh_zeroshot_snarks,Deductive Reasoning,0.028000000000000004,0.027999999999999997,6.938893903907228e-18
+bbh,bbh_zeroshot_sports_understanding,Deductive Reasoning,0.035,0.03500000000000017,-1.6653345369377348e-16
+bbh,bbh_zeroshot_temporal_sequences,Deductive Reasoning,0.665,0.6649999999999997,3.3306690738754696e-16
+bbh,bbh_zeroshot_tracking_shuffled_objects_five_objects,Deductive Reasoning,0.72,0.7199999999999995,4.440892098500626e-16
+bbh,bbh_zeroshot_tracking_shuffled_objects_seven_objects,Deductive Reasoning,0.8400000000000001,0.8399999999999995,5.551115123125783e-16
+bbh,bbh_zeroshot_tracking_shuffled_objects_three_objects,Deductive Reasoning,0.875,0.8749999999999994,5.551115123125783e-16
+bbh,bbh_zeroshot_web_of_lies,Deductive Reasoning,0.9199999999999999,0.9199999999999994,5.551115123125783e-16
+bbh,bbh_zeroshot_word_sorting,Deductive Reasoning,0.6799999999999999,0.6799999999999996,3.3306690738754696e-16
+mmlu_pro,mmlu_pro_biology,Deductive Reasoning,0.089,0.08900000000000012,-1.249000902703301e-16
+mmlu_pro,mmlu_pro_business,Deductive Reasoning,0.045000000000000005,0.04500000000000019,-1.8735013540549517e-16
+mmlu_pro,mmlu_pro_chemistry,Deductive Reasoning,0.185,0.18500000000000005,-5.551115123125783e-17
+mmlu_pro,mmlu_pro_computer_science,Deductive Reasoning,0.16499999999999998,0.16500000000000004,-5.551115123125783e-17
+mmlu_pro,mmlu_pro_economics,Deductive Reasoning,0.16199999999999998,0.16200000000000003,-5.551115123125783e-17
+mmlu_pro,mmlu_pro_engineering,Deductive Reasoning,0.28500000000000003,0.28500000000000003,0.0
+mmlu_pro,mmlu_pro_health,Deductive Reasoning,0.06545,0.06545000000000013,-1.3877787807814457e-16
+mmlu_pro,mmlu_pro_history,Deductive Reasoning,0.03799999999999999,0.038000000000000124,-1.3183898417423734e-16
+mmlu_pro,mmlu_pro_law,Deductive Reasoning,0.305,0.30499999999999994,5.551115123125783e-17
+mmlu_pro,mmlu_pro_math,Deductive Reasoning,0.21300000000000002,0.21300000000000008,-5.551115123125783e-17
+mmlu_pro,mmlu_pro_other,Deductive Reasoning,0.05,0.05000000000000016,-1.5959455978986625e-16
+mmlu_pro,mmlu_pro_philosophy,Deductive Reasoning,0.15999999999999998,0.16,-2.7755575615628914e-17
+mmlu_pro,mmlu_pro_physics,Deductive Reasoning,0.192,0.1920000000000001,-8.326672684688674e-17
+mmlu_pro,mmlu_pro_psychology,Deductive Reasoning,0.08,0.08000000000000013,-1.249000902703301e-16
+mmlu_redux,mmlu_redux_abstract_algebra_generative,Deductive Reasoning,0.35500000000000004,0.355,5.551115123125783e-17
+mmlu_redux,mmlu_redux_anatomy_generative,Deductive Reasoning,0.01,0.0100000000000002,-1.9949319973733282e-16
+mmlu_redux,mmlu_redux_astronomy_generative,Deductive Reasoning,0.035,0.035000000000000184,-1.8041124150158794e-16
+mmlu_redux,mmlu_redux_business_ethics_generative,Deductive Reasoning,0.010000000000000002,0.01000000000000016,-1.5785983631388945e-16
+mmlu_redux,mmlu_redux_clinical_knowledge_generative,Deductive Reasoning,0.025,0.025000000000000182,-1.8041124150158794e-16
+mmlu_redux,mmlu_redux_college_biology_generative,Deductive Reasoning,0.05600000000000001,0.05600000000000016,-1.5265566588595902e-16
+mmlu_redux,mmlu_redux_college_chemistry_generative,Deductive Reasoning,0.12200000000000003,0.12200000000000015,-1.249000902703301e-16
+mmlu_redux,mmlu_redux_college_computer_science_generative,Deductive Reasoning,0.25,0.25,0.0
+mmlu_redux,mmlu_redux_college_mathematics_generative,Deductive Reasoning,0.34500000000000003,0.345,5.551115123125783e-17
+mmlu_redux,mmlu_redux_college_medicine_generative,Deductive Reasoning,0.083,0.08300000000000013,-1.249000902703301e-16
+mmlu_redux,mmlu_redux_college_physics_generative,Deductive Reasoning,0.18500000000000003,0.1850000000000001,-8.326672684688674e-17
+mmlu_redux,mmlu_redux_computer_security_generative,Deductive Reasoning,0.028000000000000004,0.028000000000000184,-1.8041124150158794e-16
+mmlu_redux,mmlu_redux_conceptual_physics_generative,Deductive Reasoning,0.10500000000000002,0.10500000000000015,-1.249000902703301e-16
+mmlu_redux,mmlu_redux_econometrics_generative,Deductive Reasoning,0.145,0.14500000000000007,-8.326672684688674e-17
+mmlu_redux,mmlu_redux_electrical_engineering_generative,Deductive Reasoning,0.01,0.010000000000000201,-2.0122792321330962e-16
+mmlu_redux,mmlu_redux_elementary_mathematics_generative,Deductive Reasoning,0.2,0.20000000000000004,-2.7755575615628914e-17
+mmlu_redux,mmlu_redux_formal_logic_generative,Deductive Reasoning,0.5250000000000001,0.5249999999999999,2.220446049250313e-16
+mmlu_redux,mmlu_redux_global_facts_generative,Deductive Reasoning,0.0,2.082099713513154e-16,-2.082099713513154e-16
+mmlu_redux,mmlu_redux_high_school_biology_generative,Deductive Reasoning,0.09,0.09000000000000011,-1.1102230246251565e-16
+mmlu_redux,mmlu_redux_high_school_chemistry_generative,Deductive Reasoning,0.205,0.20500000000000002,-2.7755575615628914e-17
+mmlu_redux,mmlu_redux_high_school_computer_science_generative,Deductive Reasoning,0.219,0.21900000000000003,-2.7755575615628914e-17
+mmlu_redux,mmlu_redux_high_school_european_history_generative,Deductive Reasoning,0.08,0.08000000000000007,-6.938893903907228e-17
+mmlu_redux,mmlu_redux_high_school_geography_generative,Deductive Reasoning,0.005,0.005000000000000194,-1.942890293094024e-16
+mmlu_redux,mmlu_redux_high_school_government_and_politics_generative,Deductive Reasoning,0.034999999999999996,0.035000000000000156,-1.5959455978986625e-16
+mmlu_redux,mmlu_redux_high_school_macroeconomics_generative,Deductive Reasoning,0.19,0.19000000000000003,-2.7755575615628914e-17
+mmlu_redux,mmlu_redux_high_school_mathematics_generative,Deductive Reasoning,0.363,0.36299999999999993,5.551115123125783e-17
+mmlu_redux,mmlu_redux_high_school_microeconomics_generative,Deductive Reasoning,0.18,0.18000000000000005,-5.551115123125783e-17
+mmlu_redux,mmlu_redux_high_school_physics_generative,Deductive Reasoning,0.315,0.315,0.0
+mmlu_redux,mmlu_redux_high_school_psychology_generative,Deductive Reasoning,0.025,0.02500000000000017,-1.700029006457271e-16
+mmlu_redux,mmlu_redux_high_school_statistics_generative,Deductive Reasoning,0.24,0.24,0.0
+mmlu_redux,mmlu_redux_high_school_us_history_generative,Deductive Reasoning,0.06499999999999999,0.06500000000000009,-9.71445146547012e-17
+mmlu_redux,mmlu_redux_high_school_world_history_generative,Deductive Reasoning,0.05000000000000001,0.05000000000000011,-9.71445146547012e-17
+mmlu_redux,mmlu_redux_human_aging_generative,Deductive Reasoning,0.008,0.008000000000000194,-1.942890293094024e-16
+mmlu_redux,mmlu_redux_human_sexuality_generative,Deductive Reasoning,0.030000000000000006,0.030000000000000186,-1.8041124150158794e-16
+mmlu_redux,mmlu_redux_international_law_generative,Deductive Reasoning,0.0,1.906547606724791e-16,-1.906547606724791e-16
+mmlu_redux,mmlu_redux_jurisprudence_generative,Deductive Reasoning,0.045,0.04500000000000012,-1.249000902703301e-16
+mmlu_redux,mmlu_redux_logical_fallacies_generative,Deductive Reasoning,0.010000000000000002,0.010000000000000148,-1.457167719820518e-16
+mmlu_redux,mmlu_redux_machine_learning_generative,Deductive Reasoning,0.145,0.14500000000000007,-8.326672684688674e-17
+mmlu_redux,mmlu_redux_management_generative,Deductive Reasoning,0.0,1.8606065435249724e-16,-1.8606065435249724e-16
+mmlu_redux,mmlu_redux_marketing_generative,Deductive Reasoning,0.010000000000000002,0.01000000000000018,-1.7867651802561113e-16
+mmlu_redux,mmlu_redux_medical_genetics_generative,Deductive Reasoning,0.025,0.025000000000000192,-1.9081958235744878e-16
+mmlu_redux,mmlu_redux_miscellaneous_generative,Deductive Reasoning,0.03,0.03000000000000018,-1.8041124150158794e-16
+mmlu_redux,mmlu_redux_moral_disputes_generative,Deductive Reasoning,0.01,0.010000000000000168,-1.682681771697503e-16
+mmlu_redux,mmlu_redux_moral_scenarios_generative,Deductive Reasoning,0.0,2.3805676095370785e-16,-2.3805676095370785e-16
+mmlu_redux,mmlu_redux_nutrition_generative,Deductive Reasoning,0.005,0.005000000000000187,-1.8648277366750676e-16
+mmlu_redux,mmlu_redux_philosophy_generative,Deductive Reasoning,0.015000000000000003,0.01500000000000016,-1.5785983631388945e-16
+mmlu_redux,mmlu_redux_prehistory_generative,Deductive Reasoning,0.010000000000000002,0.010000000000000194,-1.9255430583342559e-16
+mmlu_redux,mmlu_redux_professional_accounting_generative,Deductive Reasoning,0.10300000000000002,0.10300000000000013,-1.1102230246251565e-16
+mmlu_redux,mmlu_redux_professional_law_generative,Deductive Reasoning,0.31,0.30999999999999994,5.551115123125783e-17
+mmlu_redux,mmlu_redux_professional_medicine_generative,Deductive Reasoning,0.21200000000000002,0.21200000000000005,-2.7755575615628914e-17
+mmlu_redux,mmlu_redux_professional_psychology_generative,Deductive Reasoning,0.032,0.032000000000000174,-1.734723475976807e-16
+mmlu_redux,mmlu_redux_public_relations_generative,Deductive Reasoning,0.005,0.005000000000000197,-1.968911145233676e-16
+mmlu_redux,mmlu_redux_security_studies_generative,Deductive Reasoning,0.025000000000000005,0.025000000000000147,-1.4224732503009818e-16
+mmlu_redux,mmlu_redux_sociology_generative,Deductive Reasoning,0.004,0.004000000000000192,-1.9168694409543718e-16
+mmlu_redux,mmlu_redux_us_foreign_policy_generative,Deductive Reasoning,0.009000000000000001,0.00900000000000019,-1.8908485888147197e-16
+mmlu_redux,mmlu_redux_virology_generative,Deductive Reasoning,0.01,0.010000000000000196,-1.960237527853792e-16
+mmlu_redux,mmlu_redux_world_religions_generative,Deductive Reasoning,0.0,2.0596844840575183e-16,-2.0596844840575183e-16
+agieval,agieval_aqua_rat,Mathematical Computation,0.45499999999999996,0.28282224074685547,0.1721777592531445
+agieval,agieval_gaokao_biology,Mathematical Computation,0.005,0.02055876457922945,-0.015558764579229448
+agieval,agieval_gaokao_chemistry,Mathematical Computation,0.066,0.08355939855959676,-0.01755939855959676
+agieval,agieval_gaokao_chinese,Mathematical Computation,0.0,-0.00270324398647237,0.00270324398647237
+agieval,agieval_gaokao_english,Mathematical Computation,0.03,0.002674830727889658,0.02732516927211034
+agieval,agieval_gaokao_geography,Mathematical Computation,0.005,0.11507776865500602,-0.11007776865500601
+agieval,agieval_gaokao_history,Mathematical Computation,0.0,0.010188185249445258,-0.010188185249445258
+agieval,agieval_gaokao_mathcloze,Mathematical Computation,0.41500000000000004,0.29189152905804927,0.12310847094195077
+agieval,agieval_gaokao_mathqa,Mathematical Computation,0.36499999999999994,0.2618467376577797,0.10315326234222022
+agieval,agieval_gaokao_physics,Mathematical Computation,0.215,0.16054561925664795,0.05445438074335204
+agieval,agieval_jec_qa_ca,Mathematical Computation,0.0,0.006635210492298538,-0.006635210492298538
+agieval,agieval_jec_qa_kd,Mathematical Computation,0.0,-0.001981663753096552,0.001981663753096552
+agieval,agieval_logiqa_en,Mathematical Computation,0.005,0.21815315322814302,-0.21315315322814302
+agieval,agieval_logiqa_zh,Mathematical Computation,0.006,0.1956221570862422,-0.1896221570862422
+agieval,agieval_lsat_ar,Mathematical Computation,0.005,0.11131256271042023,-0.10631256271042022
+agieval,agieval_lsat_lr,Mathematical Computation,0.005,0.20019148747829674,-0.19519148747829673
+agieval,agieval_lsat_rc,Mathematical Computation,0.0,0.1571548216044224,-0.1571548216044224
+agieval,agieval_sat_en,Mathematical Computation,0.005,0.13022902879075243,-0.12522902879075243
+agieval,agieval_sat_en_without_passage,Mathematical Computation,0.0,0.04275854067230339,-0.04275854067230339
+agieval,agieval_sat_math,Mathematical Computation,0.465,0.27202773752869236,0.19297226247130767
+bbh,bbh_zeroshot_boolean_expressions,Mathematical Computation,0.034999999999999996,0.01479153533957378,0.020208464660426216
+bbh,bbh_zeroshot_causal_judgement,Mathematical Computation,0.0,0.2469425863943293,-0.2469425863943293
+bbh,bbh_zeroshot_date_understanding,Mathematical Computation,0.19,0.07018299149982432,0.11981700850017568
+bbh,bbh_zeroshot_disambiguation_qa,Mathematical Computation,0.0,-0.05994238386985052,0.05994238386985052
+bbh,bbh_zeroshot_dyck_languages,Mathematical Computation,0.0,0.29666895428089674,-0.29666895428089674
+bbh,bbh_zeroshot_formal_fallacies,Mathematical Computation,0.0,-0.05481150671290108,0.05481150671290108
+bbh,bbh_zeroshot_geometric_shapes,Mathematical Computation,0.02,0.2959011630088577,-0.2759011630088577
+bbh,bbh_zeroshot_hyperbaton,Mathematical Computation,0.0,-0.05348514350307243,0.05348514350307243
+bbh,bbh_zeroshot_logical_deduction_five_objects,Mathematical Computation,0.0,-0.013145161514464765,0.013145161514464765
+bbh,bbh_zeroshot_logical_deduction_seven_objects,Mathematical Computation,0.0,-0.0011062177808972562,0.0011062177808972562
+bbh,bbh_zeroshot_logical_deduction_three_objects,Mathematical Computation,0.0,-0.048514483469167535,0.048514483469167535
+bbh,bbh_zeroshot_movie_recommendation,Mathematical Computation,0.0,0.23254590507235234,-0.23254590507235234
+bbh,bbh_zeroshot_multistep_arithmetic_two,Mathematical Computation,0.885,0.5283118010661886,0.35668819893381143
+bbh,bbh_zeroshot_navigate,Mathematical Computation,0.26,0.21112459853970456,0.04887540146029545
+bbh,bbh_zeroshot_object_counting,Mathematical Computation,0.41999999999999993,0.1846758589466357,0.23532414105336422
+bbh,bbh_zeroshot_penguins_in_a_table,Mathematical Computation,0.16,0.16639367681642095,-0.006393676816420946
+bbh,bbh_zeroshot_reasoning_about_colored_objects,Mathematical Computation,0.10500000000000001,0.11430564616331015,-0.009305646163310144
+bbh,bbh_zeroshot_ruin_names,Mathematical Computation,0.0,-0.0838606434605826,0.0838606434605826
+bbh,bbh_zeroshot_salient_translation_error_detection,Mathematical Computation,0.005,0.014934925540314392,-0.009934925540314391
+bbh,bbh_zeroshot_snarks,Mathematical Computation,0.0,-0.06433209714321925,0.06433209714321925
+bbh,bbh_zeroshot_sports_understanding,Mathematical Computation,0.0,0.0027251504281912697,-0.0027251504281912697
+bbh,bbh_zeroshot_temporal_sequences,Mathematical Computation,0.005,0.07799226879270726,-0.07299226879270726
+bbh,bbh_zeroshot_tracking_shuffled_objects_five_objects,Mathematical Computation,0.0,0.059702048801472174,-0.059702048801472174
+bbh,bbh_zeroshot_tracking_shuffled_objects_seven_objects,Mathematical Computation,0.0,0.0023336366013948506,-0.0023336366013948506
+bbh,bbh_zeroshot_tracking_shuffled_objects_three_objects,Mathematical Computation,0.0,-0.0224024525574279,0.0224024525574279
+bbh,bbh_zeroshot_web_of_lies,Mathematical Computation,0.0,-0.03837462863982577,0.03837462863982577
+bbh,bbh_zeroshot_word_sorting,Mathematical Computation,0.0,0.022715874609399278,-0.022715874609399278
+mmlu_pro,mmlu_pro_biology,Mathematical Computation,0.05499999999999999,0.0521631516721604,0.0028368483278395917
+mmlu_pro,mmlu_pro_business,Mathematical Computation,0.475,0.2968071219163637,0.17819287808363626
+mmlu_pro,mmlu_pro_chemistry,Mathematical Computation,0.355,0.21699855122423245,0.13800144877576753
+mmlu_pro,mmlu_pro_computer_science,Mathematical Computation,0.166,0.13463915394181403,0.03136084605818598
+mmlu_pro,mmlu_pro_economics,Mathematical Computation,0.165,0.11335158671165169,0.05164841328834832
+mmlu_pro,mmlu_pro_engineering,Mathematical Computation,0.3549999999999999,0.23377080614685658,0.12122919385314335
+mmlu_pro,mmlu_pro_health,Mathematical Computation,0.025,0.049933352803655684,-0.024933352803655683
+mmlu_pro,mmlu_pro_history,Mathematical Computation,0.0,0.03938135066939935,-0.03938135066939935
+mmlu_pro,mmlu_pro_law,Mathematical Computation,0.005,0.025798448821720332,-0.02079844882172033
+mmlu_pro,mmlu_pro_math,Mathematical Computation,0.38,0.2400446229396121,0.1399553770603879
+mmlu_pro,mmlu_pro_other,Mathematical Computation,0.12999999999999998,0.0877013999918489,0.04229860000815108
+mmlu_pro,mmlu_pro_philosophy,Mathematical Computation,0.0,-0.012576763002619173,0.012576763002619173
+mmlu_pro,mmlu_pro_physics,Mathematical Computation,0.35500000000000004,0.2328531785987944,0.12214682140120564
+mmlu_pro,mmlu_pro_psychology,Mathematical Computation,0.025,0.04991542808541399,-0.02491542808541399
+mmlu_redux,mmlu_redux_abstract_algebra_generative,Mathematical Computation,0.13,0.1129729358847511,0.017027064115248902
+mmlu_redux,mmlu_redux_anatomy_generative,Mathematical Computation,0.0,0.03059452886174785,-0.03059452886174785
+mmlu_redux,mmlu_redux_astronomy_generative,Mathematical Computation,0.023,0.03818741278102944,-0.01518741278102944
+mmlu_redux,mmlu_redux_business_ethics_generative,Mathematical Computation,0.0,-0.010443766555510436,0.010443766555510436
+mmlu_redux,mmlu_redux_clinical_knowledge_generative,Mathematical Computation,0.01,0.011853538158015153,-0.001853538158015153
+mmlu_redux,mmlu_redux_college_biology_generative,Mathematical Computation,0.0,0.03453712551793858,-0.03453712551793858
+mmlu_redux,mmlu_redux_college_chemistry_generative,Mathematical Computation,0.147,0.10250306540897203,0.044496934591027965
+mmlu_redux,mmlu_redux_college_computer_science_generative,Mathematical Computation,0.11500000000000002,0.10942515571948452,0.005574844280515495
+mmlu_redux,mmlu_redux_college_mathematics_generative,Mathematical Computation,0.25999999999999995,0.20803567232265785,0.051964327677342104
+mmlu_redux,mmlu_redux_college_medicine_generative,Mathematical Computation,0.01,0.01904344280969361,-0.009043442809693611
+mmlu_redux,mmlu_redux_college_physics_generative,Mathematical Computation,0.285,0.18975128745912195,0.09524871254087802
+mmlu_redux,mmlu_redux_computer_security_generative,Mathematical Computation,0.0,0.010752256670208182,-0.010752256670208182
+mmlu_redux,mmlu_redux_conceptual_physics_generative,Mathematical Computation,0.065,0.053750561225325844,0.011249438774674159
+mmlu_redux,mmlu_redux_econometrics_generative,Mathematical Computation,0.025,0.012190130260424259,0.012809869739575742
+mmlu_redux,mmlu_redux_electrical_engineering_generative,Mathematical Computation,0.06999999999999999,0.0502258284291236,0.019774171570876395
+mmlu_redux,mmlu_redux_elementary_mathematics_generative,Mathematical Computation,0.45,0.248693177126764,0.201306822873236
+mmlu_redux,mmlu_redux_formal_logic_generative,Mathematical Computation,0.02,0.027626665195177202,-0.007626665195177202
+mmlu_redux,mmlu_redux_global_facts_generative,Mathematical Computation,0.01,0.019115652637273328,-0.009115652637273328
+mmlu_redux,mmlu_redux_high_school_biology_generative,Mathematical Computation,0.005,0.011250445695466682,-0.006250445695466682
+mmlu_redux,mmlu_redux_high_school_chemistry_generative,Mathematical Computation,0.155,0.11937754549613522,0.03562245450386478
+mmlu_redux,mmlu_redux_high_school_computer_science_generative,Mathematical Computation,0.05500000000000001,0.08600277122721023,-0.03100277122721022
+mmlu_redux,mmlu_redux_high_school_european_history_generative,Mathematical Computation,0.0,0.030046733491066957,-0.030046733491066957
+mmlu_redux,mmlu_redux_high_school_geography_generative,Mathematical Computation,0.0,0.010272200291132183,-0.010272200291132183
+mmlu_redux,mmlu_redux_high_school_government_and_politics_generative,Mathematical Computation,0.0,0.009915482372889362,-0.009915482372889362
+mmlu_redux,mmlu_redux_high_school_macroeconomics_generative,Mathematical Computation,0.04,0.059973326054076626,-0.019973326054076625
+mmlu_redux,mmlu_redux_high_school_mathematics_generative,Mathematical Computation,0.34199999999999997,0.2349625542166634,0.10703744578333657
+mmlu_redux,mmlu_redux_high_school_microeconomics_generative,Mathematical Computation,0.030000000000000006,0.013311940733879257,0.01668805926612075
+mmlu_redux,mmlu_redux_high_school_physics_generative,Mathematical Computation,0.17500000000000002,0.13215652286641077,0.04284347713358924
+mmlu_redux,mmlu_redux_high_school_psychology_generative,Mathematical Computation,0.0,0.018378012468322935,-0.018378012468322935
+mmlu_redux,mmlu_redux_high_school_statistics_generative,Mathematical Computation,0.18999999999999997,0.12028642595687217,0.06971357404312781
+mmlu_redux,mmlu_redux_high_school_us_history_generative,Mathematical Computation,0.0,0.0633721437165693,-0.0633721437165693
+mmlu_redux,mmlu_redux_high_school_world_history_generative,Mathematical Computation,0.0,0.06266112547104646,-0.06266112547104646
+mmlu_redux,mmlu_redux_human_aging_generative,Mathematical Computation,0.0,0.010414403940236627,-0.010414403940236627
+mmlu_redux,mmlu_redux_human_sexuality_generative,Mathematical Computation,0.0,0.028092718562820362,-0.028092718562820362
+mmlu_redux,mmlu_redux_international_law_generative,Mathematical Computation,0.0,0.002971524972496753,-0.002971524972496753
+mmlu_redux,mmlu_redux_jurisprudence_generative,Mathematical Computation,0.0,-0.015357033021710875,0.015357033021710875
+mmlu_redux,mmlu_redux_logical_fallacies_generative,Mathematical Computation,0.0,-0.02094809603825115,0.02094809603825115
+mmlu_redux,mmlu_redux_machine_learning_generative,Mathematical Computation,0.1,0.06642936954778311,0.03357063045221689
+mmlu_redux,mmlu_redux_management_generative,Mathematical Computation,0.0,5.280619207398418e-05,-5.280619207398418e-05
+mmlu_redux,mmlu_redux_marketing_generative,Mathematical Computation,0.0,0.0004558416848498559,-0.0004558416848498559
+mmlu_redux,mmlu_redux_medical_genetics_generative,Mathematical Computation,0.045000000000000005,0.04043251719190588,0.004567482808094124
+mmlu_redux,mmlu_redux_miscellaneous_generative,Mathematical Computation,0.0,0.01546022781489631,-0.01546022781489631
+mmlu_redux,mmlu_redux_moral_disputes_generative,Mathematical Computation,0.0,-0.004606328994664788,0.004606328994664788
+mmlu_redux,mmlu_redux_moral_scenarios_generative,Mathematical Computation,0.0,0.45232961436235686,-0.45232961436235686
+mmlu_redux,mmlu_redux_nutrition_generative,Mathematical Computation,0.0,0.002686589588814292,-0.002686589588814292
+mmlu_redux,mmlu_redux_philosophy_generative,Mathematical Computation,0.0,-0.0078099831587701285,0.0078099831587701285
+mmlu_redux,mmlu_redux_prehistory_generative,Mathematical Computation,0.0,0.011933077427731531,-0.011933077427731531
+mmlu_redux,mmlu_redux_professional_accounting_generative,Mathematical Computation,0.132,0.09101403610987557,0.04098596389012443
+mmlu_redux,mmlu_redux_professional_law_generative,Mathematical Computation,0.009999999999999998,0.010159943288500728,-0.00015994328850072945
+mmlu_redux,mmlu_redux_professional_medicine_generative,Mathematical Computation,0.005,0.061902791769503474,-0.056902791769503476
+mmlu_redux,mmlu_redux_professional_psychology_generative,Mathematical Computation,0.0,0.04429910456546232,-0.04429910456546232
+mmlu_redux,mmlu_redux_public_relations_generative,Mathematical Computation,0.0,0.019408344756112195,-0.019408344756112195
+mmlu_redux,mmlu_redux_security_studies_generative,Mathematical Computation,0.0,0.0038573580641692584,-0.0038573580641692584
+mmlu_redux,mmlu_redux_sociology_generative,Mathematical Computation,0.0,0.009277225356203678,-0.009277225356203678
+mmlu_redux,mmlu_redux_us_foreign_policy_generative,Mathematical Computation,0.0,0.015562408412154394,-0.015562408412154394
+mmlu_redux,mmlu_redux_virology_generative,Mathematical Computation,0.0,0.013878889948013451,-0.013878889948013451
+mmlu_redux,mmlu_redux_world_religions_generative,Mathematical Computation,0.0,0.012700587573906352,-0.012700587573906352
+agieval,agieval_aqua_rat,Structural Analysis,0.1,0.15199282318020857,-0.051992823180208564
+agieval,agieval_gaokao_biology,Structural Analysis,0.045,0.03101844894740749,0.013981551052592509
+agieval,agieval_gaokao_chemistry,Structural Analysis,0.07700000000000001,0.051682765510702194,0.02531723448929782
+agieval,agieval_gaokao_chinese,Structural Analysis,0.045,0.07650106657350787,-0.031501066573507874
+agieval,agieval_gaokao_english,Structural Analysis,0.030000000000000006,0.08428228985420146,-0.05428228985420145
+agieval,agieval_gaokao_geography,Structural Analysis,0.12,0.06794582725508777,0.052054172744912225
+agieval,agieval_gaokao_history,Structural Analysis,0.009999999999999998,0.009922553895762215,7.744610423778345e-05
+agieval,agieval_gaokao_mathcloze,Structural Analysis,0.12400000000000003,0.14598455780753583,-0.021984557807535804
+agieval,agieval_gaokao_mathqa,Structural Analysis,0.12800000000000003,0.13661201149083635,-0.008612011490836319
+agieval,agieval_gaokao_physics,Structural Analysis,0.1,0.10103899270957047,-0.0010389927095704604
+agieval,agieval_jec_qa_ca,Structural Analysis,0.06000000000000002,0.03938628489357046,0.020613715106429557
+agieval,agieval_jec_qa_kd,Structural Analysis,0.022,0.009654635862201694,0.012345364137798305
+agieval,agieval_logiqa_en,Structural Analysis,0.075,0.14360265625779658,-0.06860265625779659
+agieval,agieval_logiqa_zh,Structural Analysis,0.158,0.13977743880306587,0.018222561196934134
+agieval,agieval_lsat_ar,Structural Analysis,0.255,0.1273246721383378,0.1276753278616622
+agieval,agieval_lsat_lr,Structural Analysis,0.19,0.13801822160106353,0.05198177839893647
+agieval,agieval_lsat_rc,Structural Analysis,0.215,0.1214090579595879,0.0935909420404121
+agieval,agieval_sat_en,Structural Analysis,0.13,0.11469383983917107,0.015306160160828933
+agieval,agieval_sat_en_without_passage,Structural Analysis,0.045,0.028049012547714136,0.016950987452285862
+agieval,agieval_sat_math,Structural Analysis,0.06,0.1446333131121578,-0.0846333131121578
+bbh,bbh_zeroshot_boolean_expressions,Structural Analysis,0.06500000000000002,0.11586332394558825,-0.050863323945588235
+bbh,bbh_zeroshot_causal_judgement,Structural Analysis,0.27,0.1451101706210619,0.12488982937893811
+bbh,bbh_zeroshot_date_understanding,Structural Analysis,0.039999999999999994,0.09105751367095861,-0.05105751367095862
+bbh,bbh_zeroshot_disambiguation_qa,Structural Analysis,0.095,0.05620806401506374,0.038791935984936264
+bbh,bbh_zeroshot_dyck_languages,Structural Analysis,0.5700000000000001,0.15972274296280436,0.4102772570371957
+bbh,bbh_zeroshot_formal_fallacies,Structural Analysis,0.030000000000000006,0.09643888282430024,-0.06643888282430024
+bbh,bbh_zeroshot_geometric_shapes,Structural Analysis,0.4600000000000001,0.1368303388395246,0.32316966116047546
+bbh,bbh_zeroshot_hyperbaton,Structural Analysis,0.0,0.022721477574681764,-0.022721477574681764
+bbh,bbh_zeroshot_logical_deduction_five_objects,Structural Analysis,0.062,0.10991507419266304,-0.04791507419266304
+bbh,bbh_zeroshot_logical_deduction_seven_objects,Structural Analysis,0.08499999999999999,0.11124221647419709,-0.026242216474197097
+bbh,bbh_zeroshot_logical_deduction_three_objects,Structural Analysis,0.005,0.10404323565019102,-0.09904323565019102
+bbh,bbh_zeroshot_movie_recommendation,Structural Analysis,0.0,0.0839165249173298,-0.0839165249173298
+bbh,bbh_zeroshot_multistep_arithmetic_two,Structural Analysis,0.06,0.19786314585845494,-0.13786314585845494
+bbh,bbh_zeroshot_navigate,Structural Analysis,0.16999999999999998,0.14592036753911644,0.024079632460883543
+bbh,bbh_zeroshot_object_counting,Structural Analysis,0.0,0.09950758801145654,-0.09950758801145654
+bbh,bbh_zeroshot_penguins_in_a_table,Structural Analysis,0.24000000000000005,0.1282408339884852,0.11175916601151484
+bbh,bbh_zeroshot_reasoning_about_colored_objects,Structural Analysis,0.225,0.11645784329799769,0.10854215670200232
+bbh,bbh_zeroshot_ruin_names,Structural Analysis,0.0,0.048616018194267564,-0.048616018194267564
+bbh,bbh_zeroshot_salient_translation_error_detection,Structural Analysis,0.13000000000000003,0.07773413107374477,0.05226586892625526
+bbh,bbh_zeroshot_snarks,Structural Analysis,0.012,0.05035819400342972,-0.03835819400342971
+bbh,bbh_zeroshot_sports_understanding,Structural Analysis,0.005,-0.00037638623662522575,0.005376386236625226
+bbh,bbh_zeroshot_temporal_sequences,Structural Analysis,0.21500000000000002,0.12296904097112024,0.09203095902887978
+bbh,bbh_zeroshot_tracking_shuffled_objects_five_objects,Structural Analysis,0.185,0.12096343789321104,0.06403656210678896
+bbh,bbh_zeroshot_tracking_shuffled_objects_seven_objects,Structural Analysis,0.08499999999999999,0.11284776178310017,-0.02784776178310018
+bbh,bbh_zeroshot_tracking_shuffled_objects_three_objects,Structural Analysis,0.045,0.10876660777842623,-0.06376660777842623
+bbh,bbh_zeroshot_web_of_lies,Structural Analysis,0.015000000000000003,0.10690990125659808,-0.09190990125659808
+bbh,bbh_zeroshot_word_sorting,Structural Analysis,0.12000000000000002,0.1033629212985931,0.016637078701406918
+mmlu_pro,mmlu_pro_biology,Structural Analysis,0.022,0.027691480198154816,-0.005691480198154818
+mmlu_pro,mmlu_pro_business,Structural Analysis,0.06200000000000001,0.11805193896486471,-0.0560519389648647
+mmlu_pro,mmlu_pro_chemistry,Structural Analysis,0.03799999999999999,0.10289986993463761,-0.06489986993463762
+mmlu_pro,mmlu_pro_computer_science,Structural Analysis,0.06600000000000002,0.06818293862022598,-0.002182938620225963
+mmlu_pro,mmlu_pro_economics,Structural Analysis,0.048,0.05991139372604254,-0.011911393726042538
+mmlu_pro,mmlu_pro_engineering,Structural Analysis,0.09,0.12215740754228421,-0.032157407542284216
+mmlu_pro,mmlu_pro_health,Structural Analysis,0.027549999999999998,0.022893500333189404,0.004656499666810594
+mmlu_pro,mmlu_pro_history,Structural Analysis,0.02,0.029032882971907203,-0.009032882971907203
+mmlu_pro,mmlu_pro_law,Structural Analysis,0.07500000000000001,0.06173396840296927,0.013266031597030742
+mmlu_pro,mmlu_pro_math,Structural Analysis,0.06200000000000001,0.1180730922973982,-0.05607309229739818
+mmlu_pro,mmlu_pro_other,Structural Analysis,0.012,0.03492224841953098,-0.022922248419530982
+mmlu_pro,mmlu_pro_philosophy,Structural Analysis,0.0,0.0206825863651722,-0.0206825863651722
+mmlu_pro,mmlu_pro_physics,Structural Analysis,0.06999999999999999,0.10722126924514667,-0.03722126924514668
+mmlu_pro,mmlu_pro_psychology,Structural Analysis,0.025000000000000005,0.025922103523821377,-0.0009221035238213722
+mmlu_redux,mmlu_redux_abstract_algebra_generative,Structural Analysis,0.085,0.08262882628261296,0.002371173717387043
+mmlu_redux,mmlu_redux_anatomy_generative,Structural Analysis,0.034999999999999996,0.0001398600210771872,0.03486013997892281
+mmlu_redux,mmlu_redux_astronomy_generative,Structural Analysis,0.01,0.007218314687940708,0.0027816853120592924
+mmlu_redux,mmlu_redux_business_ethics_generative,Structural Analysis,0.0,0.0008105115515442407,-0.0008105115515442407
+mmlu_redux,mmlu_redux_clinical_knowledge_generative,Structural Analysis,0.0,-0.0021821998484949368,0.0021821998484949368
+mmlu_redux,mmlu_redux_college_biology_generative,Structural Analysis,0.026000000000000002,0.011554840342569955,0.014445159657430047
+mmlu_redux,mmlu_redux_college_chemistry_generative,Structural Analysis,0.028999999999999998,0.04332510814653093,-0.01432510814653093
+mmlu_redux,mmlu_redux_college_computer_science_generative,Structural Analysis,0.068,0.07090575665996891,-0.0029057566599689083
+mmlu_redux,mmlu_redux_college_mathematics_generative,Structural Analysis,0.10700000000000001,0.1224369473440023,-0.015436947344002291
+mmlu_redux,mmlu_redux_college_medicine_generative,Structural Analysis,0.012,0.009175032942045469,0.002824967057954531
+mmlu_redux,mmlu_redux_college_physics_generative,Structural Analysis,0.067,0.09072565536830661,-0.023725655368306606
+mmlu_redux,mmlu_redux_computer_security_generative,Structural Analysis,0.004,-0.0037766049561190618,0.007776604956119062
+mmlu_redux,mmlu_redux_conceptual_physics_generative,Structural Analysis,0.025,0.02371146499578189,0.0012885350042181123
+mmlu_redux,mmlu_redux_econometrics_generative,Structural Analysis,0.02,0.024977817627619053,-0.004977817627619053
+mmlu_redux,mmlu_redux_electrical_engineering_generative,Structural Analysis,0.0,0.007464826360699617,-0.007464826360699617
+mmlu_redux,mmlu_redux_elementary_mathematics_generative,Structural Analysis,0.025,0.133126419140923,-0.108126419140923
+mmlu_redux,mmlu_redux_formal_logic_generative,Structural Analysis,0.15000000000000002,0.10439137458659659,0.045608625413403436
+mmlu_redux,mmlu_redux_global_facts_generative,Structural Analysis,0.0,-0.006859432564177842,0.006859432564177842
+mmlu_redux,mmlu_redux_high_school_biology_generative,Structural Analysis,0.015000000000000003,0.012137784415903574,0.0028622155840964288
+mmlu_redux,mmlu_redux_high_school_chemistry_generative,Structural Analysis,0.05500000000000001,0.06708480567586264,-0.012084805675862634
+mmlu_redux,mmlu_redux_high_school_computer_science_generative,Structural Analysis,0.057000000000000016,0.05701049353297555,-1.0493532975532072e-05
+mmlu_redux,mmlu_redux_high_school_european_history_generative,Structural Analysis,0.04,0.044584388837558275,-0.0045843888375582745
+mmlu_redux,mmlu_redux_high_school_geography_generative,Structural Analysis,0.0,-0.005653972323795997,0.005653972323795997
+mmlu_redux,mmlu_redux_high_school_government_and_politics_generative,Structural Analysis,0.015000000000000003,0.003113935041130639,0.011886064958869364
+mmlu_redux,mmlu_redux_high_school_macroeconomics_generative,Structural Analysis,0.085,0.04555203163265176,0.03944796836734825
+mmlu_redux,mmlu_redux_high_school_mathematics_generative,Structural Analysis,0.083,0.13360778925425265,-0.05060778925425265
+mmlu_redux,mmlu_redux_high_school_microeconomics_generative,Structural Analysis,0.015,0.026434466380441113,-0.011434466380441113
+mmlu_redux,mmlu_redux_high_school_physics_generative,Structural Analysis,0.09000000000000001,0.08778509277404256,0.0022149072259574493
+mmlu_redux,mmlu_redux_high_school_psychology_generative,Structural Analysis,0.0,0.004091147839003634,-0.004091147839003634
+mmlu_redux,mmlu_redux_high_school_statistics_generative,Structural Analysis,0.05,0.07971076162980521,-0.02971076162980521
+mmlu_redux,mmlu_redux_high_school_us_history_generative,Structural Analysis,0.038,0.04827451323111123,-0.010274513231111233
+mmlu_redux,mmlu_redux_high_school_world_history_generative,Structural Analysis,0.045,0.05247697318176878,-0.0074769731817687785
+mmlu_redux,mmlu_redux_human_aging_generative,Structural Analysis,0.0,-0.006494464313927473,0.006494464313927473
+mmlu_redux,mmlu_redux_human_sexuality_generative,Structural Analysis,0.01,0.0029322155406188155,0.007067784459381185
+mmlu_redux,mmlu_redux_international_law_generative,Structural Analysis,0.0,-0.0059284631360971285,0.0059284631360971285
+mmlu_redux,mmlu_redux_jurisprudence_generative,Structural Analysis,0.005,0.005850718081081119,-0.0008507180810811187
+mmlu_redux,mmlu_redux_logical_fallacies_generative,Structural Analysis,0.0,0.001974107039852707,-0.001974107039852707
+mmlu_redux,mmlu_redux_machine_learning_generative,Structural Analysis,0.03,0.039031874050431875,-0.009031874050431876
+mmlu_redux,mmlu_redux_management_generative,Structural Analysis,0.0,-0.005090730206975341,0.005090730206975341
+mmlu_redux,mmlu_redux_marketing_generative,Structural Analysis,0.0,-0.004169267773706853,0.004169267773706853
+mmlu_redux,mmlu_redux_medical_genetics_generative,Structural Analysis,0.005,0.004425961898350594,0.0005740381016494057
+mmlu_redux,mmlu_redux_miscellaneous_generative,Structural Analysis,0.0,-0.002698823715836074,0.002698823715836074
+mmlu_redux,mmlu_redux_moral_disputes_generative,Structural Analysis,0.0,-0.0008649543066993337,0.0008649543066993337
+mmlu_redux,mmlu_redux_moral_scenarios_generative,Structural Analysis,0.0,0.17612580155228338,-0.17612580155228338
+mmlu_redux,mmlu_redux_nutrition_generative,Structural Analysis,0.0,-0.005328109764609235,0.005328109764609235
+mmlu_redux,mmlu_redux_philosophy_generative,Structural Analysis,0.0,0.0005731319939103752,-0.0005731319939103752
+mmlu_redux,mmlu_redux_prehistory_generative,Structural Analysis,0.0,-0.005612107571722591,0.005612107571722591
+mmlu_redux,mmlu_redux_professional_accounting_generative,Structural Analysis,0.032,0.04576294765021263,-0.013762947650212631
+mmlu_redux,mmlu_redux_professional_law_generative,Structural Analysis,0.06,0.05563292352865269,0.004367076471347306
+mmlu_redux,mmlu_redux_professional_medicine_generative,Structural Analysis,0.05,0.052093497078336215,-0.0020934970783362122
+mmlu_redux,mmlu_redux_professional_psychology_generative,Structural Analysis,0.01,0.013298996938370944,-0.0032989969383709437
+mmlu_redux,mmlu_redux_public_relations_generative,Structural Analysis,0.0,-0.0027221396654546204,0.0027221396654546204
+mmlu_redux,mmlu_redux_security_studies_generative,Structural Analysis,0.015000000000000003,0.011221061830283624,0.003778938169716379
+mmlu_redux,mmlu_redux_sociology_generative,Structural Analysis,0.002,-0.004731561920997773,0.006731561920997773
+mmlu_redux,mmlu_redux_us_foreign_policy_generative,Structural Analysis,0.015000000000000003,-0.0019439653587652872,0.01694396535876529
+mmlu_redux,mmlu_redux_virology_generative,Structural Analysis,0.0,-0.0061705961911371066,0.0061705961911371066
+mmlu_redux,mmlu_redux_world_religions_generative,Structural Analysis,0.0,-0.008720906233169623,0.008720906233169623
+agieval,agieval_aqua_rat,Ethical & Safety Judgment,0.0,0.05734317723460775,-0.05734317723460775
+agieval,agieval_gaokao_biology,Ethical & Safety Judgment,0.0,-0.002211680501979063,0.002211680501979063
+agieval,agieval_gaokao_chemistry,Ethical & Safety Judgment,0.001,0.009807054789395753,-0.008807054789395752
+agieval,agieval_gaokao_chinese,Ethical & Safety Judgment,0.0,0.0017489171016261407,-0.0017489171016261407
+agieval,agieval_gaokao_english,Ethical & Safety Judgment,0.0,0.014030947318768477,-0.014030947318768477
+agieval,agieval_gaokao_geography,Ethical & Safety Judgment,0.005,0.022097133433845895,-0.017097133433845894
+agieval,agieval_gaokao_history,Ethical & Safety Judgment,0.0,-0.0007361755486339494,0.0007361755486339494
+agieval,agieval_gaokao_mathcloze,Ethical & Safety Judgment,0.0,0.05534399249539619,-0.05534399249539619
+agieval,agieval_gaokao_mathqa,Ethical & Safety Judgment,0.0,0.04983035978515328,-0.04983035978515328
+agieval,agieval_gaokao_physics,Ethical & Safety Judgment,0.0,0.024440348178095053,-0.024440348178095053
+agieval,agieval_jec_qa_ca,Ethical & Safety Judgment,0.0,-0.006269150175048713,0.006269150175048713
+agieval,agieval_jec_qa_kd,Ethical & Safety Judgment,0.0,-0.004416576455119545,0.004416576455119545
+agieval,agieval_logiqa_en,Ethical & Safety Judgment,0.005,0.03835449558535195,-0.03335449558535195
+agieval,agieval_logiqa_zh,Ethical & Safety Judgment,0.017000000000000005,0.03154934568517477,-0.014549345685174766
+agieval,agieval_lsat_ar,Ethical & Safety Judgment,0.0,0.0064643453295761405,-0.0064643453295761405
+agieval,agieval_lsat_lr,Ethical & Safety Judgment,0.0,0.03738472550770139,-0.03738472550770139
+agieval,agieval_lsat_rc,Ethical & Safety Judgment,0.0,0.03712786216922607,-0.03712786216922607
+agieval,agieval_sat_en,Ethical & Safety Judgment,0.0,0.03603217548147093,-0.03603217548147093
+agieval,agieval_sat_en_without_passage,Ethical & Safety Judgment,0.0,0.007357343886257139,-0.007357343886257139
+agieval,agieval_sat_math,Ethical & Safety Judgment,0.0,0.056081891403925346,-0.056081891403925346
+bbh,bbh_zeroshot_boolean_expressions,Ethical & Safety Judgment,0.0,-0.027348549482272735,0.027348549482272735
+bbh,bbh_zeroshot_causal_judgement,Ethical & Safety Judgment,0.125,0.050530377621215455,0.07446962237878454
+bbh,bbh_zeroshot_date_understanding,Ethical & Safety Judgment,0.0,0.00961674033357969,-0.00961674033357969
+bbh,bbh_zeroshot_disambiguation_qa,Ethical & Safety Judgment,0.0,-0.002630139674942737,0.002630139674942737
+bbh,bbh_zeroshot_dyck_languages,Ethical & Safety Judgment,0.0,0.05537895919943252,-0.05537895919943252
+bbh,bbh_zeroshot_formal_fallacies,Ethical & Safety Judgment,0.0,-0.034523257899675946,0.034523257899675946
+bbh,bbh_zeroshot_geometric_shapes,Ethical & Safety Judgment,0.0,0.06286285954465698,-0.06286285954465698
+bbh,bbh_zeroshot_hyperbaton,Ethical & Safety Judgment,0.0,-0.013497514505369887,0.013497514505369887
+bbh,bbh_zeroshot_logical_deduction_five_objects,Ethical & Safety Judgment,0.0,-0.03307823885665846,0.03307823885665846
+bbh,bbh_zeroshot_logical_deduction_seven_objects,Ethical & Safety Judgment,0.0,-0.028702868471137913,0.028702868471137913
+bbh,bbh_zeroshot_logical_deduction_three_objects,Ethical & Safety Judgment,0.0,-0.04289051113708328,0.04289051113708328
+bbh,bbh_zeroshot_movie_recommendation,Ethical & Safety Judgment,0.0,0.050708764194291614,-0.050708764194291614
+bbh,bbh_zeroshot_multistep_arithmetic_two,Ethical & Safety Judgment,0.0,0.12012902978863471,-0.12012902978863471
+bbh,bbh_zeroshot_navigate,Ethical & Safety Judgment,0.0,0.03103127067304637,-0.03103127067304637
+bbh,bbh_zeroshot_object_counting,Ethical & Safety Judgment,0.0,0.04652544162932243,-0.04652544162932243
+bbh,bbh_zeroshot_penguins_in_a_table,Ethical & Safety Judgment,0.0,0.03272028939551335,-0.03272028939551335
+bbh,bbh_zeroshot_reasoning_about_colored_objects,Ethical & Safety Judgment,0.0,0.021392107784906897,-0.021392107784906897
+bbh,bbh_zeroshot_ruin_names,Ethical & Safety Judgment,0.0,-0.005394462497820052,0.005394462497820052
+bbh,bbh_zeroshot_salient_translation_error_detection,Ethical & Safety Judgment,0.0,0.0032607101061827154,-0.0032607101061827154
+bbh,bbh_zeroshot_snarks,Ethical & Safety Judgment,0.015000000000000003,-0.003659365971279839,0.018659365971279842
+bbh,bbh_zeroshot_sports_understanding,Ethical & Safety Judgment,0.0,-0.0044238238708386585,0.0044238238708386585
+bbh,bbh_zeroshot_temporal_sequences,Ethical & Safety Judgment,0.0,-0.0045929813236987305,0.0045929813236987305
+bbh,bbh_zeroshot_tracking_shuffled_objects_five_objects,Ethical & Safety Judgment,0.0,-0.011256726822117175,0.011256726822117175
+bbh,bbh_zeroshot_tracking_shuffled_objects_seven_objects,Ethical & Safety Judgment,0.0,-0.02934378332316226,0.02934378332316226
+bbh,bbh_zeroshot_tracking_shuffled_objects_three_objects,Ethical & Safety Judgment,0.0,-0.03624533020052763,0.03624533020052763
+bbh,bbh_zeroshot_web_of_lies,Ethical & Safety Judgment,0.0,-0.04190217649756989,0.04190217649756989
+bbh,bbh_zeroshot_word_sorting,Ethical & Safety Judgment,0.0,-0.018405637917296186,0.018405637917296186
+mmlu_pro,mmlu_pro_biology,Ethical & Safety Judgment,0.0,0.006073426788812453,-0.006073426788812453
+mmlu_pro,mmlu_pro_business,Ethical & Safety Judgment,0.005,0.06660858260357128,-0.06160858260357128
+mmlu_pro,mmlu_pro_chemistry,Ethical & Safety Judgment,0.001,0.04226286454824722,-0.04126286454824722
+mmlu_pro,mmlu_pro_computer_science,Ethical & Safety Judgment,0.002,0.02308726371879867,-0.02108726371879867
+mmlu_pro,mmlu_pro_economics,Ethical & Safety Judgment,0.0,0.018148998703924793,-0.018148998703924793
+mmlu_pro,mmlu_pro_engineering,Ethical & Safety Judgment,0.0,0.04292586078459812,-0.04292586078459812
+mmlu_pro,mmlu_pro_health,Ethical & Safety Judgment,0.022449999999999998,0.0061313897739926765,0.01631861022600732
+mmlu_pro,mmlu_pro_history,Ethical & Safety Judgment,0.007000000000000001,0.007464646871651631,-0.0004646468716516302
+mmlu_pro,mmlu_pro_law,Ethical & Safety Judgment,0.015000000000000003,-0.003956951236513823,0.018956951236513826
+mmlu_pro,mmlu_pro_math,Ethical & Safety Judgment,0.0,0.047431738404112536,-0.047431738404112536
+mmlu_pro,mmlu_pro_other,Ethical & Safety Judgment,0.015,0.015593256541841322,-0.0005932565418413221
+mmlu_pro,mmlu_pro_philosophy,Ethical & Safety Judgment,0.0,-0.009944088003166374,0.009944088003166374
+mmlu_pro,mmlu_pro_physics,Ethical & Safety Judgment,0.0,0.045255426469083024,-0.045255426469083024
+mmlu_pro,mmlu_pro_psychology,Ethical & Safety Judgment,0.04000000000000001,0.005889912765787542,0.034110087234212466
+mmlu_redux,mmlu_redux_abstract_algebra_generative,Ethical & Safety Judgment,0.0,0.01117985917254885,-0.01117985917254885
+mmlu_redux,mmlu_redux_anatomy_generative,Ethical & Safety Judgment,0.0,0.0015953517664716171,-0.0015953517664716171
+mmlu_redux,mmlu_redux_astronomy_generative,Ethical & Safety Judgment,0.0,0.002781295430598907,-0.002781295430598907
+mmlu_redux,mmlu_redux_business_ethics_generative,Ethical & Safety Judgment,0.005,-0.004713825212311576,0.009713825212311577
+mmlu_redux,mmlu_redux_clinical_knowledge_generative,Ethical & Safety Judgment,0.0,-0.002765283334014379,0.002765283334014379
+mmlu_redux,mmlu_redux_college_biology_generative,Ethical & Safety Judgment,0.0,0.0018554223370907535,-0.0018554223370907535
+mmlu_redux,mmlu_redux_college_chemistry_generative,Ethical & Safety Judgment,0.0,0.01532760182923873,-0.01532760182923873
+mmlu_redux,mmlu_redux_college_computer_science_generative,Ethical & Safety Judgment,0.0,0.014517542580730597,-0.014517542580730597
+mmlu_redux,mmlu_redux_college_mathematics_generative,Ethical & Safety Judgment,0.0,0.03527632935660359,-0.03527632935660359
+mmlu_redux,mmlu_redux_college_medicine_generative,Ethical & Safety Judgment,0.0,-0.0027395386580408437,0.0027395386580408437
+mmlu_redux,mmlu_redux_college_physics_generative,Ethical & Safety Judgment,0.0,0.03536729638567643,-0.03536729638567643
+mmlu_redux,mmlu_redux_computer_security_generative,Ethical & Safety Judgment,0.0,-0.003463558170887837,0.003463558170887837
+mmlu_redux,mmlu_redux_conceptual_physics_generative,Ethical & Safety Judgment,0.0,0.004492664347428205,-0.004492664347428205
+mmlu_redux,mmlu_redux_econometrics_generative,Ethical & Safety Judgment,0.0,-0.004212714648637164,0.004212714648637164
+mmlu_redux,mmlu_redux_electrical_engineering_generative,Ethical & Safety Judgment,0.0,0.0062532982265982445,-0.0062532982265982445
+mmlu_redux,mmlu_redux_elementary_mathematics_generative,Ethical & Safety Judgment,0.0,0.05281388804315022,-0.05281388804315022
+mmlu_redux,mmlu_redux_formal_logic_generative,Ethical & Safety Judgment,0.0,-0.007950641041928191,0.007950641041928191
+mmlu_redux,mmlu_redux_global_facts_generative,Ethical & Safety Judgment,0.0,-0.0011003606691430412,0.0011003606691430412
+mmlu_redux,mmlu_redux_high_school_biology_generative,Ethical & Safety Judgment,0.0,-0.003756819390755256,0.003756819390755256
+mmlu_redux,mmlu_redux_high_school_chemistry_generative,Ethical & Safety Judgment,0.0,0.018010080409654794,-0.018010080409654794
+mmlu_redux,mmlu_redux_high_school_computer_science_generative,Ethical & Safety Judgment,0.033999999999999996,0.00974673025751216,0.024253269742487836
+mmlu_redux,mmlu_redux_high_school_european_history_generative,Ethical & Safety Judgment,0.0,0.006768339480315189,-0.006768339480315189
+mmlu_redux,mmlu_redux_high_school_geography_generative,Ethical & Safety Judgment,0.0,-0.002537626616212721,0.002537626616212721
+mmlu_redux,mmlu_redux_high_school_government_and_politics_generative,Ethical & Safety Judgment,0.0,-0.0025445905665383434,0.0025445905665383434
+mmlu_redux,mmlu_redux_high_school_macroeconomics_generative,Ethical & Safety Judgment,0.0,0.004966521638486515,-0.004966521638486515
+mmlu_redux,mmlu_redux_high_school_mathematics_generative,Ethical & Safety Judgment,0.0,0.040807478790729726,-0.040807478790729726
+mmlu_redux,mmlu_redux_high_school_microeconomics_generative,Ethical & Safety Judgment,0.0,-0.005860528702037654,0.005860528702037654
+mmlu_redux,mmlu_redux_high_school_physics_generative,Ethical & Safety Judgment,0.0,0.017744130923570453,-0.017744130923570453
+mmlu_redux,mmlu_redux_high_school_psychology_generative,Ethical & Safety Judgment,0.005,-0.00039385318101946287,0.005393853181019463
+mmlu_redux,mmlu_redux_high_school_statistics_generative,Ethical & Safety Judgment,0.005,0.018724358674609032,-0.01372435867460903
+mmlu_redux,mmlu_redux_high_school_us_history_generative,Ethical & Safety Judgment,0.002,0.013715704192159478,-0.011715704192159478
+mmlu_redux,mmlu_redux_high_school_world_history_generative,Ethical & Safety Judgment,0.0,0.015420936691576043,-0.015420936691576043
+mmlu_redux,mmlu_redux_human_aging_generative,Ethical & Safety Judgment,0.0,-0.00287867311609602,0.00287867311609602
+mmlu_redux,mmlu_redux_human_sexuality_generative,Ethical & Safety Judgment,0.018,0.0005799251403636047,0.017420074859636394
+mmlu_redux,mmlu_redux_international_law_generative,Ethical & Safety Judgment,0.0,-0.0034392517644234455,0.0034392517644234455
+mmlu_redux,mmlu_redux_jurisprudence_generative,Ethical & Safety Judgment,0.0,-0.00654202219864293,0.00654202219864293
+mmlu_redux,mmlu_redux_logical_fallacies_generative,Ethical & Safety Judgment,0.0,-0.0061159998083260975,0.0061159998083260975
+mmlu_redux,mmlu_redux_machine_learning_generative,Ethical & Safety Judgment,0.0,0.007330359423676797,-0.007330359423676797
+mmlu_redux,mmlu_redux_management_generative,Ethical & Safety Judgment,0.0,-0.003718526622472615,0.003718526622472615
+mmlu_redux,mmlu_redux_marketing_generative,Ethical & Safety Judgment,0.0,-0.004067984182632073,0.004067984182632073
+mmlu_redux,mmlu_redux_medical_genetics_generative,Ethical & Safety Judgment,0.0,0.0031458911311671722,-0.0031458911311671722
+mmlu_redux,mmlu_redux_miscellaneous_generative,Ethical & Safety Judgment,0.0,-0.0026141914463700677,0.0026141914463700677
+mmlu_redux,mmlu_redux_moral_disputes_generative,Ethical & Safety Judgment,0.005,-0.004155275496213223,0.009155275496213224
+mmlu_redux,mmlu_redux_moral_scenarios_generative,Ethical & Safety Judgment,0.825,0.10626621100518169,0.7187337889948182
+mmlu_redux,mmlu_redux_nutrition_generative,Ethical & Safety Judgment,0.0,-0.0036605263541780314,0.0036605263541780314
+mmlu_redux,mmlu_redux_philosophy_generative,Ethical & Safety Judgment,0.0,-0.004655824944016992,0.004655824944016992
+mmlu_redux,mmlu_redux_prehistory_generative,Ethical & Safety Judgment,0.0,-0.0025727179672678235,0.0025727179672678235
+mmlu_redux,mmlu_redux_professional_accounting_generative,Ethical & Safety Judgment,0.01,0.015203772612530156,-0.005203772612530156
+mmlu_redux,mmlu_redux_professional_law_generative,Ethical & Safety Judgment,0.002,-0.008029784054218767,0.010029784054218767
+mmlu_redux,mmlu_redux_professional_medicine_generative,Ethical & Safety Judgment,0.028000000000000004,0.005329895233330745,0.02267010476666926
+mmlu_redux,mmlu_redux_professional_psychology_generative,Ethical & Safety Judgment,0.06000000000000001,0.005229635365836774,0.05477036463416324
+mmlu_redux,mmlu_redux_public_relations_generative,Ethical & Safety Judgment,0.02,-0.0004722100732129225,0.020472210073212923
+mmlu_redux,mmlu_redux_security_studies_generative,Ethical & Safety Judgment,0.0,-0.001147923970457515,0.001147923970457515
+mmlu_redux,mmlu_redux_sociology_generative,Ethical & Safety Judgment,0.0,-0.0024351966043445195,0.0024351966043445195
+mmlu_redux,mmlu_redux_us_foreign_policy_generative,Ethical & Safety Judgment,0.0,-0.0011542446118125715,0.0011542446118125715
+mmlu_redux,mmlu_redux_virology_generative,Ethical & Safety Judgment,0.002,-0.002386534728568368,0.004386534728568368
+mmlu_redux,mmlu_redux_world_religions_generative,Ethical & Safety Judgment,0.0,-0.00250833557092614,0.00250833557092614

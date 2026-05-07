@@ -1,0 +1,11 @@
+model,projection,aggregate,early_gini,late_gini,late_minus_early_gini,early_top_to_geomean,late_top_to_geomean,late_minus_early_top_to_geomean
+Llama 3.1 8B Instruct,down_proj,dense,0.2012,0.1989,-0.0023,4.6017,3.0415,-1.5602
+Llama 3.1 8B Instruct,up_proj,dense,0.1852,0.1927,0.0075,2.9769,4.7986,1.8217
+Llama 3.2 1B Instruct,down_proj,dense,0.1910,0.2027,0.0116,3.8644,2.8862,-0.9783
+Llama 3.2 1B Instruct,up_proj,dense,0.1726,0.2093,0.0366,3.1799,4.3885,1.2086
+Llama 3.2 3B Instruct,down_proj,dense,0.2227,0.2274,0.0046,4.4082,3.2492,-1.1590
+Llama 3.2 3B Instruct,up_proj,dense,0.2066,0.2199,0.0132,2.9669,5.2773,2.3104
+Qwen3 30B-A3B MoE,down_proj,moe_expert_mean_max,0.2348,0.2269,-0.0080,3.7861,3.3018,-0.4843
+Qwen3 30B-A3B MoE,up_proj,moe_expert_mean_max,0.2328,0.2200,-0.0128,2.8082,3.0488,0.2406
+Qwen3 8B,down_proj,dense,0.2310,0.2037,-0.0273,6.8302,3.9079,-2.9224
+Qwen3 8B,up_proj,dense,0.2473,0.1994,-0.0479,4.4389,4.3108,-0.1281

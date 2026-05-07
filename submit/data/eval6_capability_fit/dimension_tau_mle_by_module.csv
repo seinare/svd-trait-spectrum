@@ -1,0 +1,57 @@
+model,module,dimension,tau_mle,total_nll
+llama1b,mmlu_pro,Factual Knowledge,0.33942025005767384,-123.87123582030927
+llama1b,mmlu_pro,Language Understanding,0.030995726762523036,-123.87123582030927
+llama1b,mmlu_pro,Inductive Reasoning,0.148079065509051,-123.87123582030927
+llama1b,mmlu_pro,Deductive Reasoning,0.031795328303393856,-123.87123582030927
+llama1b,mmlu_pro,Mathematical Computation,0.2973642752350084,-123.87123582030927
+llama1b,mmlu_pro,Structural Analysis,0.08752942473984379,-123.87123582030927
+llama1b,mmlu_pro,Ethical & Safety Judgment,0.14105604387873868,-123.87123582030927
+llama1b,mmlu_redux,Factual Knowledge,0.515858366503499,-304.853802666464
+llama1b,mmlu_redux,Language Understanding,0.17609378392790725,-304.853802666464
+llama1b,mmlu_redux,Inductive Reasoning,3.200923160051419,-304.853802666464
+llama1b,mmlu_redux,Deductive Reasoning,1.3106803740541282,-304.853802666464
+llama1b,mmlu_redux,Mathematical Computation,0.36821520075990144,-304.853802666464
+llama1b,mmlu_redux,Structural Analysis,0.27861689619977065,-304.853802666464
+llama1b,mmlu_redux,Ethical & Safety Judgment,0.747830319922652,-304.853802666464
+llama1b,agieval,Factual Knowledge,0.15869774800721867,-208.8683315749059
+llama1b,agieval,Language Understanding,0.2731556053977463,-208.8683315749059
+llama1b,agieval,Inductive Reasoning,0.08348292199290083,-208.8683315749059
+llama1b,agieval,Deductive Reasoning,0.01290216070870106,-208.8683315749059
+llama1b,agieval,Mathematical Computation,0.31183650586366446,-208.8683315749059
+llama1b,agieval,Structural Analysis,0.542657139559481,-208.8683315749059
+llama1b,agieval,Ethical & Safety Judgment,0.12871536223136454,-208.8683315749059
+llama1b,bbh,Factual Knowledge,0.00235665174221432,-193.9821095659284
+llama1b,bbh,Language Understanding,0.622279206243598,-193.9821095659284
+llama1b,bbh,Inductive Reasoning,0.004518435579008054,-193.9821095659284
+llama1b,bbh,Deductive Reasoning,0.2707679569298545,-193.9821095659284
+llama1b,bbh,Mathematical Computation,2.8313141731635776,-193.9821095659284
+llama1b,bbh,Structural Analysis,0.26966126539276125,-193.9821095659284
+llama1b,bbh,Ethical & Safety Judgment,1.3877851503896814,-193.9821095659284
+llama3b,mmlu_pro,Factual Knowledge,0.3848671796996216,-115.59653022888955
+llama3b,mmlu_pro,Language Understanding,0.049266598390208256,-115.59653022888955
+llama3b,mmlu_pro,Inductive Reasoning,0.3282089257090131,-115.59653022888955
+llama3b,mmlu_pro,Deductive Reasoning,0.5784609459772371,-115.59653022888955
+llama3b,mmlu_pro,Mathematical Computation,0.019253318452719707,-115.59653022888955
+llama3b,mmlu_pro,Structural Analysis,0.1259960616284715,-115.59653022888955
+llama3b,mmlu_pro,Ethical & Safety Judgment,0.1833879861453695,-115.59653022888955
+llama3b,mmlu_redux,Factual Knowledge,0.6713069203907688,-273.31960028553414
+llama3b,mmlu_redux,Language Understanding,0.42452761962656643,-273.31960028553414
+llama3b,mmlu_redux,Inductive Reasoning,0.1839052376753004,-273.31960028553414
+llama3b,mmlu_redux,Deductive Reasoning,0.6273085144780524,-273.31960028553414
+llama3b,mmlu_redux,Mathematical Computation,1.3593506159123252,-273.31960028553414
+llama3b,mmlu_redux,Structural Analysis,0.24302659496686593,-273.31960028553414
+llama3b,mmlu_redux,Ethical & Safety Judgment,0.5015035935864832,-273.31960028553414
+llama3b,agieval,Factual Knowledge,0.34091249541613067,-179.25440901593566
+llama3b,agieval,Language Understanding,0.37492327822163046,-179.25440901593566
+llama3b,agieval,Inductive Reasoning,0.12691588219587674,-179.25440901593566
+llama3b,agieval,Deductive Reasoning,0.09211564229757206,-179.25440901593566
+llama3b,agieval,Mathematical Computation,0.6331891983910927,-179.25440901593566
+llama3b,agieval,Structural Analysis,0.02768479208602027,-179.25440901593566
+llama3b,agieval,Ethical & Safety Judgment,0.13854232644398876,-179.25440901593566
+llama3b,bbh,Factual Knowledge,0.22161930814383193,-139.64120261115886
+llama3b,bbh,Language Understanding,1.006554329435471,-139.64120261115886
+llama3b,bbh,Inductive Reasoning,0.7287313642482633,-139.64120261115886
+llama3b,bbh,Deductive Reasoning,0.8868975675266569,-139.64120261115886
+llama3b,bbh,Mathematical Computation,0.002626272608179693,-139.64120261115886
+llama3b,bbh,Structural Analysis,0.19780673686572325,-139.64120261115886
+llama3b,bbh,Ethical & Safety Judgment,0.17346621886359068,-139.64120261115886

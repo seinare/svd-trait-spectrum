@@ -1,0 +1,9 @@
+model,available_alpha_count,missing_alphas
+llama32_1b_instruct,9,
+llama32_3b_instruct,9,
+llama31_8b_instruct,9,
+qwen3_8b,9,
+qwen3_30b_a3b,9,
+llama32_1b_base,5,-0.15 -0.05 0.05 0.15
+llama32_3b_base,5,-0.15 -0.05 0.05 0.15
+llama31_8b_base,5,-0.15 -0.05 0.05 0.15

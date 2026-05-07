@@ -1,0 +1,15 @@
+component,dimension,loading
+PC1,Factual Knowledge,0.8579434631379922
+PC1,Language Understanding,-0.10290174172047206
+PC1,Inductive Reasoning,-0.036810882805053305
+PC1,Deductive Reasoning,-0.473862989893067
+PC1,Mathematical Computation,-0.10937715954039644
+PC1,Structural Analysis,-0.12392434960802268
+PC1,Ethical & Safety Judgment,-0.01106633957097979
+PC2,Factual Knowledge,-0.2921388314032492
+PC2,Language Understanding,0.5716819804980888
+PC2,Inductive Reasoning,0.1469408662657332
+PC2,Deductive Reasoning,-0.7194653282708818
+PC2,Mathematical Computation,0.21020268241997014
+PC2,Structural Analysis,0.019013870358025483
+PC2,Ethical & Safety Judgment,0.06376476013231351

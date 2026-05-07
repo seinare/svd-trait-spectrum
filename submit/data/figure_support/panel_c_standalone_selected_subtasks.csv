@@ -1,0 +1,13 @@
+module,task,dominant_cap,dominant_weight,positive_slope,negative_slope
+mmlu_pro,mmlu_pro_biology,Factual Knowledge,0.7979910714285714,-1.0278940027894,-1.0706648070664804
+mmlu_pro,mmlu_pro_health,Factual Knowledge,0.830569965379553,-0.6069682151589242,-0.7422575387123064
+mmlu_pro,mmlu_pro_math,Factual Knowledge,0.45286506469500915,-0.7841105354058721,-0.7789291882556131
+mmlu_pro,mmlu_pro_chemistry,Factual Knowledge,0.5743243243243242,-0.6152826855123674,-0.7280624263839811
+bbh,bbh_zeroshot_salient_translation_error_detection,Language Understanding,0.5393939393939393,-0.8813333333333333,-0.8531282051282051
+bbh,bbh_zeroshot_ruin_names,Language Understanding,0.8152173913043479,-0.14400000000000002,-0.6340512820512821
+agieval,agieval_sat_en,Language Understanding,0.8264462809917356,-0.34466019417475724,-0.6092233009708737
+bbh,bbh_zeroshot_reasoning_about_colored_objects,Language Understanding,0.5074626865671642,-0.5986666666666666,-0.23435897435897435
+bbh,bbh_zeroshot_temporal_sequences,Deductive Reasoning,0.8525641025641025,-1.0266666666666664,0.2182564102564103
+bbh,bbh_zeroshot_date_understanding,Deductive Reasoning,0.3896103896103896,-1.0113333333333332,-0.11630769230769214
+bbh,bbh_zeroshot_logical_deduction_three_objects,Deductive Reasoning,0.9045226130653267,-0.6653333333333332,0.06487179487179477
+bbh,bbh_zeroshot_tracking_shuffled_objects_five_objects,Deductive Reasoning,0.8834355828220859,-0.5813333333333334,-0.01743589743589748

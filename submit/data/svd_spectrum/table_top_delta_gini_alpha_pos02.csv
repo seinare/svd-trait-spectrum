@@ -1,0 +1,13 @@
+model,layer,projection,aggregate,alpha,gini_base_mean,delta_gini_mean,top_sv_rel_mean,top_sv_abs_delta_mean,top_to_geomean_base_mean
+Qwen3 8B,2,up_proj,dense,0.2,0.3910,0.0593,1.6443,8.2783,12.0206
+Qwen3 8B,0,up_proj,dense,0.2,0.3512,0.0579,1.4721,5.9413,6.9126
+Qwen3 8B,1,up_proj,dense,0.2,0.3669,0.0562,1.5122,4.2561,7.9082
+Qwen3 8B,2,down_proj,dense,0.2,0.3513,0.0542,1.7278,13.3616,15.3986
+Qwen3 8B,1,down_proj,dense,0.2,0.3209,0.0512,1.7984,19.6545,18.8111
+Qwen3 8B,3,up_proj,dense,0.2,0.2962,0.0507,1.4012,3.1887,5.4004
+Qwen3 30B-A3B MoE,0,up_proj,moe_expert_mean_max,0.2,0.3371,0.0502,1.3712,0.8793,5.6961
+Llama 3.2 3B Instruct,27,up_proj,dense,0.2,0.2506,0.0492,1.6784,13.2868,13.3201
+Qwen3 30B-A3B MoE,22,down_proj,moe_expert_mean_max,0.2,0.2408,0.0451,1.3005,1.0397,3.7923
+Qwen3 8B,3,down_proj,dense,0.2,0.2611,0.0451,1.4906,6.1539,7.3577
+Llama 3.2 3B Instruct,24,down_proj,dense,0.2,0.2451,0.0448,1.2895,1.3910,3.5657
+Qwen3 30B-A3B MoE,24,down_proj,moe_expert_mean_max,0.2,0.2395,0.0447,1.2813,0.9216,3.5511

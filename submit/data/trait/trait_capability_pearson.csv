@@ -1,0 +1,25 @@
+trait,dimension,pearson_r,n
+Openness,Factual Knowledge,0.35287063414829717,32
+Openness,Language Understanding,0.19034635682866574,32
+Openness,Deductive Reasoning,-0.2816045590321156,32
+Conscientiousness,Factual Knowledge,0.15745601381636262,32
+Conscientiousness,Language Understanding,-0.06344343589890995,32
+Conscientiousness,Deductive Reasoning,-0.20386857402168235,32
+Extraversion,Factual Knowledge,-0.011591389870290056,32
+Extraversion,Language Understanding,0.16259370816586352,32
+Extraversion,Deductive Reasoning,-0.11069804835646245,32
+Agreeableness,Factual Knowledge,0.5277656148643057,32
+Agreeableness,Language Understanding,0.33541442940570576,32
+Agreeableness,Deductive Reasoning,0.1056933759001112,32
+Neuroticism,Factual Knowledge,-0.08226251574624405,32
+Neuroticism,Language Understanding,-0.09820698987157295,32
+Neuroticism,Deductive Reasoning,0.1324935585773812,32
+Machiavellianism,Factual Knowledge,0.1752328723422718,32
+Machiavellianism,Language Understanding,0.03154544562736845,32
+Machiavellianism,Deductive Reasoning,-0.35126522219400746,32
+Narcissism,Factual Knowledge,-0.0762932204257248,32
+Narcissism,Language Understanding,0.13216659049991344,32
+Narcissism,Deductive Reasoning,0.32919957717956344,32
+Psychopathy,Factual Knowledge,0.19253113587788226,32
+Psychopathy,Language Understanding,0.06372294179718163,32
+Psychopathy,Deductive Reasoning,-0.022917622274419947,32
